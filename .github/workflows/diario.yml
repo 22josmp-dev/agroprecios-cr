@@ -32,8 +32,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
-      contents: write   # commit de /data y /archivo
-      actions: write    # re-habilitar este workflow (evita que se desactive por inactividad)
+      # commit de /data y /archivo. Cada ejecución cambia data/meta.json, así que siempre hay
+      # un commit: es la actividad que evita que GitHub desactive la programación a los 60 días.
+      contents: write
     outputs:
       resultado: ${{ steps.ingesta.outcome }}
       mensaje: ${{ steps.resumen.outputs.mensaje }}
@@ -97,12 +98,6 @@ jobs:
             sleep $((intento * 10))
           done
           echo "No se pudo subir el commit de datos"; exit 1
-
-      - name: Mantener activa la programación
-        if: always()
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/diario.yml/enable"
 
       - name: Armar sitio
         if: always()
