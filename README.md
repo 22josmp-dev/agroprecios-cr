@@ -17,6 +17,9 @@ el **PIMA – SIMM**. Se actualiza sola cada día: nadie carga datos a mano.
        ├─ descarga los que falten (1 solicitud/s) y guarda el PDF en archivo/
        ├─ parsea, valida y escribe data/ (latest, prices, rejects, meta)
        └─ si algo falla: conserva los datos buenos, anota el error en data/meta.json
+  └─ python -m ingesta estacional
+       ├─ PDF de índices del SIMM (se re-descargan solo si cambia la lista o el día 1 del mes)
+       └─ data/seasonal.json + data/historico/ (índice propio + índice oficial de referencia)
   ├─ commit de data/ y archivo/
   ├─ arma el sitio (app + data/) y lo publica en GitHub Pages
   └─ si la ingesta falló: el workflow queda en rojo → GitHub te envía un correo
@@ -75,6 +78,7 @@ El workflow seguiría publicando el sitio.
 pip install -r requirements-dev.txt
 python -m pytest -q
 python -m ingesta diario
+python -m ingesta estacional
 python scripts/armar_sitio.py
 ```
 
@@ -131,4 +135,7 @@ funciona desde la caché del teléfono).
   productos de primera calidad; el precio en finca es distinto.
 - La app no tiene cuentas ni formularios y no recolecta datos personales. Solo guarda en el
   teléfono (localStorage) los cultivos marcados como favoritos.
-- Permiso de uso de los datos: pendiente de confirmar por escrito con simm@pima.go.cr.
+- Permiso de uso de los datos: pendiente de confirmar por escrito con simm@pima.go.cr
+  (borrador en [docs/CORREO_SIMM.md](docs/CORREO_SIMM.md)).
+- Los ciclos de cultivo (`data/cycle_defaults.json`) son estimaciones **no verificadas**
+  (`verified: false`) hasta que un técnico del MAG/INTA las revise.

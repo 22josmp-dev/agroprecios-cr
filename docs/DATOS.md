@@ -101,5 +101,66 @@ vacío (`total: 0`), como constancia.
   (`procesado` · `fallido` · `reemplazado`), `registros`, `rechazados`, `formato_numerico`, `error`.
 - Tamaño: ≈ 216 KB por boletín, ≈ 55 MB por año.
 
-## ⏳ `data/seasonal.json` (Paso 4)
-## ⏳ `data/cycle_defaults.json` (Paso 4)
+## ✅ `data/seasonal.json` — índices estacionales de precio
+
+Se regenera en cada ejecución diaria (`python -m ingesta estacional`). Fuente: los PDF de
+índices estacionales del SIMM (76 productos, precios mensuales 2018–2025), más los meses
+completos del boletín diario desde 2026 cuando la unidad coincide.
+
+```json
+{"esquema":1,"fuente":"PIMA – SIMM","datos_de_ejemplo":false,"generado_utc":"…",
+ "edicion_simm":[2026],"estado":"ok","avisos":[],"metodo":{…},
+ "productos":[{
+   "id":"tomate-primera","nombre":"Tomate Primera","cultivo_id":"tomate","cultivo":"Tomate",
+   "productos_boletin":["tomate-primera"],"unidad_precio":"Caja plástica (18 kg)",
+   "years_of_data":8,"confianza":"baja",
+   "indice":[1.0937,0.8955,…],        "desviacion":[0.31,…],   "desviacion_media":0.3002,
+   "n_ratios":[7,…],"metodo":"media_movil_12","meses_sin_dato":[],"motivo":null,
+   "indice_oficial_simm":[1.2146,…],  "indice_oferta_oficial_simm":[0.8935,…],
+   "meses_del_boletin_diario":0,"verificacion_dif_max":0.0}]}
+```
+
+| Campo | Significado |
+|---|---|
+| `indice` | 12 valores (enero…diciembre), promedio 1.0. `null` en meses sin mercado |
+| `metodo` | `media_movil_12`: ratio = precio / media móvil centrada 2×12; índice = mediana de ratios entre años. `promedio_anual`: respaldo para frutas de temporada con meses sin dato (ratio contra el promedio de los meses con dato del año) |
+| `desviacion` | Desviación estándar de los ratios de cada mes (riesgo); `desviacion_media` su promedio |
+| `years_of_data` | Años con al menos un precio mensual |
+| `confianza` | `alta`: ≥ 5 años y `desviacion_media` ≤ 0,15 · `media`: 3–4 años · `baja`: cualquier otro caso (incluye < 3 años y precios muy variables) |
+| `indice_oficial_simm` | Índice publicado por el SIMM (método porcentaje promedio), como referencia |
+| `productos_boletin` | Ids de `catalog.json` con el mismo producto y calidad; vacío si solo coincide el cultivo |
+| `verificacion_dif_max` | Diferencia máxima al reproducir el índice oficial con los datos leídos (0 = lectura exacta) |
+
+La desviación media de los 76 productos va de 0,01 a 0,83 (mediana 0,12). El umbral 0,15 se
+puede cambiar con la variable `DESVIACION_BAJA`.
+
+## ✅ `data/historico/<id>.json` — precio y oferta mensual por producto
+
+Para los gráficos de 12 meses y la comparación entre años (≈ 2,5 KB cada uno, se carga solo al
+abrir el detalle de un producto).
+
+```json
+{"id":"camote","nombre":"Camote","unidad_precio":"Kilo",
+ "precio":{"2018":[619.05,640.0,…],"2019":[…]},
+ "oferta_tm":{"2018":[136.6,…]},
+ "meses_boletin_diario":[]}
+```
+`null` = mes sin dato. `meses_boletin_diario` lista los meses tomados del boletín diario
+(media de la moda) en vez de las tablas del SIMM.
+
+## ✅ `data/cycle_defaults.json` — ciclos típicos (NO verificados)
+
+```json
+{"verified":false,"altitudes":{"baja":"menos de 800 m s. n. m.",…},
+ "cultivos":[{"cultivo_id":"tomate","nombre":"Tomate","tipo":"anual","referencia":"trasplante",
+   "ciclo_dias":{"baja":75,"media":85,"alta":100},"ventana_cosecha_dias":50,"verified":false}]}
+```
+- 57 cultivos: 32 anuales con ciclo, 24 perennes (la guía de siembra no aplica) y 1 sin dato.
+- Son **estimaciones agronómicas generales** para que la guía tenga un valor inicial; la app
+  las muestra como "valor estimado" y el usuario puede cambiarlas. `null` = poco común a esa
+  altitud. Un técnico (MAG/INTA) debe revisarlas y poner `verified: true` en cada cultivo.
+
+## ✅ `archivo/indices/`
+
+PDF originales de los índices del SIMM (`archivo/indices/2026/…pdf`, ≈ 8,8 MB por edición) y
+`archivo/indices/registro.json` (título, sha256, archivo, fecha de descarga).

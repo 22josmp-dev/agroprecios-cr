@@ -1,0 +1,680 @@
+{
+ "esquema": 1,
+ "datos_de_ejemplo": false,
+ "verified": false,
+ "fuente": "Estimaciones agronómicas generales para orientar la guía de siembra. NO validadas por un técnico: la app las muestra como 'valor estimado' y el usuario puede cambiarlas. Un extensionista (MAG/INTA) debe revisarlas y marcar verified: true.",
+ "altitudes": {
+  "baja": "menos de 800 m s. n. m.",
+  "media": "800 a 1500 m s. n. m.",
+  "alta": "más de 1500 m s. n. m."
+ },
+ "definicion": "ciclo_dias: días desde la siembra (o el trasplante, según 'referencia') hasta el inicio de la cosecha. ventana_cosecha_dias: duración típica del período de cosecha. null: no es común a esa altitud o no hay valor de referencia.",
+ "cultivos": [
+  {
+   "cultivo_id": "aguacate",
+   "nombre": "Aguacate",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "apio",
+   "nombre": "Apio",
+   "tipo": "anual",
+   "referencia": "trasplante",
+   "ciclo_dias": {
+    "baja": null,
+    "media": 100,
+    "alta": 110
+   },
+   "ventana_cosecha_dias": 30,
+   "verified": false
+  },
+  {
+   "cultivo_id": "arverja",
+   "nombre": "Arveja",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": null,
+    "media": 80,
+    "alta": 90
+   },
+   "ventana_cosecha_dias": 30,
+   "verified": false
+  },
+  {
+   "cultivo_id": "ayote",
+   "nombre": "Ayote",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 100,
+    "media": 110,
+    "alta": 120
+   },
+   "ventana_cosecha_dias": 30,
+   "verified": false
+  },
+  {
+   "cultivo_id": "banano",
+   "nombre": "Banano",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "brocoli",
+   "nombre": "Brócoli",
+   "tipo": "anual",
+   "referencia": "trasplante",
+   "ciclo_dias": {
+    "baja": null,
+    "media": 70,
+    "alta": 80
+   },
+   "ventana_cosecha_dias": 20,
+   "verified": false
+  },
+  {
+   "cultivo_id": "camote",
+   "nombre": "Camote",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 110,
+    "media": 120,
+    "alta": 140
+   },
+   "ventana_cosecha_dias": 30,
+   "verified": false
+  },
+  {
+   "cultivo_id": "carambola",
+   "nombre": "Carambola",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "cas",
+   "nombre": "Cas",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "cebolla",
+   "nombre": "Cebolla",
+   "tipo": "anual",
+   "referencia": "trasplante",
+   "ciclo_dias": {
+    "baja": 100,
+    "media": 110,
+    "alta": 130
+   },
+   "ventana_cosecha_dias": 20,
+   "verified": false
+  },
+  {
+   "cultivo_id": "cebollino",
+   "nombre": "Cebollino",
+   "tipo": "anual",
+   "referencia": "trasplante",
+   "ciclo_dias": {
+    "baja": null,
+    "media": 70,
+    "alta": 80
+   },
+   "ventana_cosecha_dias": 30,
+   "verified": false
+  },
+  {
+   "cultivo_id": "chayote",
+   "nombre": "Chayote",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 110,
+    "media": 120,
+    "alta": 140
+   },
+   "ventana_cosecha_dias": 180,
+   "verified": false
+  },
+  {
+   "cultivo_id": "chile-dulce",
+   "nombre": "Chile dulce",
+   "tipo": "anual",
+   "referencia": "trasplante",
+   "ciclo_dias": {
+    "baja": 75,
+    "media": 85,
+    "alta": 100
+   },
+   "ventana_cosecha_dias": 60,
+   "verified": false
+  },
+  {
+   "cultivo_id": "chiverre",
+   "nombre": "Chiverre",
+   "tipo": "sin_dato",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Sin valor de referencia; el usuario debe indicar el ciclo."
+  },
+  {
+   "cultivo_id": "coco",
+   "nombre": "Coco",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "coliflor",
+   "nombre": "Coliflor",
+   "tipo": "anual",
+   "referencia": "trasplante",
+   "ciclo_dias": {
+    "baja": null,
+    "media": 75,
+    "alta": 85
+   },
+   "ventana_cosecha_dias": 20,
+   "verified": false
+  },
+  {
+   "cultivo_id": "culantro",
+   "nombre": "Culantro",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 40,
+    "media": 45,
+    "alta": 55
+   },
+   "ventana_cosecha_dias": 20,
+   "verified": false
+  },
+  {
+   "cultivo_id": "elote",
+   "nombre": "Elote",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 70,
+    "media": 80,
+    "alta": 95
+   },
+   "ventana_cosecha_dias": 15,
+   "verified": false
+  },
+  {
+   "cultivo_id": "espinaca",
+   "nombre": "Espinaca",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": null,
+    "media": 45,
+    "alta": 50
+   },
+   "ventana_cosecha_dias": 20,
+   "verified": false
+  },
+  {
+   "cultivo_id": "fresa",
+   "nombre": "Fresa",
+   "tipo": "anual",
+   "referencia": "trasplante",
+   "ciclo_dias": {
+    "baja": null,
+    "media": 80,
+    "alta": 90
+   },
+   "ventana_cosecha_dias": 150,
+   "verified": false
+  },
+  {
+   "cultivo_id": "granadilla",
+   "nombre": "Granadilla",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "guanabana",
+   "nombre": "Guanábana",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "guayaba",
+   "nombre": "Guayaba",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "jengibre",
+   "nombre": "Jengibre",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 240,
+    "media": 270,
+    "alta": null
+   },
+   "ventana_cosecha_dias": 30,
+   "verified": false
+  },
+  {
+   "cultivo_id": "jocote",
+   "nombre": "Jocote",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "lechuga",
+   "nombre": "Lechuga",
+   "tipo": "anual",
+   "referencia": "trasplante",
+   "ciclo_dias": {
+    "baja": 45,
+    "media": 50,
+    "alta": 60
+   },
+   "ventana_cosecha_dias": 10,
+   "verified": false
+  },
+  {
+   "cultivo_id": "limon-mandarina",
+   "nombre": "Limón mandarina",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "limon-mesino",
+   "nombre": "Limón mesino",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "mamon-chino",
+   "nombre": "Mamón chino",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "mandarina",
+   "nombre": "Mandarina",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "mango",
+   "nombre": "Mango",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "manzana",
+   "nombre": "Manzana",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "maracuya",
+   "nombre": "Maracuyá",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "melon",
+   "nombre": "Melón",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 65,
+    "media": 75,
+    "alta": null
+   },
+   "ventana_cosecha_dias": 20,
+   "verified": false
+  },
+  {
+   "cultivo_id": "mora",
+   "nombre": "Mora",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "nampi",
+   "nombre": "Ñampí",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 240,
+    "media": 270,
+    "alta": null
+   },
+   "ventana_cosecha_dias": 30,
+   "verified": false
+  },
+  {
+   "cultivo_id": "naranja",
+   "nombre": "Naranja",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "naranjilla",
+   "nombre": "Naranjilla",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "palmito",
+   "nombre": "Palmito",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "papa",
+   "nombre": "Papa",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": null,
+    "media": 100,
+    "alta": 120
+   },
+   "ventana_cosecha_dias": 20,
+   "verified": false
+  },
+  {
+   "cultivo_id": "papaya",
+   "nombre": "Papaya",
+   "tipo": "anual",
+   "referencia": "trasplante",
+   "ciclo_dias": {
+    "baja": 240,
+    "media": 270,
+    "alta": null
+   },
+   "ventana_cosecha_dias": 240,
+   "verified": false
+  },
+  {
+   "cultivo_id": "pejibaye",
+   "nombre": "Pejibaye",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "pepino",
+   "nombre": "Pepino",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 45,
+    "media": 50,
+    "alta": 60
+   },
+   "ventana_cosecha_dias": 30,
+   "verified": false
+  },
+  {
+   "cultivo_id": "pina",
+   "nombre": "Piña",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 450,
+    "media": 510,
+    "alta": null
+   },
+   "ventana_cosecha_dias": 30,
+   "verified": false
+  },
+  {
+   "cultivo_id": "pipa",
+   "nombre": "Pipa",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "pitahaya",
+   "nombre": "Pitahaya",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "platano",
+   "nombre": "Plátano",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 330,
+    "media": 390,
+    "alta": null
+   },
+   "ventana_cosecha_dias": 30,
+   "verified": false
+  },
+  {
+   "cultivo_id": "remolacha",
+   "nombre": "Remolacha",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 60,
+    "media": 70,
+    "alta": 80
+   },
+   "ventana_cosecha_dias": 15,
+   "verified": false
+  },
+  {
+   "cultivo_id": "repollo",
+   "nombre": "Repollo",
+   "tipo": "anual",
+   "referencia": "trasplante",
+   "ciclo_dias": {
+    "baja": 75,
+    "media": 85,
+    "alta": 100
+   },
+   "ventana_cosecha_dias": 20,
+   "verified": false
+  },
+  {
+   "cultivo_id": "sandia",
+   "nombre": "Sandía",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 75,
+    "media": 85,
+    "alta": null
+   },
+   "ventana_cosecha_dias": 20,
+   "verified": false
+  },
+  {
+   "cultivo_id": "tamarindo",
+   "nombre": "Tamarindo",
+   "tipo": "perenne",
+   "referencia": null,
+   "ciclo_dias": null,
+   "ventana_cosecha_dias": null,
+   "verified": false,
+   "nota": "Cultivo perenne: la guía de fechas de siembra no aplica."
+  },
+  {
+   "cultivo_id": "tiquisque",
+   "nombre": "Tiquisque",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 270,
+    "media": 300,
+    "alta": null
+   },
+   "ventana_cosecha_dias": 30,
+   "verified": false
+  },
+  {
+   "cultivo_id": "tomate",
+   "nombre": "Tomate",
+   "tipo": "anual",
+   "referencia": "trasplante",
+   "ciclo_dias": {
+    "baja": 75,
+    "media": 85,
+    "alta": 100
+   },
+   "ventana_cosecha_dias": 50,
+   "verified": false
+  },
+  {
+   "cultivo_id": "vainica",
+   "nombre": "Vainica",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 55,
+    "media": 60,
+    "alta": 70
+   },
+   "ventana_cosecha_dias": 25,
+   "verified": false
+  },
+  {
+   "cultivo_id": "yuca",
+   "nombre": "Yuca",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 270,
+    "media": 300,
+    "alta": null
+   },
+   "ventana_cosecha_dias": 60,
+   "verified": false
+  },
+  {
+   "cultivo_id": "zanahoria",
+   "nombre": "Zanahoria",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 90,
+    "media": 100,
+    "alta": 115
+   },
+   "ventana_cosecha_dias": 20,
+   "verified": false
+  },
+  {
+   "cultivo_id": "zucchini",
+   "nombre": "Zucchini",
+   "tipo": "anual",
+   "referencia": "siembra",
+   "ciclo_dias": {
+    "baja": 45,
+    "media": 50,
+    "alta": 60
+   },
+   "ventana_cosecha_dias": 30,
+   "verified": false
+  }
+ ]
+}

@@ -36,7 +36,7 @@ jobs:
       # un commit: es la actividad que evita que GitHub desactive la programación a los 60 días.
       contents: write
     outputs:
-      resultado: ${{ steps.ingesta.outcome }}
+      resultado: ${{ steps.ingesta.outcome == 'success' && steps.estacional.outcome == 'success' && 'success' || 'failure' }}
       mensaje: ${{ steps.resumen.outputs.mensaje }}
     steps:
       - uses: actions/checkout@v7
@@ -66,11 +66,22 @@ jobs:
             python -m ingesta diario
           fi
 
+      # Índices estacionales: 3 solicitudes al día (lista); descarga los 76 PDF solo si cambió la
+      # lista, el día 1 de cada mes o a mano. Recalcula con los meses completos del boletín diario.
+      - name: Índices estacionales
+        id: estacional
+        if: always()
+        continue-on-error: true
+        run: python -m ingesta estacional
+
       - name: Resumen
         id: resumen
         if: always()
         run: |
           mensaje=$(jq -r '"\(.estado): \(.mensaje)"' data/meta.json | cut -c1-200)
+          if [ "${{ steps.estacional.outcome }}" != "success" ]; then
+            mensaje="$mensaje | Índices estacionales: $(jq -r '.avisos | join("; ")' data/seasonal.json 2>/dev/null | cut -c1-150)"
+          fi
           echo "mensaje=$mensaje" >> "$GITHUB_OUTPUT"
           {
             echo "## Actualización de precios"
@@ -78,6 +89,7 @@ jobs:
             echo "- Estado: **$(jq -r .estado data/meta.json)**"
             echo "- Boletín más reciente: $(jq -r .fecha_boletin data/meta.json) ($(jq -r .registros data/meta.json) registros, $(jq -r .rechazados data/meta.json) rechazados)"
             echo "- Mensaje: $(jq -r .mensaje data/meta.json)"
+            echo "- Índices estacionales: ${{ steps.estacional.outcome }} — $(jq -r '"\(.productos | length) productos, estado \(.estado)"' data/seasonal.json 2>/dev/null)"
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Guardar datos en el repositorio

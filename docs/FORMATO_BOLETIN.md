@@ -130,6 +130,12 @@ que leer la lista; no se puede construir la URL a partir de la fecha.
   "Tomate primera"; "Manga Keith" vs "Manga grande Keitt") → se resuelve en `catalog.json`
   (sinónimos).
 - Se publican una vez al año (edición "Agosto 2026"). Basta revisarlos mensualmente.
+- Verificado con los 76 PDF (29-09-2026): con los valores leídos se reproduce **exactamente**
+  (diferencia 0) la columna "Índice Estacional" de precio de cada producto usando el método del
+  SIMM. Hay celdas vacías reales (meses sin mercado, p. ej. mangos o pitahaya fuera de
+  temporada, años sin datos): el SIMM promedia con los meses disponibles.
+- La lista trae 78 enlaces: 2 al instructivo y **76 índices de producto**. El instructivo
+  menciona 79 índices (36 hortalizas y 43 frutas); la diferencia con lo publicado no se investigó.
 - También existe un PDF "Calendario de Estacionalidad según Precios 2026" (menú del sitio);
   no se analizó porque los índices por producto ya dan la información en forma tabular.
 

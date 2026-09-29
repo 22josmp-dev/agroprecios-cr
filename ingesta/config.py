@@ -35,6 +35,12 @@ MIN_REGISTROS_ABS = int(os.environ.get("MIN_REGISTROS_ABS", "20"))
 # Tolerancia para "promedio dentro de [mínimo, máximo]" (redondeos del boletín).
 TOLERANCIA_PROMEDIO = 0.005
 
+# Índice estacional: desviación estándar media de los ratios por debajo de la cual se
+# considera "baja" (para el nivel de confianza "alta").
+DESVIACION_BAJA = float(os.environ.get("DESVIACION_BAJA", "0.15"))
+# Meses recientes tomados del boletín diario: mínimo de días con dato en el mes.
+MIN_DIAS_MES = 10
+
 HISTORIAL_META = 30  # entradas guardadas en meta.json -> historial
 
 
