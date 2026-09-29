@@ -4,8 +4,8 @@
  "datos_de_ejemplo": false,
  "estado": "ok",
  "mensaje": "Sin boletines nuevos; los datos están al día.",
- "ultimo_intento_utc": "2026-09-29T05:36:28Z",
- "ultima_actualizacion_exitosa_utc": "2026-09-29T05:36:28Z",
+ "ultimo_intento_utc": "2026-09-29T05:46:59Z",
+ "ultima_actualizacion_exitosa_utc": "2026-09-29T05:46:59Z",
  "fecha_boletin": "2026-09-28",
  "registros": 57,
  "rechazados": 0,
@@ -29,6 +29,11 @@
   },
   {
    "utc": "2026-09-29T05:36:28Z",
+   "estado": "ok",
+   "mensaje": "Sin boletines nuevos; los datos están al día."
+  },
+  {
+   "utc": "2026-09-29T05:46:59Z",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día."
   }

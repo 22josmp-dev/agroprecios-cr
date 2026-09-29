@@ -5,7 +5,7 @@
  "id": "tamarindo",
  "nombre": "Tamarindo",
  "unidad_precio": "Kilo",
- "generado_utc": "2026-09-29T05:43:56Z",
+ "generado_utc": "2026-09-29T05:47:11Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2021": [
