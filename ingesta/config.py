@@ -12,14 +12,18 @@ USER_AGENT = (
     "AgroPreciosCR-bot/1.0 (+https://github.com/22josmp-dev/agroprecios-cr; "
     "app informativa sin fines de lucro; datos publicos PIMA-SIMM)"
 )
-BASE_URL = "https://bpm.pima.go.cr"
+# PIMA_BASE_URL, PIMA_INTERVALO_MIN_S y PIMA_ESPERA_BASE_S existen SOLO para las pruebas de punta
+# a punta contra el PIMA simulado (tests/test_e2e.py). En producción no se definen.
+BASE_URL = os.environ.get("PIMA_BASE_URL", "https://bpm.pima.go.cr").rstrip("/")
 CM_BOLETIN = 4        # iframe de https://www.pima.go.cr/boletin/
 CM_INDICES = 77       # iframe de https://www.pima.go.cr/reporte-indices-estacionales/
 
-INTERVALO_MIN_S = 1.1   # como máximo 1 solicitud por segundo
+INTERVALO_MIN_S = float(os.environ.get("PIMA_INTERVALO_MIN_S", "1.1"))  # máx. 1 solicitud por segundo
 TIMEOUT_S = 60
 REINTENTOS = 3          # reintentos después del primer intento
-ESPERA_BASE_S = 5       # espera creciente: 5 s, 15 s, 45 s
+ESPERA_BASE_S = float(os.environ.get("PIMA_ESPERA_BASE_S", "5"))  # espera creciente: 5 s, 15 s, 45 s
+if "PIMA_BASE_URL" not in os.environ and INTERVALO_MIN_S < 1.0:
+    raise SystemExit("Contra el PIMA real el intervalo mínimo entre solicitudes es 1 segundo")
 
 # Se vuelven a descargar los N boletines más recientes aunque ya estén procesados,
 # para detectar republicaciones del mismo día (cambio de SHA-256).

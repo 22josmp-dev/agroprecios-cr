@@ -1,0 +1,19 @@
+# Verifica que GitHub envía el correo de "workflow fallido". Termina en error A PROPÓSITO.
+# No toca datos ni publica nada. Uso: Actions -> "Probar aviso de falla" -> Run workflow,
+# y confirmar que llega el correo "Run failed: Probar aviso de falla".
+name: Probar aviso de falla
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fallar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - run: |
+          echo "::error::Falla simulada para comprobar que llega el correo de aviso. No hay ningún problema real."
+          exit 1

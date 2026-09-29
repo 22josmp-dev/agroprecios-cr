@@ -1,7 +1,8 @@
 """Proceso diario: descarga, parsea, valida y publica los boletines nuevos del PIMA.
 
 Reglas (ver README y docs/FORMATO_BOLETIN.md):
-- Idempotente por SHA-256: un PDF ya procesado no se vuelve a procesar.
+- Idempotente por (fecha, SHA-256): un PDF ya procesado para esa fecha no se vuelve a procesar;
+  el mismo PDF bajo otra fecha sí se revisa (y la validación de fecha lo rechaza).
 - Se revisan todos los boletines de la lista (≈ 2 semanas): si un día faltó, se recupera.
 - Si un boletín falla (descarga, formato, validación o muy pocos registros), sus datos NO se
   escriben; los datos buenos anteriores se conservan, la falla queda en data/meta.json y el
@@ -83,8 +84,9 @@ def _entrada_registro(fecha: date, sha: str, ruta_pdf: str, nombre: str | None, 
 
 
 def _actualizar_registro(registro: list[dict], entrada: dict) -> None:
-    """Reemplaza una entrada con el mismo SHA o marca como 'reemplazado' la versión anterior del día."""
-    registro[:] = [r for r in registro if r["sha256"] != entrada["sha256"]]
+    """Reemplaza la entrada con la misma fecha y SHA, o marca como 'reemplazado' la versión
+    anterior del día."""
+    registro[:] = [r for r in registro if (r["fecha"], r["sha256"]) != (entrada["fecha"], entrada["sha256"])]
     if entrada["estado"] == "procesado":
         for r in registro:
             if r["fecha"] == entrada["fecha"] and r["estado"] == "procesado":
@@ -139,7 +141,9 @@ def ejecutar_diario(alm: Almacen, cliente: ClientePIMA, ahora: datetime | None =
         return 1
 
     log(f"Lista del PIMA: {len(entradas)} boletines ({entradas[-1].fecha} a {entradas[0].fecha})")
-    procesados_sha = {r["sha256"] for r in registro if r["estado"] in ("procesado", "reemplazado")}
+    # Idempotencia por (fecha, SHA-256): el mismo PDF bajo OTRA fecha (p. ej. un boletín viejo
+    # re-subido por error) no se da por conocido; se procesa y la validación de fecha lo rechaza.
+    procesados = {(r["fecha"], r["sha256"]) for r in registro if r["estado"] in ("procesado", "reemplazado")}
     fechas_ok = {r["fecha"] for r in registro if r["estado"] == "procesado"}
     recientes = set(sorted({e.fecha for e in entradas}, reverse=True)[:config.REVISAR_ULTIMOS])
     catalogo_cambio = False
@@ -154,7 +158,7 @@ def ejecutar_diario(alm: Almacen, cliente: ClientePIMA, ahora: datetime | None =
             problemas.append(f"{f}: no se pudo descargar: {e}")
             continue
         sha = hashlib.sha256(datos).hexdigest()
-        if sha in procesados_sha:
+        if (f, sha) in procesados:
             log(f"{f}: sin cambios (SHA-256 {sha[:12]} ya procesado)")
             continue
         ruta_pdf = alm.guardar_pdf(entrada.fecha, sha, datos)
@@ -174,7 +178,7 @@ def ejecutar_diario(alm: Almacen, cliente: ClientePIMA, ahora: datetime | None =
         reg.update(estado="procesado", registros=len(registros), rechazados=len(rechazos),
                    formato_numerico=resultado.formato_numerico)
         _actualizar_registro(registro, reg)
-        procesados_sha.add(sha)
+        procesados.add((f, sha))
         publicados.append(f)
         log(f"{f}: {len(registros)} registros válidos, {len(rechazos)} rechazados "
             f"(formato {resultado.formato_numerico}, métodos {resultado.metodos})")

@@ -18,6 +18,7 @@ def main(argv=None) -> int:
     d = sub.add_parser("diario", help="descarga y procesa los boletines nuevos")
     d.add_argument("--ultimo-intento", action="store_true",
                    help="si el boletín de hoy no está publicado, termina con error")
+    d.add_argument("--ahora", help="momento UTC ISO a simular (solo pruebas), p. ej. 2026-09-29T19:17:00Z")
     sub.add_parser("reprocesar", help="vuelve a parsear todos los PDF archivados")
     e = sub.add_parser("estacional", help="índices estacionales (seasonal.json, historico/)")
     e.add_argument("--forzar", action="store_true", help="volver a descargar todos los PDF del SIMM")
@@ -30,7 +31,9 @@ def main(argv=None) -> int:
     if a.comando == "diario":
         from .diario import ejecutar_diario
         from .fuente import ClientePIMA
-        return ejecutar_diario(Almacen(config.RAIZ), ClientePIMA(), ultimo_intento=a.ultimo_intento)
+        from datetime import datetime
+        ahora = datetime.fromisoformat(a.ahora.replace("Z", "+00:00")) if a.ahora else None
+        return ejecutar_diario(Almacen(config.RAIZ), ClientePIMA(), ahora=ahora, ultimo_intento=a.ultimo_intento)
     if a.comando == "estacional":
         from .fuente import ClientePIMA
         from .indices import ejecutar_indices

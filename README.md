@@ -63,6 +63,19 @@ propia con el Programador de tareas de Windows y hacer `git push` de `data/` y `
 (`python -m ingesta diario && git add data archivo && git commit -m Datos && git push`).
 El workflow seguiría publicando el sitio.
 
+## Verificación de punta a punta
+
+`tests/test_e2e.py` ejecuta el comando real `python -m ingesta diario` contra un **PIMA simulado**
+(`tests/pima_simulado.py`, imita el flujo del portal real) con los PDF reales archivados, en una
+copia temporal del repositorio. Escenarios: instalación nueva, día nuevo, segundo intento sin
+cambios, día sin boletín (pendiente → error en el último intento), cambio de formato que rompe
+(error, datos intactos, PDF guardado), cambio de formato tolerable (otro orden de columnas y
+`1.000,00`), sitio caído (503 con reintentos), y un boletín viejo re-subido con otra fecha
+(rechazado). Corre en cada cambio en el workflow **Pruebas**.
+
+Para comprobar que llegan los correos de falla: *Actions → Probar aviso de falla → Run workflow*
+(falla a propósito, no toca datos).
+
 ## Actualizar el parser si el PIMA cambia el formato
 
 1. Descargar el PDF problemático (queda en `archivo/boletines/AAAA/`).

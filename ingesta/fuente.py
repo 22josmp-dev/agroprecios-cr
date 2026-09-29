@@ -30,7 +30,7 @@ class EntradaBoletin:
     url: str
 
 
-_RE_ENLACE = re.compile(r'<a [^>]*href="(https://bpm\.pima\.go\.cr/AccessDoc\.aspx\?[^"]+)"[^>]*>', re.I)
+_RE_ENLACE = re.compile(r'<a [^>]*href="(https?://[^"/]+/AccessDoc\.aspx\?[^"]+)"[^>]*>', re.I)
 _RE_FECHA_TITULO = re.compile(r"Plaza\s+\S+\s+(\d{1,2})-(\d{1,2})-(\d{4})\s*$")
 _RE_FECHA_ARCHIVO = re.compile(r"(\d{4})-(\d{2})-(\d{2})\.pdf$", re.I)
 
