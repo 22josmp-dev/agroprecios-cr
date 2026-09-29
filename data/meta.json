@@ -2,15 +2,15 @@
  "esquema": 1,
  "fuente": "PIMA – SIMM",
  "datos_de_ejemplo": false,
- "estado": "pendiente",
- "mensaje": "El boletín de hoy (2026-09-29) aún no está publicado; se reintentará más tarde.",
- "ultimo_intento_utc": "2026-09-29T06:09:51Z",
- "ultima_actualizacion_exitosa_utc": "2026-09-29T06:09:51Z",
- "fecha_boletin": "2026-09-28",
- "registros": 57,
+ "estado": "ok",
+ "mensaje": "Boletines nuevos: 2026-09-29",
+ "ultimo_intento_utc": "2026-09-29T22:56:43Z",
+ "ultima_actualizacion_exitosa_utc": "2026-09-29T22:56:43Z",
+ "fecha_boletin": "2026-09-29",
+ "registros": 51,
  "rechazados": 0,
- "sha256": "089940e6b6d3963c6c856dd4c8f629611274a00e564557ff6a24ecdbead6aea7",
- "dias_con_datos": 11,
+ "sha256": "21f6586d0938636b64c792a2bd95ff9402ffb12abd58677007e95ccda164ce24",
+ "dias_con_datos": 12,
  "meses_precios": [
   "2026-09"
  ],
@@ -44,6 +44,11 @@
    "utc": "2026-09-29T06:09:51Z",
    "estado": "pendiente",
    "mensaje": "El boletín de hoy (2026-09-29) aún no está publicado; se reintentará más tarde."
+  },
+  {
+   "utc": "2026-09-29T22:56:43Z",
+   "estado": "ok",
+   "mensaje": "Boletines nuevos: 2026-09-29"
   }
  ]
 }
