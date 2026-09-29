@@ -74,7 +74,8 @@ cambios, día sin boletín (pendiente → error en el último intento), cambio d
 (rechazado). Corre en cada cambio en el workflow **Pruebas**.
 
 Para comprobar que llegan los correos de falla: *Actions → Probar aviso de falla → Run workflow*
-(falla a propósito, no toca datos).
+(falla a propósito, no toca datos). Verificado el 29-09-2026: el correo llegó al propietario
+(22josmp-dev).
 
 ## Actualizar el parser si el PIMA cambia el formato
 
