@@ -50,7 +50,10 @@ que leer la lista; no se puede construir la URL a partir de la fecha.
 
 ### Frecuencia y hora de publicación (11 boletines, 14–28 sep 2026)
 - Hay boletín **de lunes a viernes**; no hubo sábado ni domingo en la muestra.
-  Feriados: no verificado (no hubo feriados en el período).
+- Feriados: **sí hubo boletín el martes 15-09-2026 (Día de la Independencia, feriado)**, así
+  que el CENADA opera al menos algunos feriados. El motor procesa cualquier boletín que aparezca;
+  la lista de feriados en `ingesta/config.py` solo evita una falsa alarma de "boletín no
+  publicado" en esos días. Otros feriados: sin verificar.
 - `Fecha de Plaza` a las 09:19 (ej. 28-09). El PDF se genera (`CreationDate`) entre las
   **10:22 y 11:56** hora de Costa Rica (UTC−6).
 - El boletín del 28-09 tiene `ModDate` 10:59 y otro productor de PDF: **un boletín puede

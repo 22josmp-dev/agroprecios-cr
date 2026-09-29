@@ -1,0 +1,4 @@
+-r requirements.txt
+pytest>=8
+# Solo para generar boletines SINTÉTICOS en las pruebas (formato 1.000,00, cambios de formato)
+fpdf2==2.8.8

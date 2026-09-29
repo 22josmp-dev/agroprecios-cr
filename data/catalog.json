@@ -1,0 +1,1231 @@
+{
+ "esquema": 1,
+ "descripcion": "Catálogo de productos del boletín PIMA-CENADA. Curado a mano; el proceso diario solo agrega unidades nuevas observadas. Un producto que no esté aquí se rechaza con motivo 'producto no reconocido' (ver data/rejects).",
+ "productos": [
+  {
+   "id": "apio-verde-mata",
+   "nombre": "Apio verde (mata)",
+   "cultivo": "Apio",
+   "cultivo_id": "apio",
+   "categoria": "hortaliza",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Apio verde (mata)"
+   ],
+   "unidades": [
+    {
+     "unidad": "Mata",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "ayote-sazon",
+   "nombre": "Ayote sazón",
+   "cultivo": "Ayote",
+   "cultivo_id": "ayote",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "calabaza",
+    "zapallo"
+   ],
+   "nombres_boletin": [
+    "Ayote sazón"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "ayote-tierno",
+   "nombre": "Ayote tierno",
+   "cultivo": "Ayote",
+   "cultivo_id": "ayote",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "calabaza",
+    "zapallo"
+   ],
+   "nombres_boletin": [
+    "Ayote tierno"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "banano-maduro-criollo",
+   "nombre": "Banano maduro criollo",
+   "cultivo": "Banano",
+   "cultivo_id": "banano",
+   "categoria": "fruta",
+   "sinonimos": [
+    "guineo",
+    "cambur"
+   ],
+   "nombres_boletin": [
+    "Banano maduro criollo"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "banano-rechazo-de-exportacion-verde-y-maduro",
+   "nombre": "Banano rechazo de exportación (verde y maduro)",
+   "cultivo": "Banano",
+   "cultivo_id": "banano",
+   "categoria": "fruta",
+   "sinonimos": [
+    "guineo",
+    "cambur"
+   ],
+   "nombres_boletin": [
+    "Banano rechazo de exportación (verde y maduro)"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "brocoli",
+   "nombre": "Brócoli",
+   "cultivo": "Brócoli",
+   "cultivo_id": "brocoli",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "brecol"
+   ],
+   "nombres_boletin": [
+    "Brócoli"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "camote",
+   "nombre": "Camote",
+   "cultivo": "Camote",
+   "cultivo_id": "camote",
+   "categoria": "raíz y tubérculo",
+   "sinonimos": [
+    "batata",
+    "boniato"
+   ],
+   "nombres_boletin": [
+    "Camote"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "camote-zanahoria",
+   "nombre": "Camote Zanahoria",
+   "cultivo": "Camote",
+   "cultivo_id": "camote",
+   "categoria": "raíz y tubérculo",
+   "sinonimos": [
+    "batata",
+    "boniato"
+   ],
+   "nombres_boletin": [
+    "Camote Zanahoria"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "cebolla-seca-amarilla-burra",
+   "nombre": "Cebolla seca amarilla burra",
+   "cultivo": "Cebolla",
+   "cultivo_id": "cebolla",
+   "categoria": "hortaliza",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Cebolla seca amarilla burra"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "cebolla-seca-amarilla-suelta",
+   "nombre": "Cebolla seca amarilla suelta",
+   "cultivo": "Cebolla",
+   "cultivo_id": "cebolla",
+   "categoria": "hortaliza",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Cebolla seca amarilla suelta"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "cebolla-seca-amarilla-suelta-importada",
+   "nombre": "Cebolla seca amarilla suelta importada",
+   "cultivo": "Cebolla",
+   "cultivo_id": "cebolla",
+   "categoria": "hortaliza",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Cebolla seca amarilla suelta importada"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "cebolla-seca-amarilla-trenza",
+   "nombre": "Cebolla seca amarilla trenza",
+   "cultivo": "Cebolla",
+   "cultivo_id": "cebolla",
+   "categoria": "hortaliza",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Cebolla seca amarilla trenza"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "cebolla-seca-morada",
+   "nombre": "Cebolla seca morada",
+   "cultivo": "Cebolla",
+   "cultivo_id": "cebolla",
+   "categoria": "hortaliza",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Cebolla seca morada"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "cebollino",
+   "nombre": "Cebollino",
+   "cultivo": "Cebollino",
+   "cultivo_id": "cebollino",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "cebolla verde",
+    "cebolla de rabo"
+   ],
+   "nombres_boletin": [
+    "Cebollino"
+   ],
+   "unidades": [
+    {
+     "unidad": "Rollo",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "chayote-tierno-criollo",
+   "nombre": "Chayote tierno criollo",
+   "cultivo": "Chayote",
+   "cultivo_id": "chayote",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "guisquil",
+    "guatila"
+   ],
+   "nombres_boletin": [
+    "Chayote tierno criollo"
+   ],
+   "unidades": [
+    {
+     "unidad": "Java",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "chayote-tierno-quelite",
+   "nombre": "Chayote tierno quelite",
+   "cultivo": "Chayote",
+   "cultivo_id": "chayote",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "guisquil",
+    "guatila"
+   ],
+   "nombres_boletin": [
+    "Chayote tierno quelite"
+   ],
+   "unidades": [
+    {
+     "unidad": "Java",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "chile-dulce-jumbo",
+   "nombre": "Chile dulce jumbo",
+   "cultivo": "Chile dulce",
+   "cultivo_id": "chile-dulce",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "pimiento",
+    "pimenton",
+    "chile morron"
+   ],
+   "nombres_boletin": [
+    "Chile dulce jumbo"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja plástica",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "chile-dulce-primera",
+   "nombre": "Chile dulce primera",
+   "cultivo": "Chile dulce",
+   "cultivo_id": "chile-dulce",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "pimiento",
+    "pimenton",
+    "chile morron"
+   ],
+   "nombres_boletin": [
+    "Chile dulce primera"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja plástica",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "chile-dulce-segunda",
+   "nombre": "Chile dulce segunda",
+   "cultivo": "Chile dulce",
+   "cultivo_id": "chile-dulce",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "pimiento",
+    "pimenton",
+    "chile morron"
+   ],
+   "nombres_boletin": [
+    "Chile dulce segunda"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja plástica",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "chile-dulce-tercera",
+   "nombre": "Chile dulce tercera",
+   "cultivo": "Chile dulce",
+   "cultivo_id": "chile-dulce",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "pimiento",
+    "pimenton",
+    "chile morron"
+   ],
+   "nombres_boletin": [
+    "Chile dulce tercera"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja plástica",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "coliflor",
+   "nombre": "Coliflor",
+   "cultivo": "Coliflor",
+   "cultivo_id": "coliflor",
+   "categoria": "hortaliza",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Coliflor"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "culantro-castilla",
+   "nombre": "Culantro castilla",
+   "cultivo": "Culantro",
+   "cultivo_id": "culantro",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "cilantro"
+   ],
+   "nombres_boletin": [
+    "Culantro castilla"
+   ],
+   "unidades": [
+    {
+     "unidad": "Rollo de 10 rollitos",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "elote",
+   "nombre": "Elote",
+   "cultivo": "Elote",
+   "cultivo_id": "elote",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "maiz tierno",
+    "choclo",
+    "mazorca"
+   ],
+   "nombres_boletin": [
+    "Elote"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "espinaca",
+   "nombre": "Espinaca",
+   "cultivo": "Espinaca",
+   "cultivo_id": "espinaca",
+   "categoria": "hortaliza",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Espinaca"
+   ],
+   "unidades": [
+    {
+     "unidad": "Rollo",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "fresa-1-kg",
+   "nombre": "Fresa (1 Kg)",
+   "cultivo": "Fresa",
+   "cultivo_id": "fresa",
+   "categoria": "fruta",
+   "sinonimos": [
+    "frutilla"
+   ],
+   "nombres_boletin": [
+    "Fresa (1 Kg)"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (1 kg)",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "fresa-400-g",
+   "nombre": "Fresa (400 g)",
+   "cultivo": "Fresa",
+   "cultivo_id": "fresa",
+   "categoria": "fruta",
+   "sinonimos": [
+    "frutilla"
+   ],
+   "nombres_boletin": [
+    "Fresa (400 g)"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (400 g)",
+     "kg": 0.4
+    }
+   ]
+  },
+  {
+   "id": "jengibre-sazon",
+   "nombre": "Jengibre sazón",
+   "cultivo": "Jengibre",
+   "cultivo_id": "jengibre",
+   "categoria": "raíz y tubérculo",
+   "sinonimos": [
+    "kion"
+   ],
+   "nombres_boletin": [
+    "Jengibre sazón"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "jocote-tronador-primera",
+   "nombre": "Jocote tronador primera",
+   "cultivo": "Jocote",
+   "cultivo_id": "jocote",
+   "categoria": "fruta",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Jocote tronador primera"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja plástica (27 kg)",
+     "kg": 27.0
+    }
+   ]
+  },
+  {
+   "id": "jocote-tronador-seleccionado",
+   "nombre": "Jocote tronador seleccionado",
+   "cultivo": "Jocote",
+   "cultivo_id": "jocote",
+   "categoria": "fruta",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Jocote tronador seleccionado"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja plástica (27 kg)",
+     "kg": 27.0
+    }
+   ]
+  },
+  {
+   "id": "lechuga-americana",
+   "nombre": "Lechuga Americana",
+   "cultivo": "Lechuga",
+   "cultivo_id": "lechuga",
+   "categoria": "hortaliza",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Lechuga Americana"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "limon-mandarina",
+   "nombre": "Limón mandarina",
+   "cultivo": "Limón mandarina",
+   "cultivo_id": "limon-mandarina",
+   "categoria": "fruta",
+   "sinonimos": [
+    "limon mandarino"
+   ],
+   "nombres_boletin": [
+    "Limón mandarina"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "limon-mesino",
+   "nombre": "Limón mesino",
+   "cultivo": "Limón mesino",
+   "cultivo_id": "limon-mesino",
+   "categoria": "fruta",
+   "sinonimos": [
+    "limon persa",
+    "limon tahiti"
+   ],
+   "nombres_boletin": [
+    "Limón mesino"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "mamon-chino-injertado",
+   "nombre": "Mamón chino injertado",
+   "cultivo": "Mamón chino",
+   "cultivo_id": "mamon-chino",
+   "categoria": "fruta",
+   "sinonimos": [
+    "rambutan"
+   ],
+   "nombres_boletin": [
+    "Mamón chino injertado"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "mandarina-primera",
+   "nombre": "Mandarina primera",
+   "cultivo": "Mandarina",
+   "cultivo_id": "mandarina",
+   "categoria": "fruta",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Mandarina primera"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "mandarina-segunda",
+   "nombre": "Mandarina segunda",
+   "cultivo": "Mandarina",
+   "cultivo_id": "mandarina",
+   "categoria": "fruta",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Mandarina segunda"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "manga-grande-cavallini",
+   "nombre": "Manga grande Cavallini",
+   "cultivo": "Mango",
+   "cultivo_id": "mango",
+   "categoria": "fruta",
+   "sinonimos": [
+    "manga"
+   ],
+   "nombres_boletin": [
+    "Manga grande Cavallini"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja plástica (17 kg)",
+     "kg": 17.0
+    }
+   ]
+  },
+  {
+   "id": "manga-grande-keitt",
+   "nombre": "Manga grande Keitt",
+   "cultivo": "Mango",
+   "cultivo_id": "mango",
+   "categoria": "fruta",
+   "sinonimos": [
+    "manga"
+   ],
+   "nombres_boletin": [
+    "Manga grande Keitt"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja plástica (17 kg)",
+     "kg": 17.0
+    }
+   ]
+  },
+  {
+   "id": "melon-cantaloupe",
+   "nombre": "Melón Cantaloupe",
+   "cultivo": "Melón",
+   "cultivo_id": "melon",
+   "categoria": "fruta",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Melón Cantaloupe"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "nampi",
+   "nombre": "Ñampí",
+   "cultivo": "Ñampí",
+   "cultivo_id": "nampi",
+   "categoria": "raíz y tubérculo",
+   "sinonimos": [
+    "nampi"
+   ],
+   "nombres_boletin": [
+    "Ñampí"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "naranja-dulce",
+   "nombre": "Naranja dulce",
+   "cultivo": "Naranja",
+   "cultivo_id": "naranja",
+   "categoria": "fruta",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Naranja dulce"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "papa-amarilla-primera",
+   "nombre": "Papa amarilla primera",
+   "cultivo": "Papa",
+   "cultivo_id": "papa",
+   "categoria": "raíz y tubérculo",
+   "sinonimos": [
+    "patata"
+   ],
+   "nombres_boletin": [
+    "Papa amarilla primera"
+   ],
+   "unidades": [
+    {
+     "unidad": "Malla (45 kg)",
+     "kg": 45.0
+    }
+   ]
+  },
+  {
+   "id": "papa-blanca-primera",
+   "nombre": "Papa blanca primera",
+   "cultivo": "Papa",
+   "cultivo_id": "papa",
+   "categoria": "raíz y tubérculo",
+   "sinonimos": [
+    "patata"
+   ],
+   "nombres_boletin": [
+    "Papa blanca primera"
+   ],
+   "unidades": [
+    {
+     "unidad": "Malla (45 kg)",
+     "kg": 45.0
+    }
+   ]
+  },
+  {
+   "id": "papa-semilla",
+   "nombre": "Papa semilla",
+   "cultivo": "Papa",
+   "cultivo_id": "papa",
+   "categoria": "raíz y tubérculo",
+   "sinonimos": [
+    "patata"
+   ],
+   "nombres_boletin": [
+    "Papa semilla"
+   ],
+   "unidades": [
+    {
+     "unidad": "Malla (45 kg)",
+     "kg": 45.0
+    }
+   ]
+  },
+  {
+   "id": "papa-semillon",
+   "nombre": "Papa semillón",
+   "cultivo": "Papa",
+   "cultivo_id": "papa",
+   "categoria": "raíz y tubérculo",
+   "sinonimos": [
+    "patata"
+   ],
+   "nombres_boletin": [
+    "Papa semillón"
+   ],
+   "unidades": [
+    {
+     "unidad": "Malla (45 kg)",
+     "kg": 45.0
+    }
+   ]
+  },
+  {
+   "id": "papaya-hibrida",
+   "nombre": "Papaya híbrida",
+   "cultivo": "Papaya",
+   "cultivo_id": "papaya",
+   "categoria": "fruta",
+   "sinonimos": [
+    "lechosa",
+    "fruta bomba"
+   ],
+   "nombres_boletin": [
+    "Papaya híbrida"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "pepino",
+   "nombre": "Pepino",
+   "cultivo": "Pepino",
+   "cultivo_id": "pepino",
+   "categoria": "hortaliza",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Pepino"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "pina-grande",
+   "nombre": "Piña - grande",
+   "cultivo": "Piña",
+   "cultivo_id": "pina",
+   "categoria": "fruta",
+   "sinonimos": [
+    "anana"
+   ],
+   "nombres_boletin": [
+    "Piña - grande"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "pina-mediana",
+   "nombre": "Piña - mediana",
+   "cultivo": "Piña",
+   "cultivo_id": "pina",
+   "categoria": "fruta",
+   "sinonimos": [
+    "anana"
+   ],
+   "nombres_boletin": [
+    "Piña - mediana"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "pina-pequena",
+   "nombre": "Piña - pequeña",
+   "cultivo": "Piña",
+   "cultivo_id": "pina",
+   "categoria": "fruta",
+   "sinonimos": [
+    "anana"
+   ],
+   "nombres_boletin": [
+    "Piña - pequeña"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "pitahaya",
+   "nombre": "Pitahaya",
+   "cultivo": "Pitahaya",
+   "cultivo_id": "pitahaya",
+   "categoria": "fruta",
+   "sinonimos": [
+    "pitaya",
+    "fruta del dragon"
+   ],
+   "nombres_boletin": [
+    "Pitahaya"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "platano-primera-verde-y-maduro",
+   "nombre": "Plátano primera (verde y maduro)",
+   "cultivo": "Plátano",
+   "cultivo_id": "platano",
+   "categoria": "fruta",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Plátano primera (verde y maduro)"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "platano-segunda-verde-y-maduro",
+   "nombre": "Plátano segunda (verde y maduro)",
+   "cultivo": "Plátano",
+   "cultivo_id": "platano",
+   "categoria": "fruta",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Plátano segunda (verde y maduro)"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "remolacha",
+   "nombre": "Remolacha",
+   "cultivo": "Remolacha",
+   "cultivo_id": "remolacha",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "betabel",
+    "betarraga"
+   ],
+   "nombres_boletin": [
+    "Remolacha"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "repollo-morado",
+   "nombre": "Repollo morado",
+   "cultivo": "Repollo",
+   "cultivo_id": "repollo",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "col"
+   ],
+   "nombres_boletin": [
+    "Repollo morado"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "repollo-verde",
+   "nombre": "Repollo verde",
+   "cultivo": "Repollo",
+   "cultivo_id": "repollo",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "col"
+   ],
+   "nombres_boletin": [
+    "Repollo verde"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "sandia-de-campo-grande",
+   "nombre": "Sandía de campo - grande",
+   "cultivo": "Sandía",
+   "cultivo_id": "sandia",
+   "categoria": "fruta",
+   "sinonimos": [
+    "patilla"
+   ],
+   "nombres_boletin": [
+    "Sandía de campo - grande"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "sandia-de-campo-mediana",
+   "nombre": "Sandía de campo - mediana",
+   "cultivo": "Sandía",
+   "cultivo_id": "sandia",
+   "categoria": "fruta",
+   "sinonimos": [
+    "patilla"
+   ],
+   "nombres_boletin": [
+    "Sandía de campo - mediana"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "tiquisque",
+   "nombre": "Tiquisque",
+   "cultivo": "Tiquisque",
+   "cultivo_id": "tiquisque",
+   "categoria": "raíz y tubérculo",
+   "sinonimos": [
+    "malanga",
+    "quequisque",
+    "yautia"
+   ],
+   "nombres_boletin": [
+    "Tiquisque"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "tomate-primera",
+   "nombre": "Tomate primera",
+   "cultivo": "Tomate",
+   "cultivo_id": "tomate",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "jitomate"
+   ],
+   "nombres_boletin": [
+    "Tomate primera"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja plástica (18 kg)",
+     "kg": 18.0
+    }
+   ]
+  },
+  {
+   "id": "tomate-segunda",
+   "nombre": "Tomate segunda",
+   "cultivo": "Tomate",
+   "cultivo_id": "tomate",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "jitomate"
+   ],
+   "nombres_boletin": [
+    "Tomate segunda"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja plástica (18 kg)",
+     "kg": 18.0
+    }
+   ]
+  },
+  {
+   "id": "tomate-tercera",
+   "nombre": "Tomate tercera",
+   "cultivo": "Tomate",
+   "cultivo_id": "tomate",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "jitomate"
+   ],
+   "nombres_boletin": [
+    "Tomate tercera"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja plástica (18 kg)",
+     "kg": 18.0
+    }
+   ]
+  },
+  {
+   "id": "vainica",
+   "nombre": "Vainica",
+   "cultivo": "Vainica",
+   "cultivo_id": "vainica",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "ejote",
+    "judia verde",
+    "habichuela"
+   ],
+   "nombres_boletin": [
+    "Vainica"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "yuca-parafinada",
+   "nombre": "Yuca parafinada",
+   "cultivo": "Yuca",
+   "cultivo_id": "yuca",
+   "categoria": "raíz y tubérculo",
+   "sinonimos": [
+    "mandioca"
+   ],
+   "nombres_boletin": [
+    "Yuca parafinada"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "zanahoria-primera",
+   "nombre": "Zanahoria primera",
+   "cultivo": "Zanahoria",
+   "cultivo_id": "zanahoria",
+   "categoria": "hortaliza",
+   "sinonimos": [],
+   "nombres_boletin": [
+    "Zanahoria primera"
+   ],
+   "unidades": [
+    {
+     "unidad": "Malla (45 kg)",
+     "kg": 45.0
+    }
+   ]
+  },
+  {
+   "id": "zucchini",
+   "nombre": "Zucchini",
+   "cultivo": "Zucchini",
+   "cultivo_id": "zucchini",
+   "categoria": "hortaliza",
+   "sinonimos": [
+    "zapallito",
+    "calabacin"
+   ],
+   "nombres_boletin": [
+    "Zucchini"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  }
+ ]
+}

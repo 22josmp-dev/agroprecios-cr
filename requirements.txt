@@ -1,0 +1,2 @@
+# Motor de ingesta (lo usa GitHub Actions a diario)
+pdfplumber==0.11.10
