@@ -112,6 +112,7 @@ def escribir_meta(alm: Almacen, momento: str, estado: str, mensaje: str, exito: 
         "rechazados": entrada["rechazados"] if entrada else 0,
         "sha256": entrada["sha256"] if entrada else None,
         "dias_con_datos": len(fechas),
+        "meses_precios": sorted({f"{d.year:04d}-{d.month:02d}" for d in fechas}),
         "historial": historial,
     }
     alm.guardar_meta(nuevo)

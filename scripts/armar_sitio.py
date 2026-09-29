@@ -1,8 +1,9 @@
 """Arma la carpeta del sitio estático que se publica en GitHub Pages.
 
-  _site/            <- app compilada (app/dist) o, si aún no existe, sitio_provisional/
+  _site/            <- app compilada (app/dist: cd app && npm ci && npm run build)
   _site/data/*.json <- datos publicados (sin /archivo: los PDF no se publican)
 
+Si la app no está compilada, falla: nunca se publica un sitio sin app.
 Uso: python scripts/armar_sitio.py [carpeta_salida]
 """
 import shutil
@@ -15,8 +16,9 @@ RAIZ = Path(__file__).resolve().parent.parent
 def armar(salida: Path) -> Path:
     if salida.exists():
         shutil.rmtree(salida)
-    app = RAIZ / "app" / "dist"
-    origen = app if (app / "index.html").exists() else RAIZ / "sitio_provisional"
+    origen = RAIZ / "app" / "dist"
+    if not (origen / "index.html").exists() or not (origen / "sw.js").exists():
+        raise SystemExit("Falta la app compilada (app/dist). Ejecute: cd app && npm ci && npm run build")
     shutil.copytree(origen, salida)
     datos = RAIZ / "data"
     for archivo in datos.rglob("*.json"):

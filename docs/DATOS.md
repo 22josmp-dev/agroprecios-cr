@@ -20,6 +20,7 @@ Estado: ✅ generado por el motor · ⏳ pendiente (paso indicado).
 | `registros`, `rechazados` | Conteos de ese boletín |
 | `sha256` | Huella del PDF de ese boletín |
 | `dias_con_datos` | Días de boletín acumulados |
+| `meses_precios` | Meses con archivo `data/prices/AAAA-MM.json` (la app los usa para las tendencias) |
 | `historial` | Últimos 30 intentos `{utc, estado, mensaje}` |
 
 Si un intento falla, `fecha_boletin`, `registros` y `ultima_actualizacion_exitosa_utc` conservan

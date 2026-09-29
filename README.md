@@ -72,6 +72,28 @@ El workflow seguiría publicando el sitio.
 4. `pip install -r requirements-dev.txt && python -m pytest -q`
 5. `python -m ingesta reprocesar` (re-lee todos los PDF archivados) y subir los cambios.
 
+## La app (carpeta `app/`)
+
+**Elección:** Vite + TypeScript + **Preact** (API de React en 4 KB) con **gráficos SVG propios**
+en lugar de React + Recharts + Tailwind. Se logra lo mismo (componentes, tipado, gráficos
+interactivos con tooltip y tabla alternativa) con **≈ 22 KB de JavaScript comprimido** en vez de
+≈ 150 KB, lo que importa con datos móviles limitados. CSS propio con variables (modo claro y
+oscuro), sin framework de CSS.
+
+- Pantallas: Inicio (buscador, favoritos, resumen del día, lista), Detalle del producto, Guía de
+  siembra y Ayuda. Rutas por `#/…` (funciona en GitHub Pages sin configuración).
+- Lee `data/*.json` por fetch relativo; el esquema está en [docs/DATOS.md](docs/DATOS.md).
+- Lógica probada (Vitest, 25 pruebas): buscador tolerante, motor de la guía de siembra, frescura
+  de los datos, resumen del día, fechas y formatos (`app/src/*.test.ts`).
+- **PWA:** manifiesto con íconos 192/512 y maskable (`scripts/generar_iconos.py`). El
+  service worker (`sw.js`, generado en la compilación) guarda la app y, al instalarse,
+  `meta`, `latest`, `catalog`, `seasonal`, `cycle_defaults` y los últimos 2 meses de precios:
+  todo funciona sin conexión. El historial mensual de cada producto (`data/historico/`) se guarda
+  la primera vez que se abre ese producto. Los datos se piden siempre primero a la red.
+- Accesibilidad: texto base de 18 px, contrastes WCAG AA verificados en claro y oscuro, cambios
+  con flecha + palabra + color, foco visible, buscador con patrón *combobox*, gráficos con
+  descripción y tabla de datos, diseño desde 360 px sin desplazamiento horizontal.
+
 ## Desarrollo local
 
 ```bash
@@ -79,7 +101,8 @@ pip install -r requirements-dev.txt
 python -m pytest -q
 python -m ingesta diario
 python -m ingesta estacional
-python scripts/armar_sitio.py
+cd app && npm ci && npm test && npm run dev    # http://localhost:5173 con los datos de ../data
+npm run build && cd .. && python scripts/armar_sitio.py
 ```
 
 ## Límites de las plataformas gratuitas
@@ -91,12 +114,12 @@ Verificados en la documentación oficial de GitHub el 29-09-2026.
 | **GitHub Actions** (repo público) | Gratis en runners estándar; 6 h por job; 20 jobs simultáneos | ~2 ejecuciones/día de < 1 min |
 | Actions – programación (`schedule`) | Puede **retrasarse** en horas de carga y, con carga muy alta, **omitirse**; se **desactiva tras 60 días sin actividad** en repos públicos | Dos intentos diarios; ver "Inactividad" abajo |
 | Actions – artefactos | 500 MB de almacenamiento (plan Free) | Artefacto del sitio ≈ 0,1 MB, vida corta |
-| **GitHub Pages** | Sitio ≤ 1 GB; ancho de banda *suave* 100 GB/mes; despliegue ≤ 10 min; prohibido uso comercial/SaaS | Sitio ≈ 0,1 MB + ≈ 40 KB/mes de datos |
+| **GitHub Pages** | Sitio ≤ 1 GB; ancho de banda *suave* 100 GB/mes; despliegue ≤ 10 min; prohibido uso comercial/SaaS | Sitio ≈ 0,7 MB + ≈ 40 KB/mes de datos |
 | Repositorio | Recomendado ≤ 1 GB | PDF originales ≈ 55 MB/año → ~15 años antes de acercarse |
 
 **Riesgos de exceder:** ninguno previsible. El más cercano es el ancho de banda si la app se
-volviera muy popular: 100 GB/mes equivalen a unas 500 000 visitas completas al mes con la app
-actual. Si se acercara, publicar el mismo sitio también en Cloudflare Pages (gratis) o mover
+volviera muy popular: 100 GB/mes equivalen a más de 1 millón de primeras visitas al mes
+(≈ 85 KB cada una); las visitas siguientes usan la caché del teléfono. Si se acercara, publicar el mismo sitio también en Cloudflare Pages (gratis) o mover
 `archivo/` a otro repositorio.
 
 ### Inactividad (desactivación a los 60 días)
@@ -126,8 +149,9 @@ avisos pasan a esa persona. Configuración: *Settings → Notifications → Syst
 
 **₡0.** GitHub Actions (repositorio público), GitHub Pages y el repositorio son gratuitos y no
 requieren tarjeta. No hay servidor propio, base de datos, funciones en la nube ni APIs de pago.
-Los usuarios solo gastan los datos móviles de cargar la app (≈ 100 KB la primera vez; después
-funciona desde la caché del teléfono).
+Los usuarios solo gastan los datos móviles de cargar la app (≈ 25 KB de app + ≈ 60 KB de datos
+comprimidos la primera vez; después funciona desde la caché del teléfono y solo baja los datos
+nuevos).
 
 ## Datos y privacidad
 

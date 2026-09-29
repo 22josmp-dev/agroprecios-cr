@@ -111,6 +111,18 @@ jobs:
           done
           echo "No se pudo subir el commit de datos"; exit 1
 
+      - uses: actions/setup-node@v7
+        if: always()
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - name: Compilar la app
+        if: always()
+        working-directory: app
+        run: npm ci --no-audit --no-fund && npm run build
+
       - name: Armar sitio
         if: always()
         run: python scripts/armar_sitio.py _site

@@ -1,9 +1,9 @@
-# Pruebas del motor de ingesta en cada cambio de código.
+# Pruebas del motor de ingesta y de la app en cada cambio de código.
 name: Pruebas
 
 on:
   push:
-    paths: ["ingesta/**", "tests/**", "requirements*.txt", ".github/workflows/pruebas.yml"]
+    paths: ["ingesta/**", "tests/**", "app/**", "requirements*.txt", ".github/workflows/pruebas.yml"]
   pull_request:
   workflow_dispatch:
 
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 jobs:
-  pytest:
+  motor:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -23,3 +23,20 @@ jobs:
           cache-dependency-path: requirements-dev.txt
       - run: pip install -r requirements-dev.txt
       - run: python -m pytest -q
+
+  app:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - run: npm test
+      - run: npm run build
