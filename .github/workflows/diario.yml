@@ -1,0 +1,140 @@
+# Actualización diaria de precios PIMA-CENADA y publicación de la app en GitHub Pages.
+#
+# Horario (hora de Costa Rica): el PDF se genera entre 10:20 y 12:00 (docs/FORMATO_BOLETIN.md).
+#   13:17 -> primer intento. Si el boletín de hoy aún no está, queda "pendiente" (sin error).
+#   17:17 -> último intento. Si sigue sin aparecer, el workflow termina en error y GitHub
+#            envía un correo al propietario del repositorio.
+# Minuto :17 para evitar el inicio de cada hora, cuando GitHub retrasa más los cron.
+# También corre sábados y domingos: no se espera boletín, pero confirma que todo sigue al día
+# y mantiene la actividad del repositorio.
+name: Actualización diaria
+
+on:
+  schedule:
+    - cron: "17 13 * * *"
+      timezone: "America/Costa_Rica"
+    - cron: "17 17 * * *"
+      timezone: "America/Costa_Rica"
+  workflow_dispatch:
+    inputs:
+      ultimo_intento:
+        description: "Tratar como último intento del día (error si falta el boletín de hoy)"
+        type: boolean
+        default: false
+
+# Nunca dos ejecuciones a la vez sobre los mismos datos; la segunda espera a la primera.
+concurrency:
+  group: actualizacion-datos
+  cancel-in-progress: false
+
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write   # commit de /data y /archivo
+      actions: write    # re-habilitar este workflow (evita que se desactive por inactividad)
+    outputs:
+      resultado: ${{ steps.ingesta.outcome }}
+      mensaje: ${{ steps.resumen.outputs.mensaje }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - run: pip install -r requirements.txt
+
+      - name: Descargar y procesar boletines
+        id: ingesta
+        continue-on-error: true   # se guarda meta.json igual y se falla al final
+        env:
+          ULTIMO: ${{ github.event.schedule == '17 17 * * *' || inputs.ultimo_intento == true }}
+          EVENTO: ${{ github.event_name }}
+        run: |
+          # También es el último intento si el cron llega tarde (16:00 o más, hora de Costa Rica)
+          hora=$(TZ=America/Costa_Rica date +%H)
+          if [ "$EVENTO" = "schedule" ] && [ "$hora" -ge 16 ]; then ULTIMO=true; fi
+          echo "Hora de Costa Rica: $hora — último intento: $ULTIMO"
+          if [ "$ULTIMO" = "true" ]; then
+            python -m ingesta diario --ultimo-intento
+          else
+            python -m ingesta diario
+          fi
+
+      - name: Resumen
+        id: resumen
+        if: always()
+        run: |
+          mensaje=$(jq -r '"\(.estado): \(.mensaje)"' data/meta.json | cut -c1-200)
+          echo "mensaje=$mensaje" >> "$GITHUB_OUTPUT"
+          {
+            echo "## Actualización de precios"
+            echo
+            echo "- Estado: **$(jq -r .estado data/meta.json)**"
+            echo "- Boletín más reciente: $(jq -r .fecha_boletin data/meta.json) ($(jq -r .registros data/meta.json) registros, $(jq -r .rechazados data/meta.json) rechazados)"
+            echo "- Mensaje: $(jq -r .mensaje data/meta.json)"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Guardar datos en el repositorio
+        if: always()
+        env:
+          MENSAJE: ${{ steps.resumen.outputs.mensaje }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data archivo
+          if git diff --cached --quiet; then
+            echo "Sin cambios que guardar"
+            exit 0
+          fi
+          git commit -q -m "Datos: $MENSAJE"
+          for intento in 1 2 3; do
+            git pull --rebase -q origin "${GITHUB_REF_NAME}" && git push -q origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((intento * 10))
+          done
+          echo "No se pudo subir el commit de datos"; exit 1
+
+      - name: Mantener activa la programación
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/diario.yml/enable"
+
+      - name: Armar sitio
+        if: always()
+        run: python scripts/armar_sitio.py _site
+
+      - uses: actions/upload-pages-artifact@v5
+        if: always()
+        with:
+          path: _site
+
+  publicar:
+    needs: datos
+    if: always() && needs.datos.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
+
+      # Se publica también cuando la ingesta falla (meta.json avisa del problema en la app),
+      # pero el workflow queda en rojo para que GitHub notifique al propietario.
+      - name: Resultado de la ingesta
+        if: needs.datos.outputs.resultado != 'success'
+        env:
+          MENSAJE: ${{ needs.datos.outputs.mensaje }}
+        run: |
+          echo "::error::La actualización falló: $MENSAJE"
+          exit 1

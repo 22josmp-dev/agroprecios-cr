@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es-CR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Precios CENADA (provisional)</title>
+<style>
+  body { font: 18px/1.5 system-ui, sans-serif; margin: 0 auto; max-width: 720px; padding: 16px; color: #111; background: #fff; }
+  .aviso { background: #fff3cd; border: 2px solid #8a6d00; padding: 12px; border-radius: 8px; }
+  table { border-collapse: collapse; width: 100%; font-size: 16px; }
+  th, td { border-bottom: 1px solid #ccc; padding: 6px 4px; text-align: left; }
+  td.n { text-align: right; font-variant-numeric: tabular-nums; }
+  .fuente { color: #333; font-size: 15px; }
+</style>
+</head>
+<body>
+<h1>Precios mayoristas del CENADA</h1>
+<p class="aviso">Página provisional para verificar la publicación automática. La app completa se publica más adelante.</p>
+<p id="estado">Cargando…</p>
+<table><thead><tr><th>Producto</th><th>Unidad</th><th>Promedio (₡)</th></tr></thead><tbody id="filas"></tbody></table>
+<p class="fuente">Fuente: PIMA – SIMM</p>
+<script>
+  const fecha = (iso) => new Date(iso).toLocaleString("es-CR", { timeZone: "America/Costa_Rica" });
+  Promise.all([fetch("data/meta.json").then(r => r.json()), fetch("data/latest.json").then(r => r.json())])
+    .then(([meta, latest]) => {
+      document.getElementById("estado").textContent =
+        `Última actualización: ${fecha(meta.ultima_actualizacion_exitosa_utc)} · Boletín del ${meta.fecha_boletin} · Estado: ${meta.estado}`;
+      document.getElementById("filas").innerHTML = latest.productos.map(p =>
+        `<tr><td>${p.nombre}</td><td>${p.unidad}</td><td class="n">${p.promedio.toLocaleString("es-CR")}</td></tr>`).join("");
+    })
+    .catch(() => { document.getElementById("estado").textContent = "No se pudieron cargar los datos."; });
+</script>
+</body>
+</html>

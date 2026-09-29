@@ -1,4 +1,4 @@
-# Prueba manual: ¿el portal del PIMA responde a los servidores de GitHub Actions?
+﻿# Prueba manual: ¿el portal del PIMA responde a los servidores de GitHub Actions?
 # Ejecutar desde la pestaña Actions -> "Prueba de fuentes PIMA" -> Run workflow.
 name: Prueba de fuentes PIMA
 
@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - name: Descargar boletín e índice de prueba

@@ -1,0 +1,25 @@
+# Pruebas del motor de ingesta en cada cambio de código.
+name: Pruebas
+
+on:
+  push:
+    paths: ["ingesta/**", "tests/**", "requirements*.txt", ".github/workflows/pruebas.yml"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - run: pip install -r requirements-dev.txt
+      - run: python -m pytest -q
