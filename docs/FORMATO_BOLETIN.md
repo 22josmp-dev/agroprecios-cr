@@ -145,12 +145,16 @@ que leer la lista; no se puede construir la URL a partir de la fecha.
 
 - Local (Windows, red residencial de Costa Rica): **OK**, sin bloqueos, con
   `scripts/probe_fuentes.py` (solo biblioteca estándar).
-- **GitHub Actions: PENDIENTE.** Requiere que el desarrollador cree el repositorio y ejecute a
-  mano el workflow `.github/workflows/probe-fuentes.yml` ("Prueba de fuentes PIMA" →
-  Run workflow). Riesgos posibles: bloqueo por IP de centros de datos (Azure/EE. UU.), filtro
-  por país o WAF. El servidor manda `Vary: User-Agent`, pero con nuestro User-Agent de bot
-  respondió normal.
-- **Plan B si GitHub es bloqueado (gratis):** ejecutar el mismo script en una computadora propia
+- **GitHub Actions (`ubuntu-latest`, 29-09-2026): OK.** Ejecución
+  https://github.com/22josmp-dev/agroprecios-cr/actions/runs/36525180702 del workflow
+  `.github/workflows/probe-fuentes.yml`: 11 boletines listados, PDF del 28-09 descargado con el
+  mismo SHA-256 que la descarga local (`089940e6b6d3963c…`), 78 índices listados y el del tomate
+  descargado. No hubo bloqueo por IP de centro de datos. El servidor manda `Vary: User-Agent`,
+  pero con nuestro User-Agent de bot respondió normal.
+- Avisos de GitHub en esa ejecución: `actions/checkout@v4` y `actions/setup-python@v5` usan
+  Node 20 (obsoleto) y `ubuntu-latest` pasa a Ubuntu 26 desde el 19-10-2026. Se actualizarán las
+  versiones de las acciones en el workflow diario (Paso 3).
+- El acceso puede cambiar en el futuro. **Plan B si GitHub llegara a ser bloqueado (gratis):** ejecutar el mismo script en una computadora propia
   con el Programador de tareas de Windows (o cron en Linux/Raspberry Pi) y que haga `git push`
   de `/data`; GitHub Actions solo publicaría la app. Se documentará en el README.
 
