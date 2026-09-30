@@ -5,7 +5,7 @@
  "id": "aguacate-criollo",
  "nombre": "Aguacate Criollo",
  "unidad_precio": "Unidad",
- "generado_utc": "2026-09-30T02:08:45Z",
+ "generado_utc": "2026-09-30T22:59:46Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2018": [
