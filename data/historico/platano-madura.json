@@ -5,7 +5,7 @@
  "id": "platano-madura",
  "nombre": "Plátano Madura",
  "unidad_precio": "Unidad",
- "generado_utc": "2026-10-01T02:10:44Z",
+ "generado_utc": "2026-10-01T23:10:43Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2018": [

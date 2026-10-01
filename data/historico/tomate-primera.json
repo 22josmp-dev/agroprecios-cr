@@ -5,7 +5,7 @@
  "id": "tomate-primera",
  "nombre": "Tomate Primera",
  "unidad_precio": "Caja plástica (18 kg)",
- "generado_utc": "2026-10-01T02:10:44Z",
+ "generado_utc": "2026-10-01T23:10:43Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2018": [
@@ -119,6 +119,20 @@
    12782.61,
    13150.0,
    14952.38
+  ],
+  "2026": [
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   15076.92,
+   null,
+   null,
+   null
   ]
  },
  "oferta_tm": {
@@ -235,5 +249,7 @@
    1161.0
   ]
  },
- "meses_boletin_diario": []
+ "meses_boletin_diario": [
+  "2026-09"
+ ]
 }

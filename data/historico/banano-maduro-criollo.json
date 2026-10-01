@@ -5,7 +5,7 @@
  "id": "banano-maduro-criollo",
  "nombre": "Banano Maduro Criollo",
  "unidad_precio": "Unidad",
- "generado_utc": "2026-10-01T02:10:44Z",
+ "generado_utc": "2026-10-01T23:10:43Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2018": [
@@ -119,6 +119,20 @@
    30.0,
    30.0,
    30.0
+  ],
+  "2026": [
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   30.0,
+   null,
+   null,
+   null
   ]
  },
  "oferta_tm": {
@@ -235,5 +249,7 @@
    218.5
   ]
  },
- "meses_boletin_diario": []
+ "meses_boletin_diario": [
+  "2026-09"
+ ]
 }

@@ -5,7 +5,7 @@
  "id": "pepino",
  "nombre": "Pepino",
  "unidad_precio": "Kilo",
- "generado_utc": "2026-10-01T02:10:44Z",
+ "generado_utc": "2026-10-01T23:10:43Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2018": [
@@ -119,6 +119,20 @@
    350.0,
    490.0,
    290.48
+  ],
+  "2026": [
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   446.15,
+   null,
+   null,
+   null
   ]
  },
  "oferta_tm": {
@@ -235,5 +249,7 @@
    368.3
   ]
  },
- "meses_boletin_diario": []
+ "meses_boletin_diario": [
+  "2026-09"
+ ]
 }

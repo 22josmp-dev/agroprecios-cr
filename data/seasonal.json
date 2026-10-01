@@ -2,7 +2,7 @@
  "esquema": 1,
  "fuente": "PIMA – SIMM",
  "datos_de_ejemplo": false,
- "generado_utc": "2026-10-01T02:10:44Z",
+ "generado_utc": "2026-10-01T23:10:43Z",
  "edicion_simm": [
   2026
  ],
@@ -194,7 +194,7 @@
     "apio-verde-mata"
    ],
    "unidad_precio": "Mata",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "alta",
    "indice": [
     0.903,
@@ -270,7 +270,7 @@
     0.9695,
     0.9136
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -368,7 +368,7 @@
     "ayote-sazon"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     0.9947,
@@ -444,7 +444,7 @@
     1.1663,
     1.0234
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -630,7 +630,7 @@
     "banano-maduro-criollo"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "alta",
    "indice": [
     0.9862,
@@ -706,7 +706,7 @@
     0.9114,
     0.8914
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -890,7 +890,7 @@
     "brocoli"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.1324,
@@ -966,7 +966,7 @@
     1.0025,
     0.8309
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -978,7 +978,7 @@
     "camote"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.1049,
@@ -1054,7 +1054,7 @@
     1.0298,
     0.8928
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -1238,7 +1238,7 @@
     "cebolla-seca-amarilla-burra"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.151,
@@ -1314,7 +1314,7 @@
     1.1032,
     0.916
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -1326,7 +1326,7 @@
     "cebolla-seca-amarilla-suelta"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.0797,
@@ -1402,7 +1402,7 @@
     0.9289,
     0.7088
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -1414,7 +1414,7 @@
     "cebolla-seca-amarilla-trenza"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.0803,
@@ -1490,7 +1490,7 @@
     0.9659,
     0.7436
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -1502,7 +1502,7 @@
     "cebolla-seca-morada"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.2088,
@@ -1578,7 +1578,7 @@
     1.0649,
     0.8351
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -1678,7 +1678,7 @@
     "chayote-tierno-criollo"
    ],
    "unidad_precio": "Java",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     0.7298,
@@ -1754,7 +1754,7 @@
     1.1756,
     1.0848
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -1766,7 +1766,7 @@
     "chayote-tierno-quelite"
    ],
    "unidad_precio": "Java",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     0.9978,
@@ -1842,7 +1842,7 @@
     1.0793,
     1.0137
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -2122,7 +2122,7 @@
     "coliflor"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     0.9562,
@@ -2198,7 +2198,7 @@
     0.953,
     0.8853
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -2210,7 +2210,7 @@
     "culantro-castilla"
    ],
    "unidad_precio": "Rollo de 10 rollitos",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     0.7544,
@@ -2286,7 +2286,7 @@
     0.9187,
     0.9273
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -2298,7 +2298,7 @@
     "elote"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "alta",
    "indice": [
     1.0604,
@@ -2374,7 +2374,7 @@
     1.0538,
     0.9016
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -2823,8 +2823,8 @@
     "jengibre-sazon"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 4,
-   "confianza": "media",
+   "years_of_data": 5,
+   "confianza": "alta",
    "indice": [
     0.9615,
     0.9472,
@@ -2899,7 +2899,7 @@
     0.921,
     0.8447
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -3006,7 +3006,7 @@
     "lechuga-americana"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "alta",
    "indice": [
     1.0102,
@@ -3082,7 +3082,7 @@
     1.0106,
     0.9305
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -3094,7 +3094,7 @@
     "limon-mandarina"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "alta",
    "indice": [
     0.746,
@@ -3170,7 +3170,7 @@
     1.056,
     0.9384
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -3182,7 +3182,7 @@
     "limon-mesino"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "alta",
    "indice": [
     1.5234,
@@ -3258,7 +3258,7 @@
     0.9182,
     0.7399
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -3270,7 +3270,7 @@
     "mamon-chino-injertado"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     null,
@@ -3353,7 +3353,7 @@
     0.3222,
     null
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": null
   },
   {
@@ -3454,7 +3454,7 @@
     "manga-grande-cavallini"
    ],
    "unidad_precio": "Caja plástica (17 kg)",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.4545,
@@ -3530,7 +3530,7 @@
     0.4936,
     0.3844
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -3634,7 +3634,7 @@
     "manga-grande-keitt"
    ],
    "unidad_precio": "Caja plástica (17 kg)",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.4813,
@@ -3710,7 +3710,7 @@
     0.5314,
     0.5172
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -4158,7 +4158,7 @@
     "melon-cantaloupe"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "alta",
    "indice": [
     0.8572,
@@ -4234,7 +4234,7 @@
     0.341,
     0.5446
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -4603,7 +4603,7 @@
     "nampi"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "alta",
    "indice": [
     0.8307,
@@ -4679,7 +4679,7 @@
     0.9964,
     1.0056
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -4691,7 +4691,7 @@
     "naranja-dulce"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "alta",
    "indice": [
     0.9737,
@@ -4767,7 +4767,7 @@
     0.9774,
     0.8804
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -4951,7 +4951,7 @@
     "papa-amarilla-primera"
    ],
    "unidad_precio": "Malla (45 kg)",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.0388,
@@ -5027,7 +5027,7 @@
     1.0604,
     0.976
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -5039,7 +5039,7 @@
     "papa-blanca-primera"
    ],
    "unidad_precio": "Malla (45 kg)",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.1045,
@@ -5115,7 +5115,7 @@
     0.8828,
     0.8872
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -5213,7 +5213,7 @@
     "papaya-hibrida"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.2522,
@@ -5289,7 +5289,7 @@
     0.9736,
     0.7216
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -5389,7 +5389,7 @@
     "pepino"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.2328,
@@ -5465,7 +5465,7 @@
     1.0198,
     0.8843
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -5477,7 +5477,7 @@
     "pina-grande"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "alta",
    "indice": [
     1.0187,
@@ -5553,7 +5553,7 @@
     1.03,
     0.7923
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -5918,7 +5918,7 @@
     "remolacha"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "alta",
    "indice": [
     1.106,
@@ -5994,7 +5994,7 @@
     0.8878,
     0.7823
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -6006,7 +6006,7 @@
     "repollo-morado"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.1567,
@@ -6082,7 +6082,7 @@
     1.0443,
     0.8612
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -6094,7 +6094,7 @@
     "repollo-verde"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.2919,
@@ -6170,7 +6170,7 @@
     0.9321,
     0.8384
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -6182,7 +6182,7 @@
     "sandia-de-campo-grande"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.0245,
@@ -6258,7 +6258,7 @@
     0.8499,
     0.8451
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -6270,7 +6270,7 @@
     "sandia-de-campo-mediana"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.0031,
@@ -6346,7 +6346,7 @@
     0.8207,
     0.7644
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -6444,7 +6444,7 @@
     "tiquisque"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "alta",
    "indice": [
     0.984,
@@ -6520,7 +6520,7 @@
     0.9861,
     0.9242
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -6532,7 +6532,7 @@
     "tomate-primera"
    ],
    "unidad_precio": "Caja plástica (18 kg)",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.0937,
@@ -6608,7 +6608,7 @@
     1.0087,
     0.8064
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   },
   {
@@ -6620,7 +6620,7 @@
     "vainica"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 8,
+   "years_of_data": 9,
    "confianza": "baja",
    "indice": [
     1.2356,
@@ -6696,7 +6696,7 @@
     0.969,
     0.9009
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": 0.0
   }
  ],
