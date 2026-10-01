@@ -3,9 +3,9 @@
  "fuente": "PIMA – SIMM",
  "datos_de_ejemplo": false,
  "estado": "ok",
- "mensaje": "Boletines nuevos: 2026-09-30",
- "ultimo_intento_utc": "2026-09-30T22:59:34Z",
- "ultima_actualizacion_exitosa_utc": "2026-09-30T22:59:34Z",
+ "mensaje": "Sin boletines nuevos; los datos están al día.",
+ "ultimo_intento_utc": "2026-10-01T02:10:30Z",
+ "ultima_actualizacion_exitosa_utc": "2026-10-01T02:10:30Z",
  "fecha_boletin": "2026-09-30",
  "registros": 65,
  "rechazados": 0,
@@ -59,6 +59,11 @@
    "utc": "2026-09-30T22:59:34Z",
    "estado": "ok",
    "mensaje": "Boletines nuevos: 2026-09-30"
+  },
+  {
+   "utc": "2026-10-01T02:10:30Z",
+   "estado": "ok",
+   "mensaje": "Sin boletines nuevos; los datos están al día."
   }
  ]
 }
