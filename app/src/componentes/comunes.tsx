@@ -1,6 +1,6 @@
 import { useMemo, useRef, useState } from "preact/hooks";
 import { buscar, type Entrada } from "../buscar";
-import { fechaCorta, fechaLarga } from "../fechas";
+import { fechaConAnio, fechaCorta } from "../fechas";
 import { alternarFavorito, useFavoritos } from "../favoritos";
 import { colones, direccion, porcentaje } from "../formato";
 import type { Frescura } from "../frescura";
@@ -18,25 +18,24 @@ export function AvisoEjemplo() {
 export function EstadoDatos({ f, fechaDiario, otras }: {
   f: Frescura; fechaDiario: string | null; otras?: Record<string, MetaFuente>;
 }) {
-  // Las tres líneas con el mismo formato: "<Boletín> (<frecuencia>): boletín del <fecha>"
+  // Primero lo que importa: de qué fecha son los precios. La hora de revisión va al final.
   const lineas = [
-    { nombre: "Frutas y hortalizas", frecuencia: "diario", fecha: fechaDiario, error: false },
-    ...Object.values(otras || {}).map((o) => ({ nombre: o.nombre, frecuencia: o.frecuencia, fecha: o.fecha_boletin, error: o.estado === "error" })),
+    { nombre: "Frutas y hortalizas", fecha: fechaDiario },
+    ...Object.values(otras || {}).map((o) => ({ nombre: o.nombre, fecha: o.fecha_boletin })),
   ].filter((l) => l.fecha);
   return (
-    <section class="estado" aria-label="Estado de los datos">
-      <p>{f.ultimaRevision}</p>
-      <ul class="boletines">
+    <section class="estado" aria-labelledby="t-estado">
+      <p id="t-estado" class="estado-titulo">Precios de los boletines más recientes</p>
+      <dl class="boletines">
         {lineas.map((l) => (
-          <li key={l.nombre}>
-            <strong>{l.nombre} ({l.frecuencia}):</strong> boletín del {fechaLarga(l.fecha!, true)}
-            {l.frecuencia === "diario" && f.insigniaDato && <> <span class="insignia">{f.insigniaDato}</span></>}
-            {l.error && " · el último intento de actualización no se completó"}
-          </li>
+          <div key={l.nombre}>
+            <dt>{l.nombre}</dt>
+            <dd>{fechaConAnio(l.fecha!)}</dd>
+          </div>
         ))}
-      </ul>
+      </dl>
+      <p class="revision">{f.revisado}: {f.resultadoRevision}</p>
       {f.desactualizado && <p class="aviso" role="alert"><span aria-hidden="true">⚠ </span>{f.desactualizado}</p>}
-      {!f.desactualizado && f.ultimoIntentoFallo && <p class="nota">{f.ultimoIntentoFallo}</p>}
     </section>
   );
 }

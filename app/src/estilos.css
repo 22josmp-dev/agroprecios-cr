@@ -137,8 +137,12 @@ small { font-size: 0.85em; color: var(--texto-2); }
 .tarjeta-precio small { font-weight: 400; }
 .tarjeta .variacion { justify-self: end; }
 .tarjeta-origen { grid-column: 1 / -1; font-size: 0.85rem; color: var(--texto-2); }
-.estado .boletines { list-style: none; padding: 0; margin: 4px 0 0; }
-.estado .boletines li { margin: 2px 0; }
+.estado-titulo { font-weight: 700; margin: 0 0 6px !important; }
+.estado .boletines { margin: 0; }
+.estado .boletines div { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; border-bottom: 1px dotted var(--borde); }
+.estado .boletines dt { margin: 0; }
+.estado .boletines dd { margin: 0; font-weight: 700; white-space: nowrap; }
+.estado .revision { margin-top: 8px !important; font-size: 0.9rem; color: var(--texto-2); }
 .tarjeta .estrella { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); }
 .estrella {
   width: 48px; height: 48px; border: none; background: transparent; font-size: 1.6rem; cursor: pointer; border-radius: 50%;

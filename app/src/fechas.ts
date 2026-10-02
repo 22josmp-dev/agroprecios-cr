@@ -22,6 +22,12 @@ export function fechaLarga(iso: string, conAnio = false): string {
   return `${d} de ${MESES[m - 1]}${conAnio ? ` de ${a}` : ""}`;
 }
 
+/** "2026-09-28" -> "28 set. 2026" */
+export function fechaConAnio(iso: string): string {
+  const [a, m, d] = iso.split("-").map(Number);
+  return `${d} ${MESES_CORTOS[m - 1]}. ${a}`;
+}
+
 /** "2026-09-28" -> "28 set" */
 export function fechaCorta(iso: string): string {
   const [, m, d] = iso.split("-").map(Number);

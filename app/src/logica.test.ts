@@ -77,13 +77,14 @@ describe("frescura de los datos", () => {
     expect(f.insigniaDato).toBeNull();
     expect(f.desactualizado).toBeNull();
     expect(f.boletin).toBe("Boletín del 28 de setiembre de 2026");
-    expect(f.ultimaRevision).toBe("Última revisión de actualización hoy a las 2:00 p. m.");
+    expect(f.revisado).toBe("Revisado hoy a las 2:00 p. m.");
+    expect(f.resultadoRevision).toBe("no hay boletines más nuevos en el PIMA.");
     const f1 = frescura(meta({ ultimo_intento_utc: "2026-09-28T19:17:00Z" }), new Date("2026-09-28T22:00:00Z"));
-    expect(f1.ultimaRevision).toBe("Última revisión de actualización hoy a la 1:17 p. m.");
+    expect(f1.revisado).toBe("Revisado hoy a la 1:17 p. m.");
   });
   it("dato de otro día: insignia 'Dato del …' y revisión con fecha", () => {
     const f = frescura(meta({}), new Date("2026-09-29T20:00:00Z"));
-    expect(f.ultimaRevision).toBe("Última revisión de actualización el 28 de setiembre a las 2:00 p. m.");
+    expect(f.revisado).toBe("Revisado el 28 de setiembre a las 2:00 p. m.");
     expect(f.insigniaDato).toBe("Dato del 28 de setiembre");
     expect(f.desactualizado).toBeNull();
   });
@@ -91,6 +92,10 @@ describe("frescura de los datos", () => {
     const f = frescura(meta({ estado: "error" }), new Date("2026-10-02T21:00:00Z"));
     expect(f.desactualizado).toMatch(/desactualizada.*4 días/);
     expect(f.ultimoIntentoFallo).not.toBeNull();
+    expect(f.resultadoRevision).toBe("la revisión no se completó; se muestran los últimos datos válidos.");
+    const g = frescura(meta({ fuentes: { fruta: { nombre: "Fruta importada", frecuencia: "semanal", estado: "error", mensaje: "",
+      ultima_actualizacion_exitosa_utc: null, fecha_boletin: "2026-09-30", meses_precios: [] } } }), new Date("2026-09-28T22:00:00Z"));
+    expect(g.resultadoRevision).toBe("la revisión no se completó para fruta importada; se muestran los últimos datos válidos.");
   });
 });
 
