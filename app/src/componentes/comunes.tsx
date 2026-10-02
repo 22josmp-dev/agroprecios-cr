@@ -1,10 +1,11 @@
 import { useMemo, useRef, useState } from "preact/hooks";
 import { buscar, type Entrada } from "../buscar";
-import { fechaCorta } from "../fechas";
+import { fechaCorta, fechaLarga } from "../fechas";
 import { alternarFavorito, useFavoritos } from "../favoritos";
 import { colones, direccion, porcentaje } from "../formato";
 import type { Frescura } from "../frescura";
-import type { ProductoHoy } from "../tipos";
+import { fuente } from "../fuentes";
+import type { MetaFuente, ProductoHoy } from "../tipos";
 
 export function Fuente() {
   return <p class="fuente">Fuente: PIMA – SIMM. Precios mayoristas de referencia en el CENADA, productos de primera calidad.</p>;
@@ -14,11 +15,17 @@ export function AvisoEjemplo() {
   return <p class="aviso aviso-ejemplo" role="alert"><strong>DATOS DE EJEMPLO.</strong> Estos precios no son reales.</p>;
 }
 
-export function EstadoDatos({ f }: { f: Frescura }) {
+export function EstadoDatos({ f, otras }: { f: Frescura; otras?: Record<string, MetaFuente> }) {
   return (
     <section class="estado" aria-label="Estado de los datos">
       <p>{f.ultimaActualizacion}</p>
-      <p><strong>{f.boletin}</strong> {f.insigniaDato && <span class="insignia">{f.insigniaDato}</span>}</p>
+      <p><strong>{f.boletin.replace("Boletín", "Boletín diario")}</strong> {f.insigniaDato && <span class="insignia">{f.insigniaDato}</span>}</p>
+      {otras && Object.values(otras).filter((o) => o.fecha_boletin).map((o) => (
+        <p key={o.nombre} class="otras">
+          {o.nombre} ({o.frecuencia}): boletín del {fechaLarga(o.fecha_boletin!)}
+          {o.estado === "error" && " · el último intento de actualización no se completó"}
+        </p>
+      ))}
       {f.desactualizado && <p class="aviso" role="alert"><span aria-hidden="true">⚠ </span>{f.desactualizado}</p>}
       {!f.desactualizado && f.ultimoIntentoFallo && <p class="nota">{f.ultimoIntentoFallo}</p>}
     </section>
@@ -59,6 +66,7 @@ export function TarjetaProducto({ p }: { p: ProductoHoy }) {
         <span class="tarjeta-nombre">{p.nombre}</span>
         <span class="tarjeta-precio">{colones(p.promedio)} <small>por {p.unidad.toLowerCase()}</small></span>
         <Variacion pct={p.vs_anterior?.variacion_pct} contra={p.vs_anterior ? `vs ${fechaCorta(p.vs_anterior.fecha)}` : ""} compacta />
+        <span class="tarjeta-origen">{fuente(p.fuente).corto} · Boletín del {fechaCorta(p.fecha_boletin)}</span>
       </a>
       <Estrella id={p.id} nombre={p.nombre} />
     </li>

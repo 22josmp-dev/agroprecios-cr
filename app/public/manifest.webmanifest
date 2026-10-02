@@ -1,6 +1,6 @@
 {
-  "name": "Precios CENADA – PIMA SIMM",
-  "short_name": "Precios CENADA",
+  "name": "AgroPrecios CR",
+  "short_name": "AgroPrecios",
   "description": "Precios mayoristas del CENADA actualizados cada día, con guía de siembra informativa.",
   "lang": "es-CR",
   "start_url": "./",

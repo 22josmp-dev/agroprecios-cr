@@ -1,7 +1,8 @@
 # AgroPrecios CR
 
 App web informativa (PWA) con los precios mayoristas de referencia del CENADA, publicados por
-el **PIMA – SIMM**. Se actualiza sola cada día: nadie carga datos a mano.
+el **PIMA – SIMM** en tres boletines: diario (frutas y hortalizas), semanal (fruta importada) y
+quincenal (aromáticos y gourmet). Se actualiza sola cada día: nadie carga datos a mano.
 
 - **App pública:** https://22josmp-dev.github.io/agroprecios-cr/
 - **Motor:** `ingesta/` (Python) + `.github/workflows/diario.yml` (GitHub Actions)
@@ -12,8 +13,8 @@ el **PIMA – SIMM**. Se actualiza sola cada día: nadie carga datos a mano.
 
 ```
 13:17 y 17:17 (hora CR)  GitHub Actions
-  └─ python -m ingesta diario
-       ├─ lista de boletines en bpm.pima.go.cr (≈ 2 semanas visibles)
+  └─ python -m ingesta diario      (las 3 fuentes; una falla no detiene a las otras)
+       ├─ lista de cada boletín en bpm.pima.go.cr (11 visibles de cada uno)
        ├─ descarga los que falten (1 solicitud/s) y guarda el PDF en archivo/
        ├─ parsea, valida y escribe data/ (latest, prices, rejects, meta)
        └─ si algo falla: conserva los datos buenos, anota el error en data/meta.json
@@ -55,8 +56,10 @@ datos buenos; si pasan más de 3 días sin actualización exitosa, avisa que pue
 | `Solo N registros válidos…` | El PDF trae muchos menos productos o el parser perdió filas | Revisar `data/rejects/` y el PDF en `archivo/`. Si el boletín es así de verdad, reprocesar con `UMBRAL_REGISTROS` más bajo |
 | `producto no reconocido` en `data/rejects/` | Producto nuevo o renombrado | Agregarlo a `data/catalog.json` y reprocesar |
 
-⚠️ Solo se ven ~2 semanas de boletines en el sitio del PIMA: un problema sin atender por más
-tiempo pierde esos días.
+⚠️ El sitio del PIMA solo muestra los últimos 11 boletines de cada tipo: ~2 semanas del diario,
+~2,5 meses de fruta importada y ~5 meses de aromáticos. Un problema sin atender por más tiempo
+pierde esos boletines. Los mensajes de error indican la fuente ("Fruta importada", etc.); el
+comando acepta `--fuente diario|fruta|aromaticos` para procesar o reprocesar solo una.
 
 **Plan B (si GitHub fuera bloqueado por el PIMA):** correr el mismo motor en una computadora
 propia con el Programador de tareas de Windows y hacer `git push` de `data/` y `archivo/`

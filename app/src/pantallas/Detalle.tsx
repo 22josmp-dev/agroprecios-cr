@@ -6,7 +6,8 @@ import { cargarHistorico, cargarSeasonal, serieDiaria } from "../datos";
 import { diasEntre, fechaCorta, fechaLarga, MESES, MESES_CORTOS } from "../fechas";
 import { colones } from "../formato";
 import { normalizar } from "../texto";
-import type { Historico, IndiceProducto } from "../tipos";
+import { fuente } from "../fuentes";
+import type { Historico, IdFuente, IndiceProducto } from "../tipos";
 
 /** Kilos por unidad solo si están escritos: "Kilo" -> 1, "Caja plástica (18 kg)" -> 18. */
 export function kgDeUnidad(unidad: string | null | undefined): number | null {
@@ -18,16 +19,22 @@ export function kgDeUnidad(unidad: string | null | undefined): number | null {
   return m[2].toLowerCase() === "g" ? v / 1000 : v;
 }
 
-type Rango = "7d" | "30d" | "12m" | "anios";
-const RANGOS: { id: Rango; nombre: string }[] = [
-  { id: "7d", nombre: "7 días" }, { id: "30d", nombre: "30 días" }, { id: "12m", nombre: "12 meses" }, { id: "anios", nombre: "Años anteriores" },
-];
+type Rango = "7d" | "30d" | "3m" | "12m" | "anios";
+// El boletín diario tiene historial del SIMM; los semanales/quincenales, solo su propio historial
+const RANGOS: Record<IdFuente, { id: Rango; nombre: string }[]> = {
+  diario: [{ id: "7d", nombre: "7 días" }, { id: "30d", nombre: "30 días" }, { id: "12m", nombre: "12 meses" }, { id: "anios", nombre: "Años anteriores" }],
+  fruta: [{ id: "3m", nombre: "3 meses" }, { id: "12m", nombre: "12 meses" }],
+  aromaticos: [{ id: "3m", nombre: "3 meses" }, { id: "12m", nombre: "12 meses" }],
+};
 
 export function Detalle({ datos, id }: { datos: DatosBase; id: string }) {
-  const p = datos.latest.productos.find((x) => x.id === id);
+  // Un producto puede venderse en más de una unidad (p. ej. Manzana Gala en dos tamaños de caja)
+  const variantes = datos.latest.productos.filter((x) => x.id === id);
+  const [iUnidad, setIUnidad] = useState(0);
+  const p = variantes[Math.min(iUnidad, variantes.length - 1)];
   const cat = datos.catalogo.productos.find((x) => x.id === id);
   const [porKilo, setPorKilo] = useState(false);
-  const [rango, setRango] = useState<Rango>("30d");
+  const [rango, setRango] = useState<Rango>(p && p.fuente !== "diario" ? "3m" : "30d");
   const [diaria, setDiaria] = useState<{ fecha: string; promedio: number }[]>([]);
   // undefined = cargando · null = no existe · "error" = no se pudo cargar (p. ej. sin conexión)
   const [indice, setIndice] = useState<IndiceProducto | null | undefined | "error">(undefined);
@@ -35,13 +42,16 @@ export function Detalle({ datos, id }: { datos: DatosBase; id: string }) {
 
   useEffect(() => {
     if (!p) return;
-    // Meses con precios diarios: de meta.json o, si falta, los 13 meses hasta el boletín
-    const [a, m] = datos.latest.fecha_boletin.split("-").map(Number);
+    // Meses con precios: de meta.json o, si falta, los 13 meses hasta el boletín
+    const [a, m] = p.fecha_boletin.split("-").map(Number);
     const respaldo = Array.from({ length: 13 }, (_, i) => {
       const k = a * 12 + m - 1 - (12 - i);
       return `${Math.floor(k / 12)}-${String((k % 12) + 1).padStart(2, "0")}`;
     });
-    serieDiaria(datos.meta.meses_precios?.slice(-13) ?? respaldo, p.id, p.unidad).then(setDiaria).catch(() => setDiaria([]));
+    const meses = p.fuente === "diario" ? datos.meta.meses_precios : datos.meta.fuentes?.[p.fuente]?.meses_precios;
+    serieDiaria(meses?.slice(-13) ?? respaldo, p.id, p.unidad, p.fuente).then(setDiaria).catch(() => setDiaria([]));
+    // Índices estacionales e historial del SIMM: solo existen para productos del boletín diario
+    if (p.fuente !== "diario") { setIndice(null); setHistorico(null); return; }
     cargarSeasonal().then((s) => {
       const exacto = s.productos.find((x) => x.productos_boletin.includes(p.id));
       const delCultivo = s.productos.find((x) => x.cultivo_id === p.cultivo_id);
@@ -49,13 +59,13 @@ export function Detalle({ datos, id }: { datos: DatosBase; id: string }) {
       setIndice(elegido);
       if (elegido) cargarHistorico(elegido.id).then(setHistorico).catch(() => setHistorico(null));
     }).catch(() => setIndice("error"));
-  }, [id]);
+  }, [id, iUnidad]);
 
   if (!p) {
     return (
       <section>
         <h1>{cat?.nombre ?? "Producto"}</h1>
-        <p class="aviso">Este producto no aparece en el boletín más reciente ({fechaLarga(datos.latest.fecha_boletin)}).</p>
+        <p class="aviso">Este producto no aparece en el boletín más reciente de su tipo.</p>
         <p><a href="#/">Volver a los precios</a></p>
         <Fuente />
       </section>
@@ -65,7 +75,8 @@ export function Detalle({ datos, id }: { datos: DatosBase; id: string }) {
   const kg = p.kg;
   const factor = porKilo && kg ? 1 / kg : 1;
   const unidadTexto = porKilo && kg ? "kilo" : p.unidad.toLowerCase();
-  const hoyBoletin = datos.latest.fecha_boletin;
+  const hoyBoletin = p.fecha_boletin;
+  const textoPromedio = datos.latest.fuentes?.[p.fuente]?.texto_promedio ?? "los últimos 30 días";
   const exacto = !!indice && indice !== "error" && indice.productos_boletin.includes(p.id);
   const mismaUnidad = !!historico && normalizar(historico.unidad_precio || "") === normalizar(p.unidad);
   const kgHistorico = kgDeUnidad(historico?.unidad_precio);
@@ -78,6 +89,13 @@ export function Detalle({ datos, id }: { datos: DatosBase; id: string }) {
         <Estrella id={p.id} nombre={p.nombre} />
       </div>
 
+      {variantes.length > 1 && (
+        <div class="selector-unidad" role="radiogroup" aria-label="Unidad de venta">
+          {variantes.map((v, i) => (
+            <button key={v.unidad} type="button" role="radio" aria-checked={i === iUnidad} onClick={() => { setIUnidad(i); setPorKilo(false); }}>{v.unidad}</button>
+          ))}
+        </div>
+      )}
       {kg && kg !== 1 && (
         <div class="selector-unidad" role="radiogroup" aria-label="Ver precio">
           <button type="button" role="radio" aria-checked={!porKilo} onClick={() => setPorKilo(false)}>Por {p.unidad.toLowerCase()}</button>
@@ -96,7 +114,7 @@ export function Detalle({ datos, id }: { datos: DatosBase; id: string }) {
           <div><dt>Mínimo</dt><dd>{colones(p.minimo * factor)}</dd></div>
           <div><dt>Máximo</dt><dd>{colones(p.maximo * factor)}</dd></div>
         </dl>
-        <p class="nota">Boletín del {fechaLarga(hoyBoletin)} · {p.unidad}{kg && !/\d\s*k?g/i.test(p.unidad) && kg !== 1 ? ` (${kg} kg)` : ""}</p>
+        <p class="nota">{fuente(p.fuente).nombre} del {fechaLarga(hoyBoletin)} · {p.unidad}{kg && !/\d\s*k?g/i.test(p.unidad) && kg !== 1 ? ` (${kg} kg)` : ""}</p>
       </section>
 
       <section aria-labelledby="t-cambios">
@@ -104,23 +122,25 @@ export function Detalle({ datos, id }: { datos: DatosBase; id: string }) {
         <ul class="cambios">
           <li><span>Boletín anterior{p.vs_anterior ? ` (${fechaCorta(p.vs_anterior.fecha)})` : ""}</span>
             <Variacion pct={p.vs_anterior?.variacion_pct} contra="" /></li>
-          <li><span>Semana pasada{p.vs_semana ? ` (${fechaCorta(p.vs_semana.fecha)})` : ""}</span>
-            <Variacion pct={p.vs_semana?.variacion_pct} contra="" /></li>
-          <li><span>Promedio de 30 días{p.vs_30d ? ` (${p.vs_30d.dias} boletines)` : ""}</span>
-            <Variacion pct={p.vs_30d?.variacion_pct} contra="" /></li>
+          {p.fuente === "diario" && (
+            <li><span>Semana pasada{p.vs_semana ? ` (${fechaCorta(p.vs_semana.fecha)})` : ""}</span>
+              <Variacion pct={p.vs_semana?.variacion_pct} contra="" /></li>
+          )}
+          <li><span>Promedio de {textoPromedio}{p.vs_promedio ? ` (${p.vs_promedio.boletines} boletines)` : ""}</span>
+            <Variacion pct={p.vs_promedio?.variacion_pct} contra="" /></li>
         </ul>
       </section>
 
       <section aria-labelledby="t-tendencia">
         <h2 id="t-tendencia">Tendencia</h2>
         <div class="filtros" role="group" aria-label="Período">
-          {RANGOS.map((r) => <button key={r.id} type="button" aria-pressed={rango === r.id} onClick={() => setRango(r.id)}>{r.nombre}</button>)}
+          {RANGOS[p.fuente].map((r) => <button key={r.id} type="button" aria-pressed={rango === r.id} onClick={() => setRango(r.id)}>{r.nombre}</button>)}
         </div>
-        {(rango === "7d" || rango === "30d") && (
-          <TendenciaDiaria puntos={diaria} dias={rango === "7d" ? 7 : 30} hasta={hoyBoletin} factor={factor} unidad={unidadTexto} />
+        {(rango === "7d" || rango === "30d" || rango === "3m") && (
+          <TendenciaDiaria puntos={diaria} dias={rango === "7d" ? 7 : rango === "30d" ? 30 : 91} hasta={hoyBoletin} factor={factor} unidad={unidadTexto} />
         )}
         {rango === "12m" && (
-          <DoceMeses historico={mismaUnidad ? historico : null} diaria={diaria} hasta={hoyBoletin} factor={factor} unidad={unidadTexto} />
+          <DoceMeses soloBoletin={p.fuente !== "diario"} historico={mismaUnidad && p.fuente === "diario" ? historico : null} diaria={diaria} hasta={hoyBoletin} factor={factor} unidad={unidadTexto} />
         )}
         {rango === "anios" && (
           historico
@@ -131,13 +151,13 @@ export function Detalle({ datos, id }: { datos: DatosBase; id: string }) {
         )}
       </section>
 
-      <section aria-labelledby="t-indice">
+      {p.fuente === "diario" && <section aria-labelledby="t-indice">
         <h2 id="t-indice">¿En qué meses suele estar mejor el precio?</h2>
         {indice === undefined && <p class="cargando">Cargando…</p>}
         {indice === null && <p class="sin-datos">El SIMM no publica índice estacional para este producto.</p>}
         {indice === "error" && <p class="sin-datos">No se pudo cargar esta información. Revise su conexión e intente de nuevo.</p>}
         {indice && indice !== "error" && <BloqueIndice indice={indice} exacto={exacto} />}
-      </section>
+      </section>}
 
       {historico && Object.keys(historico.oferta_tm).length > 0 && (
         <section aria-labelledby="t-oferta">
@@ -157,17 +177,18 @@ function TendenciaDiaria({ puntos, dias, hasta, factor, unidad }: {
   const desde = -(dias - 1);
   const visibles = puntos.filter((q) => { const d = diasEntre(hasta, q.fecha); return d >= desde && d <= 0; });
   if (visibles.length < 2) return <p class="sin-datos">Aún no hay suficientes boletines en este período.</p>;
+  const periodo = dias <= 30 ? `los últimos ${dias} días` : "los últimos 3 meses";
   const x = (f: string) => diasEntre(hasta, f);
   const serie: Serie = { id: "p", nombre: `Precio promedio por ${unidad}`, color: "var(--serie-1)",
     puntos: visibles.map((q) => ({ x: x(q.fecha), y: q.promedio * factor })) };
   const etiqueta = (v: number) => fechaCorta(new Date(Date.parse(hasta) + v * 86_400_000).toISOString().slice(0, 10));
-  const ticks = dias === 7 ? [-6, -3, 0] : [-28, -21, -14, -7, 0];
-  return <GraficoLineas titulo={`Precio promedio de los últimos ${dias} días`} descripcion={`Precio promedio por ${unidad} en cada boletín.`}
+  const ticks = dias === 7 ? [-6, -3, 0] : dias === 30 ? [-28, -21, -14, -7, 0] : [-84, -56, -28, 0];
+  return <GraficoLineas titulo={`Precio promedio de ${periodo}`} descripcion={`Precio promedio por ${unidad} en cada boletín.`}
     series={[serie]} etiquetaX={etiqueta} ticksX={ticks.filter((t) => t >= desde)} formatoY={colones} />;
 }
 
-function DoceMeses({ historico, diaria, hasta, factor, unidad }: {
-  historico: Historico | null; diaria: { fecha: string; promedio: number }[]; hasta: string; factor: number; unidad: string;
+function DoceMeses({ historico, diaria, hasta, factor, unidad, soloBoletin = false }: {
+  soloBoletin?: boolean; historico: Historico | null; diaria: { fecha: string; promedio: number }[]; hasta: string; factor: number; unidad: string;
 }) {
   const [a, m] = hasta.split("-").map(Number);
   const fin = a * 12 + (m - 1);
@@ -186,6 +207,7 @@ function DoceMeses({ historico, diaria, hasta, factor, unidad }: {
   });
   const hayDatos = puntos.filter((q) => q.y !== null).length;
   if (hayDatos < 2) {
+    if (soloBoletin) return <p class="sin-datos">Todavía no hay suficientes meses de datos; se irán completando con cada boletín.</p>;
     return <p class="sin-datos">Todavía no hay 12 meses de datos para este producto. El historial mensual del SIMM llega hasta
       diciembre de 2025 y el boletín diario se recopila desde setiembre de 2026; los meses intermedios se irán completando.</p>;
   }
@@ -195,7 +217,9 @@ function DoceMeses({ historico, diaria, hasta, factor, unidad }: {
         series={[{ id: "m", nombre: `Promedio mensual por ${unidad}`, color: "var(--serie-1)", puntos }]}
         etiquetaX={(k) => `${MESES_CORTOS[k % 12]} ${String(Math.floor(k / 12)).slice(2)}`}
         ticksX={puntos.filter((_, i) => i % 3 === 2).map((q) => q.x)} formatoY={colones} />
-      <p class="nota">Meses sin dato quedan en blanco. Hasta 2025: promedio mensual del SIMM; desde setiembre de 2026: promedio de los boletines diarios.</p>
+      <p class="nota">{soloBoletin
+        ? "Promedio mensual de los boletines publicados; los meses sin dato quedan en blanco."
+        : "Meses sin dato quedan en blanco. Hasta 2025: promedio mensual del SIMM; desde setiembre de 2026: promedio de los boletines diarios."}</p>
     </>
   );
 }

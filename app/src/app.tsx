@@ -49,13 +49,13 @@ export function App() {
 
   const pantalla = ruta[0] || "inicio";
   const titulo = { inicio: "Inicio", producto: "Detalle", guia: "Guía de siembra", ayuda: "Ayuda" }[pantalla] ?? "Inicio";
-  useEffect(() => { document.title = `${titulo} · Precios CENADA`; }, [titulo]);
+  useEffect(() => { document.title = `${titulo} · AgroPrecios CR`; }, [titulo]);
 
   return (
     <>
       <a class="saltar" href="#contenido">Saltar al contenido</a>
       <header class="barra">
-        <a href="#/" class="marca"><span aria-hidden="true">🌱</span> Precios CENADA</a>
+        <a href="#/" class="marca"><span aria-hidden="true">🌱</span> AgroPrecios CR</a>
       </header>
       {!enLinea && <p class="aviso sin-conexion" role="status">Sin conexión: se muestran los últimos datos guardados en el teléfono.</p>}
       <main id="contenido" tabIndex={-1}>
@@ -64,7 +64,14 @@ export function App() {
         {datos && (
           <>
             {(datos.meta.datos_de_ejemplo || datos.latest.datos_de_ejemplo) && <AvisoEjemplo />}
-            {pantalla !== "ayuda" && <EstadoDatos f={frescura(datos.meta)} />}
+            {pantalla === "inicio" && (
+              <p class="origen-datos">
+                Precios mayoristas de referencia del <strong>CENADA</strong>, tomados de los boletines que publica el
+                <strong> PIMA – SIMM</strong>: diario (frutas y hortalizas), semanal (fruta importada) y quincenal
+                (aromáticos y gourmet). AgroPrecios CR es una app informativa independiente, no oficial del PIMA.
+              </p>
+            )}
+            {pantalla !== "ayuda" && <EstadoDatos f={frescura(datos.meta)} otras={datos.meta.fuentes} />}
             {pantalla === "inicio" && <Inicio datos={datos} />}
             {pantalla === "producto" && <Detalle datos={datos} id={ruta[1]} />}
             {pantalla === "guia" && <Guia inicial={ruta[1]} />}

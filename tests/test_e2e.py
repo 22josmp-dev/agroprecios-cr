@@ -53,7 +53,7 @@ class Escenario:
     def correr(self, ahora: str, ultimo=False) -> int:
         env = {**os.environ, "PIMA_BASE_URL": self.pima.url, "PIMA_INTERVALO_MIN_S": "0.01",
                "PIMA_ESPERA_BASE_S": "0.01", "PYTHONIOENCODING": "utf-8"}
-        cmd = [sys.executable, "-m", "ingesta", "diario", "--ahora", ahora] + (["--ultimo-intento"] if ultimo else [])
+        cmd = [sys.executable, "-m", "ingesta", "diario", "--fuente", "diario", "--ahora", ahora] + (["--ultimo-intento"] if ultimo else [])
         r = subprocess.run(cmd, cwd=self.raiz, env=env, capture_output=True, text=True, encoding="utf-8", timeout=300)
         self.salida = r.stdout + r.stderr
         return r.returncode

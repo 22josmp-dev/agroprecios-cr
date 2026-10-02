@@ -44,14 +44,25 @@ def leer_json(ruta: Path, defecto=None):
 
 
 class Almacen:
-    def __init__(self, raiz: Path):
+    """Rutas de una fuente (boletín). El diario usa las rutas originales: data/prices, data/rejects,
+    archivo/; las otras fuentes, subcarpetas (data/prices/fruta, archivo/fruta, …)."""
+
+    def __init__(self, raiz: Path, fuente=None):
+        from .config import DIARIO
         self.raiz = Path(raiz)
+        self.fuente = fuente or DIARIO
         self.data = self.raiz / "data"
         self.archivo = self.raiz / "archivo"
+        self.dir_precios = self.data / self.fuente.dir_precios
+        self.dir_rechazos = self.data / self.fuente.dir_rechazos
+        self.archivo_fuente = self.raiz / self.fuente.dir_archivo
+
+    def de(self, fuente) -> "Almacen":
+        return Almacen(self.raiz, fuente)
 
     # --- precios mensuales -------------------------------------------------
     def ruta_mes(self, anio: int, mes: int) -> Path:
-        return self.data / "prices" / f"{anio:04d}-{mes:02d}.json"
+        return self.dir_precios / f"{anio:04d}-{mes:02d}.json"
 
     def leer_mes(self, anio: int, mes: int) -> dict:
         return leer_json(self.ruta_mes(anio, mes)) or {
@@ -89,20 +100,20 @@ class Almacen:
 
     def fechas_con_datos(self) -> list[date]:
         fechas = []
-        for ruta in sorted((self.data / "prices").glob("*.json")):
+        for ruta in sorted(self.dir_precios.glob("*.json")):
             fechas += [date.fromisoformat(f) for f in (leer_json(ruta) or {}).get("dias", {})]
         return sorted(fechas)
 
     # --- rechazos ------------------------------------------------------------
     def guardar_rechazos(self, fecha: date, sha256: str, rechazos: list[dict], momento: str) -> None:
-        escribir_json(self.data / "rejects" / f"{fecha.isoformat()}.json", {
+        escribir_json(self.dir_rechazos / f"{fecha.isoformat()}.json", {
             "esquema": 1, "fecha_boletin": fecha.isoformat(), "sha256": sha256, "generado_utc": momento,
             "total": len(rechazos), "rechazados": rechazos,
         })
 
     # --- archivo de PDF originales --------------------------------------------
     def guardar_pdf(self, fecha: date, sha256: str, datos: bytes) -> str:
-        ruta = self.archivo / "boletines" / f"{fecha.year:04d}" / f"{fecha.isoformat()}_{sha256[:12]}.pdf"
+        ruta = self.archivo_fuente / "boletines" / f"{fecha.year:04d}" / f"{fecha.isoformat()}_{sha256[:12]}.pdf"
         if not ruta.exists():
             ruta.parent.mkdir(parents=True, exist_ok=True)
             tmp = ruta.with_suffix(".tmp")
@@ -111,10 +122,10 @@ class Almacen:
         return ruta.relative_to(self.raiz).as_posix()
 
     def registro(self) -> list[dict]:
-        return leer_json(self.archivo / "registro.json", [])
+        return leer_json(self.archivo_fuente / "registro.json", [])
 
     def guardar_registro(self, entradas: list[dict]) -> None:
-        escribir_json(self.archivo / "registro.json", sorted(entradas, key=lambda e: (e["fecha"], e["descargado_utc"])))
+        escribir_json(self.archivo_fuente / "registro.json", sorted(entradas, key=lambda e: (e["fecha"], e["descargado_utc"])))
 
     # --- meta / latest ----------------------------------------------------------
     def meta(self) -> dict:

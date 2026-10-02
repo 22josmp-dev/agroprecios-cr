@@ -25,7 +25,7 @@ class PIMAFalso:
     def verificar_robots(self):
         return "robots simulado"
 
-    def listar_boletines(self):
+    def listar_boletines(self, cm=4):
         if self.falla_lista:
             raise ErrorFuente("HTTP 503 simulado")
         return [EntradaBoletin(f, f"Plaza X {f:%d-%m-%Y}", f"https://pima/{f}") for f in sorted(self.pdfs, reverse=True)]
@@ -64,7 +64,7 @@ def test_primera_carga(repo_temporal):
     assert tomate["vs_anterior"]["fecha"] == "2026-09-24"
     assert tomate["precio_kg"] == round(tomate["promedio"] / 18, 2)
     assert tomate["vs_semana"] is None  # no hay muestra del 21-09 ni anteriores dentro de la ventana
-    assert tomate["vs_30d"]["dias"] == 3
+    assert tomate["vs_promedio"]["boletines"] == 3 and tomate["fuente"] == "diario"
     registro = leer(repo_temporal, "archivo/registro.json")
     assert [r["estado"] for r in registro] == ["procesado"] * 4
     assert all((repo_temporal / r["archivo"]).exists() for r in registro)

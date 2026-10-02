@@ -1,6 +1,6 @@
 {
  "esquema": 1,
- "descripcion": "Catálogo de productos del boletín PIMA-CENADA. Curado a mano; el proceso diario solo agrega unidades nuevas observadas. Un producto que no esté aquí se rechaza con motivo 'producto no reconocido' (ver data/rejects).",
+ "descripcion": "Catálogo de productos de los boletines PIMA-CENADA (diario, fruta importada semanal y aromáticos y gourmet quincenal). Curado a mano; el proceso diario solo agrega unidades nuevas observadas. Un producto que no esté aquí se rechaza con motivo 'producto no reconocido' (ver data/rejects).",
  "productos": [
   {
    "id": "apio-verde-mata",
@@ -17,7 +17,8 @@
      "unidad": "Mata",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "ayote-sazon",
@@ -37,7 +38,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "ayote-tierno",
@@ -57,7 +59,8 @@
      "unidad": "Unidad",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "banano-maduro-criollo",
@@ -77,7 +80,8 @@
      "unidad": "Unidad",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "banano-rechazo-de-exportacion-verde-y-maduro",
@@ -97,7 +101,8 @@
      "unidad": "Caja",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "brocoli",
@@ -106,7 +111,7 @@
    "cultivo_id": "brocoli",
    "categoria": "hortaliza",
    "sinonimos": [
-    "brecol"
+    "brécol"
    ],
    "nombres_boletin": [
     "Brócoli"
@@ -116,7 +121,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "camote",
@@ -136,7 +142,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "camote-zanahoria",
@@ -156,7 +163,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "cebolla-seca-amarilla-burra",
@@ -173,7 +181,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "cebolla-seca-amarilla-suelta",
@@ -190,7 +199,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "cebolla-seca-amarilla-suelta-importada",
@@ -207,7 +217,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "cebolla-seca-amarilla-trenza",
@@ -224,7 +235,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "cebolla-seca-morada",
@@ -241,7 +253,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "cebollino",
@@ -261,7 +274,8 @@
      "unidad": "Rollo",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "chayote-tierno-criollo",
@@ -270,7 +284,7 @@
    "cultivo_id": "chayote",
    "categoria": "hortaliza",
    "sinonimos": [
-    "guisquil",
+    "güisquil",
     "guatila"
    ],
    "nombres_boletin": [
@@ -281,7 +295,8 @@
      "unidad": "Java",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "chayote-tierno-quelite",
@@ -290,7 +305,7 @@
    "cultivo_id": "chayote",
    "categoria": "hortaliza",
    "sinonimos": [
-    "guisquil",
+    "güisquil",
     "guatila"
    ],
    "nombres_boletin": [
@@ -301,7 +316,8 @@
      "unidad": "Java",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "chile-dulce-jumbo",
@@ -311,8 +327,8 @@
    "categoria": "hortaliza",
    "sinonimos": [
     "pimiento",
-    "pimenton",
-    "chile morron"
+    "pimentón",
+    "chile morrón"
    ],
    "nombres_boletin": [
     "Chile dulce jumbo"
@@ -322,7 +338,8 @@
      "unidad": "Caja plástica",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "chile-dulce-primera",
@@ -332,8 +349,8 @@
    "categoria": "hortaliza",
    "sinonimos": [
     "pimiento",
-    "pimenton",
-    "chile morron"
+    "pimentón",
+    "chile morrón"
    ],
    "nombres_boletin": [
     "Chile dulce primera"
@@ -343,7 +360,8 @@
      "unidad": "Caja plástica",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "chile-dulce-segunda",
@@ -353,8 +371,8 @@
    "categoria": "hortaliza",
    "sinonimos": [
     "pimiento",
-    "pimenton",
-    "chile morron"
+    "pimentón",
+    "chile morrón"
    ],
    "nombres_boletin": [
     "Chile dulce segunda"
@@ -364,7 +382,8 @@
      "unidad": "Caja plástica",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "chile-dulce-tercera",
@@ -374,8 +393,8 @@
    "categoria": "hortaliza",
    "sinonimos": [
     "pimiento",
-    "pimenton",
-    "chile morron"
+    "pimentón",
+    "chile morrón"
    ],
    "nombres_boletin": [
     "Chile dulce tercera"
@@ -385,7 +404,8 @@
      "unidad": "Caja plástica",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "coliflor",
@@ -402,7 +422,8 @@
      "unidad": "Unidad",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "culantro-castilla",
@@ -421,7 +442,8 @@
      "unidad": "Rollo de 10 rollitos",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "elote",
@@ -430,7 +452,7 @@
    "cultivo_id": "elote",
    "categoria": "hortaliza",
    "sinonimos": [
-    "maiz tierno",
+    "maíz tierno",
     "choclo",
     "mazorca"
    ],
@@ -442,7 +464,8 @@
      "unidad": "Unidad",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "espinaca",
@@ -459,7 +482,8 @@
      "unidad": "Rollo",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "fresa-1-kg",
@@ -478,7 +502,8 @@
      "unidad": "Bandeja (1 kg)",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "fresa-400-g",
@@ -497,7 +522,8 @@
      "unidad": "Bandeja (400 g)",
      "kg": 0.4
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "jengibre-sazon",
@@ -516,7 +542,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "jocote-tronador-primera",
@@ -533,7 +560,8 @@
      "unidad": "Caja plástica (27 kg)",
      "kg": 27.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "jocote-tronador-seleccionado",
@@ -550,7 +578,8 @@
      "unidad": "Caja plástica (27 kg)",
      "kg": 27.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "lechuga-americana",
@@ -567,7 +596,8 @@
      "unidad": "Unidad",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "limon-mandarina",
@@ -576,7 +606,7 @@
    "cultivo_id": "limon-mandarina",
    "categoria": "fruta",
    "sinonimos": [
-    "limon mandarino"
+    "limón mandarino"
    ],
    "nombres_boletin": [
     "Limón mandarina"
@@ -586,7 +616,8 @@
      "unidad": "Unidad",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "limon-mesino",
@@ -595,8 +626,8 @@
    "cultivo_id": "limon-mesino",
    "categoria": "fruta",
    "sinonimos": [
-    "limon persa",
-    "limon tahiti"
+    "limón persa",
+    "limón tahití"
    ],
    "nombres_boletin": [
     "Limón mesino"
@@ -606,7 +637,8 @@
      "unidad": "Unidad",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "mamon-chino-injertado",
@@ -615,7 +647,7 @@
    "cultivo_id": "mamon-chino",
    "categoria": "fruta",
    "sinonimos": [
-    "rambutan"
+    "rambután"
    ],
    "nombres_boletin": [
     "Mamón chino injertado"
@@ -625,7 +657,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "mandarina-primera",
@@ -642,7 +675,8 @@
      "unidad": "Unidad",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "mandarina-segunda",
@@ -659,7 +693,8 @@
      "unidad": "Unidad",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "manga-grande-cavallini",
@@ -678,7 +713,8 @@
      "unidad": "Caja plástica (17 kg)",
      "kg": 17.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "manga-grande-keitt",
@@ -697,7 +733,8 @@
      "unidad": "Caja plástica (17 kg)",
      "kg": 17.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "melon-cantaloupe",
@@ -714,7 +751,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "nampi",
@@ -722,9 +760,7 @@
    "cultivo": "Ñampí",
    "cultivo_id": "nampi",
    "categoria": "raíz y tubérculo",
-   "sinonimos": [
-    "nampi"
-   ],
+   "sinonimos": [],
    "nombres_boletin": [
     "Ñampí"
    ],
@@ -733,7 +769,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "naranja-dulce",
@@ -750,7 +787,8 @@
      "unidad": "Unidad",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "papa-amarilla-primera",
@@ -769,7 +807,8 @@
      "unidad": "Malla (45 kg)",
      "kg": 45.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "papa-blanca-primera",
@@ -788,7 +827,8 @@
      "unidad": "Malla (45 kg)",
      "kg": 45.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "papa-semilla",
@@ -807,7 +847,8 @@
      "unidad": "Malla (45 kg)",
      "kg": 45.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "papa-semillon",
@@ -826,7 +867,8 @@
      "unidad": "Malla (45 kg)",
      "kg": 45.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "papaya-hibrida",
@@ -846,7 +888,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "pepino",
@@ -863,7 +906,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "pina-grande",
@@ -872,7 +916,7 @@
    "cultivo_id": "pina",
    "categoria": "fruta",
    "sinonimos": [
-    "anana"
+    "ananá"
    ],
    "nombres_boletin": [
     "Piña - grande"
@@ -882,7 +926,8 @@
      "unidad": "Unidad",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "pina-mediana",
@@ -891,7 +936,7 @@
    "cultivo_id": "pina",
    "categoria": "fruta",
    "sinonimos": [
-    "anana"
+    "ananá"
    ],
    "nombres_boletin": [
     "Piña - mediana"
@@ -901,7 +946,8 @@
      "unidad": "Unidad",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "pina-pequena",
@@ -910,7 +956,7 @@
    "cultivo_id": "pina",
    "categoria": "fruta",
    "sinonimos": [
-    "anana"
+    "ananá"
    ],
    "nombres_boletin": [
     "Piña - pequeña"
@@ -920,7 +966,8 @@
      "unidad": "Unidad",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "pitahaya",
@@ -930,7 +977,7 @@
    "categoria": "fruta",
    "sinonimos": [
     "pitaya",
-    "fruta del dragon"
+    "fruta del dragón"
    ],
    "nombres_boletin": [
     "Pitahaya"
@@ -940,7 +987,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "platano-primera-verde-y-maduro",
@@ -957,7 +1005,8 @@
      "unidad": "Unidad",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "platano-segunda-verde-y-maduro",
@@ -974,7 +1023,8 @@
      "unidad": "Unidad",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "remolacha",
@@ -994,7 +1044,8 @@
      "unidad": "Unidad",
      "kg": null
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "repollo-morado",
@@ -1013,7 +1064,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "repollo-verde",
@@ -1032,7 +1084,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "sandia-de-campo-grande",
@@ -1051,7 +1104,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "sandia-de-campo-mediana",
@@ -1070,7 +1124,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "tiquisque",
@@ -1081,7 +1136,7 @@
    "sinonimos": [
     "malanga",
     "quequisque",
-    "yautia"
+    "yautía"
    ],
    "nombres_boletin": [
     "Tiquisque"
@@ -1091,7 +1146,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "tomate-primera",
@@ -1110,7 +1166,8 @@
      "unidad": "Caja plástica (18 kg)",
      "kg": 18.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "tomate-segunda",
@@ -1129,7 +1186,8 @@
      "unidad": "Caja plástica (18 kg)",
      "kg": 18.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "tomate-tercera",
@@ -1148,7 +1206,8 @@
      "unidad": "Caja plástica (18 kg)",
      "kg": 18.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "vainica",
@@ -1158,7 +1217,7 @@
    "categoria": "hortaliza",
    "sinonimos": [
     "ejote",
-    "judia verde",
+    "judía verde",
     "habichuela"
    ],
    "nombres_boletin": [
@@ -1169,7 +1228,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "yuca-parafinada",
@@ -1188,7 +1248,8 @@
      "unidad": "Kilo",
      "kg": 1.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "zanahoria-primera",
@@ -1205,7 +1266,8 @@
      "unidad": "Malla (45 kg)",
      "kg": 45.0
     }
-   ]
+   ],
+   "fuente": "diario"
   },
   {
    "id": "zucchini",
@@ -1215,7 +1277,7 @@
    "categoria": "hortaliza",
    "sinonimos": [
     "zapallito",
-    "calabacin"
+    "calabacín"
    ],
    "nombres_boletin": [
     "Zucchini"
@@ -1224,6 +1286,1427 @@
     {
      "unidad": "Unidad",
      "kg": null
+    }
+   ],
+   "fuente": "diario"
+  },
+  {
+   "id": "aguacate-hass-de-mexico-extra",
+   "nombre": "Aguacate Hass de México - Extra",
+   "cultivo": "Aguacate",
+   "cultivo_id": "aguacate",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Aguacate Hass de México - Extra"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (10 kg)",
+     "kg": 10.0
+    }
+   ]
+  },
+  {
+   "id": "aguacate-hass-de-mexico-super-extra",
+   "nombre": "Aguacate Hass de México - Super Extra",
+   "cultivo": "Aguacate",
+   "cultivo_id": "aguacate",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Aguacate Hass de México - Super Extra"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (10 kg)",
+     "kg": 10.0
+    }
+   ]
+  },
+  {
+   "id": "aguacate-hass-de-mexico-supremo",
+   "nombre": "Aguacate Hass de México - Supremo",
+   "cultivo": "Aguacate",
+   "cultivo_id": "aguacate",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Aguacate Hass de México - Supremo"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (10 kg)",
+     "kg": 10.0
+    }
+   ]
+  },
+  {
+   "id": "aguacate-hass-de-peru-extra",
+   "nombre": "Aguacate Hass de Perú - Extra",
+   "cultivo": "Aguacate",
+   "cultivo_id": "aguacate",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Aguacate Hass de Perú - Extra"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (10 kg)",
+     "kg": 10.0
+    }
+   ]
+  },
+  {
+   "id": "aguacate-hass-de-peru-super-extra",
+   "nombre": "Aguacate Hass de Perú - Super Extra",
+   "cultivo": "Aguacate",
+   "cultivo_id": "aguacate",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Aguacate Hass de Perú - Super Extra"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (10 kg)",
+     "kg": 10.0
+    }
+   ]
+  },
+  {
+   "id": "aguacate-hass-de-peru-supremo",
+   "nombre": "Aguacate Hass de Perú - Supremo",
+   "cultivo": "Aguacate",
+   "cultivo_id": "aguacate",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Aguacate Hass de Perú - Supremo"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (10 kg)",
+     "kg": 10.0
+    }
+   ]
+  },
+  {
+   "id": "ajo-de-china-puro-blanco-presentacion-1x3",
+   "nombre": "Ajo de China puro blanco (presentación 1x3)",
+   "cultivo": "Ajo",
+   "cultivo_id": "ajo",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Ajo de China puro blanco (presentación 1x3)"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (10 kg)",
+     "kg": 10.0
+    }
+   ]
+  },
+  {
+   "id": "ajo-de-china-puro-blanco-presentacion-1x5",
+   "nombre": "Ajo de China puro blanco (presentación 1x5)",
+   "cultivo": "Ajo",
+   "cultivo_id": "ajo",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Ajo de China puro blanco (presentación 1x5)"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (10 kg)",
+     "kg": 10.0
+    }
+   ]
+  },
+  {
+   "id": "ajo-de-china-puro-blanco-presentacion-500-gramos",
+   "nombre": "Ajo de China puro blanco (presentación 500 gramos)",
+   "cultivo": "Ajo",
+   "cultivo_id": "ajo",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Ajo de China puro blanco (presentación 500 gramos)"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (10 kg)",
+     "kg": 10.0
+    }
+   ]
+  },
+  {
+   "id": "ajo-de-china-puro-blanco-presentacion-trenza-1-kg",
+   "nombre": "Ajo de China puro blanco (presentación trenza 1 kg)",
+   "cultivo": "Ajo",
+   "cultivo_id": "ajo",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Ajo de China puro blanco (presentación trenza 1 kg)"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (10 kg)",
+     "kg": 10.0
+    }
+   ]
+  },
+  {
+   "id": "ajo-de-china-veteado-presentacion-1x3",
+   "nombre": "Ajo de China veteado (presentación 1x3)",
+   "cultivo": "Ajo",
+   "cultivo_id": "ajo",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Ajo de China veteado (presentación 1x3)"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (10 kg)",
+     "kg": 10.0
+    }
+   ]
+  },
+  {
+   "id": "ajo-de-china-veteado-presentacion-500-gramos",
+   "nombre": "Ajo de China veteado (presentación 500 gramos)",
+   "cultivo": "Ajo",
+   "cultivo_id": "ajo",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Ajo de China veteado (presentación 500 gramos)"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (10 kg)",
+     "kg": 10.0
+    }
+   ]
+  },
+  {
+   "id": "ajo-de-china-veteado-presentacion-trenza-1-kg",
+   "nombre": "Ajo de China veteado (presentación trenza 1 kg)",
+   "cultivo": "Ajo",
+   "cultivo_id": "ajo",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Ajo de China veteado (presentación trenza 1 kg)"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (10 kg)",
+     "kg": 10.0
+    }
+   ]
+  },
+  {
+   "id": "arandano",
+   "nombre": "Arándano",
+   "cultivo": "Arándano",
+   "cultivo_id": "arandano",
+   "categoria": "fruta importada",
+   "sinonimos": [
+    "blueberry"
+   ],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Arándano"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (125 g)",
+     "kg": 0.125
+    }
+   ]
+  },
+  {
+   "id": "ciruela-importada",
+   "nombre": "Ciruela importada",
+   "cultivo": "Ciruela",
+   "cultivo_id": "ciruela",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Ciruela importada"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "kiwi",
+   "nombre": "Kiwi",
+   "cultivo": "Kiwi",
+   "cultivo_id": "kiwi",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Kiwi"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "mandarina-clementina",
+   "nombre": "Mandarina Clementina",
+   "cultivo": "Mandarina",
+   "cultivo_id": "mandarina",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Mandarina Clementina"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "manzana-gala",
+   "nombre": "Manzana Gala",
+   "cultivo": "Manzana",
+   "cultivo_id": "manzana",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Manzana Gala",
+    "Manzana Gala."
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (150-198 und)",
+     "kg": null
+    },
+    {
+     "unidad": "Caja (80-100 und)",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "manzana-golden",
+   "nombre": "Manzana Golden",
+   "cultivo": "Manzana",
+   "cultivo_id": "manzana",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Manzana Golden"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (80-100 und)",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "manzana-roja",
+   "nombre": "Manzana Roja",
+   "cultivo": "Manzana",
+   "cultivo_id": "manzana",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Manzana Roja"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (80-100 und)",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "manzana-verde",
+   "nombre": "Manzana Verde",
+   "cultivo": "Manzana",
+   "cultivo_id": "manzana",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Manzana Verde"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (80-100 und)",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "melocoton",
+   "nombre": "Melocotón",
+   "cultivo": "Melocotón",
+   "cultivo_id": "melocoton",
+   "categoria": "fruta importada",
+   "sinonimos": [
+    "durazno"
+   ],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Melocotón"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "naranja-washington-importada",
+   "nombre": "Naranja Washington importada",
+   "cultivo": "Naranja",
+   "cultivo_id": "naranja",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Naranja Washington importada"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "nectarina",
+   "nombre": "Nectarina",
+   "cultivo": "Nectarina",
+   "cultivo_id": "nectarina",
+   "categoria": "fruta importada",
+   "sinonimos": [
+    "nectarin"
+   ],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Nectarina"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "pera-de-argentina",
+   "nombre": "Pera de Argentina",
+   "cultivo": "Pera",
+   "cultivo_id": "pera",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Pera de Argentina"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (80-100 und)",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "uva-globo-de-chile",
+   "nombre": "Uva globo de Chile",
+   "cultivo": "Uva",
+   "cultivo_id": "uva",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Uva globo de Chile"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (8.2 kg)",
+     "kg": 8.2
+    }
+   ]
+  },
+  {
+   "id": "uva-globo-de-mexico",
+   "nombre": "Uva globo de México",
+   "cultivo": "Uva",
+   "cultivo_id": "uva",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Uva globo de México"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (8.2 kg)",
+     "kg": 8.2
+    }
+   ]
+  },
+  {
+   "id": "uva-globo-de-peru",
+   "nombre": "Uva globo de Perú",
+   "cultivo": "Uva",
+   "cultivo_id": "uva",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Uva globo de Perú"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (8.2 kg)",
+     "kg": 8.2
+    }
+   ]
+  },
+  {
+   "id": "uva-verde",
+   "nombre": "Uva verde",
+   "cultivo": "Uva",
+   "cultivo_id": "uva",
+   "categoria": "fruta importada",
+   "sinonimos": [],
+   "fuente": "fruta",
+   "nombres_boletin": [
+    "Uva verde"
+   ],
+   "unidades": [
+    {
+     "unidad": "Caja (8.2 kg)",
+     "kg": 8.2
+    }
+   ]
+  },
+  {
+   "id": "ajo-de-china-presentacion-pelado",
+   "nombre": "Ajo de China (presentación pelado)",
+   "cultivo": "Ajo",
+   "cultivo_id": "ajo",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Ajo de China (presentación pelado)"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bolsa (1 kg)",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "albahaca",
+   "nombre": "Albahaca",
+   "cultivo": "Albahaca",
+   "cultivo_id": "albahaca",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Albahaca"
+   ],
+   "unidades": [
+    {
+     "unidad": "Rollo",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "alfalfa",
+   "nombre": "Alfalfa",
+   "cultivo": "Alfalfa",
+   "cultivo_id": "alfalfa",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Alfalfa"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (90 g)",
+     "kg": 0.09
+    }
+   ]
+  },
+  {
+   "id": "arracache-picado",
+   "nombre": "Arracache picado",
+   "cultivo": "Arracache",
+   "cultivo_id": "arracache",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Arracache picado"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bolsa (900 g)",
+     "kg": 0.9
+    }
+   ]
+  },
+  {
+   "id": "arugula",
+   "nombre": "Arúgula",
+   "cultivo": "Arúgula",
+   "cultivo_id": "arugula",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [
+    "rúcula"
+   ],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Arúgula"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "arveja-pelada",
+   "nombre": "Arveja pelada",
+   "cultivo": "Arveja",
+   "cultivo_id": "arveja",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Arveja pelada"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (500 g)",
+     "kg": 0.5
+    }
+   ]
+  },
+  {
+   "id": "berenjena",
+   "nombre": "Berenjena",
+   "cultivo": "Berenjena",
+   "cultivo_id": "berenjena",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Berenjena"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "chayote-cocoro",
+   "nombre": "Chayote cocoro",
+   "cultivo": "Chayote",
+   "cultivo_id": "chayote",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Chayote cocoro"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bolsa (1 kg)",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "chile-aji",
+   "nombre": "Chile ají",
+   "cultivo": "Chile",
+   "cultivo_id": "chile",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Chile ají"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "chile-jalapeno",
+   "nombre": "Chile jalapeño",
+   "cultivo": "Chile",
+   "cultivo_id": "chile",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Chile jalapeño"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "chile-panameno",
+   "nombre": "Chile panameño",
+   "cultivo": "Chile",
+   "cultivo_id": "chile",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Chile panameño"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "cubaces-hidratados",
+   "nombre": "Cubaces hidratados",
+   "cultivo": "Cubaces",
+   "cultivo_id": "cubaces",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Cubaces hidratados"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (500 g)",
+     "kg": 0.5
+    }
+   ]
+  },
+  {
+   "id": "culantro-coyote",
+   "nombre": "Culantro coyote",
+   "cultivo": "Culantro",
+   "cultivo_id": "culantro",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Culantro coyote"
+   ],
+   "unidades": [
+    {
+     "unidad": "Rollo de 10 rollitos",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "curcuma",
+   "nombre": "Cúrcuma",
+   "cultivo": "Cúrcuma",
+   "cultivo_id": "curcuma",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Cúrcuma"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "eneldo",
+   "nombre": "Eneldo",
+   "cultivo": "Eneldo",
+   "cultivo_id": "eneldo",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Eneldo"
+   ],
+   "unidades": [
+    {
+     "unidad": "Rollo",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "escalopines-mini",
+   "nombre": "Escalopines mini",
+   "cultivo": "Escalopines",
+   "cultivo_id": "escalopines",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Escalopines mini"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (500 g)",
+     "kg": 0.5
+    }
+   ]
+  },
+  {
+   "id": "esparragos",
+   "nombre": "Espárragos",
+   "cultivo": "Espárragos",
+   "cultivo_id": "esparragos",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Espárragos"
+   ],
+   "unidades": [
+    {
+     "unidad": "Rollo",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "estragon",
+   "nombre": "Estragón",
+   "cultivo": "Estragón",
+   "cultivo_id": "estragon",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Estragón"
+   ],
+   "unidades": [
+    {
+     "unidad": "Rollo",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "frijol-blanco-hidratado",
+   "nombre": "Frijol blanco hidratado",
+   "cultivo": "Frijol",
+   "cultivo_id": "frijol",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Frijol blanco hidratado"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (500 g)",
+     "kg": 0.5
+    }
+   ]
+  },
+  {
+   "id": "frijol-nacido",
+   "nombre": "Frijol nacido",
+   "cultivo": "Frijol",
+   "cultivo_id": "frijol",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [
+    "germinado de frijol",
+    "brotes de frijol"
+   ],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Frijol nacido"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (200 g)",
+     "kg": 0.2
+    }
+   ]
+  },
+  {
+   "id": "frijol-tierno",
+   "nombre": "Frijol tierno",
+   "cultivo": "Frijol",
+   "cultivo_id": "frijol",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Frijol tierno"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "hierba-buena",
+   "nombre": "Hierba buena",
+   "cultivo": "Hierbabuena",
+   "cultivo_id": "hierbabuena",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [
+    "hierbabuena",
+    "menta"
+   ],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Hierba buena"
+   ],
+   "unidades": [
+    {
+     "unidad": "Rollo",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "hinojo",
+   "nombre": "Hinojo",
+   "cultivo": "Hinojo",
+   "cultivo_id": "hinojo",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Hinojo"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (500 g)",
+     "kg": 0.5
+    }
+   ]
+  },
+  {
+   "id": "hongo-blanco-de-costa-rica",
+   "nombre": "Hongo Blanco de Costa Rica",
+   "cultivo": "Hongo",
+   "cultivo_id": "hongo",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [
+    "champiñón",
+    "hongos"
+   ],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Hongo Blanco de Costa Rica"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (250 g)",
+     "kg": 0.25
+    }
+   ]
+  },
+  {
+   "id": "hongo-crimini-de-costa-rica",
+   "nombre": "Hongo Crimini de Costa Rica",
+   "cultivo": "Hongo",
+   "cultivo_id": "hongo",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [
+    "champiñón",
+    "hongos"
+   ],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Hongo Crimini de Costa Rica"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (300 g)",
+     "kg": 0.3
+    }
+   ]
+  },
+  {
+   "id": "hongo-portobelo-de-costa-rica",
+   "nombre": "Hongo Portobelo de Costa Rica",
+   "cultivo": "Hongo",
+   "cultivo_id": "hongo",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [
+    "champiñón",
+    "hongos"
+   ],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Hongo Portobelo de Costa Rica"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (300 g)",
+     "kg": 0.3
+    }
+   ]
+  },
+  {
+   "id": "lechuga-escarola",
+   "nombre": "Lechuga Escarola",
+   "cultivo": "Lechuga",
+   "cultivo_id": "lechuga",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Lechuga Escarola"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "lechuga-lolorosa",
+   "nombre": "Lechuga Lolorosa",
+   "cultivo": "Lechuga",
+   "cultivo_id": "lechuga",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Lechuga Lolorosa"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "lechuga-radiccio",
+   "nombre": "Lechuga Radiccio",
+   "cultivo": "Lechuga",
+   "cultivo_id": "lechuga",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Lechuga Radiccio"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (2-3 unds)",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "lechuga-romana",
+   "nombre": "Lechuga Romana",
+   "cultivo": "Lechuga",
+   "cultivo_id": "lechuga",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Lechuga Romana"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "maiz-dulce",
+   "nombre": "Maíz dulce",
+   "cultivo": "Maíz dulce",
+   "cultivo_id": "maiz-dulce",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [
+    "elote dulce"
+   ],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Maíz dulce"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (800 g)",
+     "kg": 0.8
+    }
+   ]
+  },
+  {
+   "id": "mini-vegetales-mixtos",
+   "nombre": "Mini vegetales mixtos",
+   "cultivo": "Mini vegetales",
+   "cultivo_id": "mini-vegetales",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Mini vegetales mixtos"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (500 g)",
+     "kg": 0.5
+    }
+   ]
+  },
+  {
+   "id": "mostaza-china",
+   "nombre": "Mostaza china",
+   "cultivo": "Mostaza",
+   "cultivo_id": "mostaza",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Mostaza china"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "oregano",
+   "nombre": "Orégano",
+   "cultivo": "Orégano",
+   "cultivo_id": "oregano",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Orégano"
+   ],
+   "unidades": [
+    {
+     "unidad": "Rollo de 5 rollitos",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "palmito",
+   "nombre": "Palmito",
+   "cultivo": "Palmito",
+   "cultivo_id": "palmito",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Palmito"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bolsa (400 g)",
+     "kg": 0.4
+    }
+   ]
+  },
+  {
+   "id": "perejil",
+   "nombre": "Perejíl",
+   "cultivo": "Perejil",
+   "cultivo_id": "perejil",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Perejíl"
+   ],
+   "unidades": [
+    {
+     "unidad": "Rollo de 5 rollitos",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "pipian-tierno",
+   "nombre": "Pipián tierno",
+   "cultivo": "Pipián",
+   "cultivo_id": "pipian",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Pipián tierno"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "puerro",
+   "nombre": "Puerro",
+   "cultivo": "Puerro",
+   "cultivo_id": "puerro",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [
+    "poro"
+   ],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Puerro"
+   ],
+   "unidades": [
+    {
+     "unidad": "Unidad",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "rabanito",
+   "nombre": "Rabanito",
+   "cultivo": "Rábano",
+   "cultivo_id": "rabano",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Rabanito"
+   ],
+   "unidades": [
+    {
+     "unidad": "Rollo",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "rabano-grande",
+   "nombre": "Rábano grande",
+   "cultivo": "Rábano",
+   "cultivo_id": "rabano",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Rábano grande"
+   ],
+   "unidades": [
+    {
+     "unidad": "Rollo",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "romero",
+   "nombre": "Romero",
+   "cultivo": "Romero",
+   "cultivo_id": "romero",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Romero"
+   ],
+   "unidades": [
+    {
+     "unidad": "Rollo",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "tacaco-sazon",
+   "nombre": "Tacaco sazón",
+   "cultivo": "Tacaco",
+   "cultivo_id": "tacaco",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Tacaco sazón"
+   ],
+   "unidades": [
+    {
+     "unidad": "Kilo",
+     "kg": 1.0
+    }
+   ]
+  },
+  {
+   "id": "tomate-cherry",
+   "nombre": "Tomate Cherry",
+   "cultivo": "Tomate",
+   "cultivo_id": "tomate",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [
+    "tomate cereza"
+   ],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Tomate Cherry"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (500 g)",
+     "kg": 0.5
+    }
+   ]
+  },
+  {
+   "id": "tomillo",
+   "nombre": "Tomillo",
+   "cultivo": "Tomillo",
+   "cultivo_id": "tomillo",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Tomillo"
+   ],
+   "unidades": [
+    {
+     "unidad": "Rollo de 5 rollitos",
+     "kg": null
+    }
+   ]
+  },
+  {
+   "id": "vainica-mini",
+   "nombre": "Vainica Mini",
+   "cultivo": "Vainica",
+   "cultivo_id": "vainica",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Vainica Mini"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bolsa (500 g)",
+     "kg": 0.5
+    }
+   ]
+  },
+  {
+   "id": "zanahoria-mini",
+   "nombre": "Zanahoria mini",
+   "cultivo": "Zanahoria",
+   "cultivo_id": "zanahoria",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Zanahoria mini"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (500 g)",
+     "kg": 0.5
+    }
+   ]
+  },
+  {
+   "id": "zapallo-esmeralda",
+   "nombre": "Zapallo Esmeralda",
+   "cultivo": "Zapallo",
+   "cultivo_id": "zapallo",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Zapallo Esmeralda"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (500 g)",
+     "kg": 0.5
+    }
+   ]
+  },
+  {
+   "id": "zucchini-baby",
+   "nombre": "Zucchini baby",
+   "cultivo": "Zucchini",
+   "cultivo_id": "zucchini",
+   "categoria": "aromático y gourmet",
+   "sinonimos": [],
+   "fuente": "aromaticos",
+   "nombres_boletin": [
+    "Zucchini baby"
+   ],
+   "unidades": [
+    {
+     "unidad": "Bandeja (500 g)",
+     "kg": 0.5
     }
    ]
   }

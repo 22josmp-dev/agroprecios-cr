@@ -10,6 +10,28 @@ export interface Meta {
   registros: number;
   rechazados: number;
   meses_precios?: string[];
+  /** Fuentes semanal y quincenal (el nivel superior es el boletín diario). */
+  fuentes?: Record<string, MetaFuente>;
+}
+
+export type IdFuente = "diario" | "fruta" | "aromaticos";
+
+export interface MetaFuente {
+  nombre: string;
+  frecuencia: "semanal" | "quincenal";
+  estado: "ok" | "pendiente" | "error";
+  mensaje: string;
+  ultima_actualizacion_exitosa_utc: string | null;
+  fecha_boletin: string | null;
+  meses_precios: string[];
+}
+
+export interface InfoFuente {
+  nombre: string;
+  frecuencia: "diaria" | "semanal" | "quincenal";
+  fecha_boletin: string;
+  ventana_promedio_dias: number;
+  texto_promedio: string;
 }
 
 export interface Comparacion {
@@ -33,11 +55,15 @@ export interface ProductoHoy {
   precio_kg: number | null;
   vs_anterior: Comparacion | null;
   vs_semana: Comparacion | null;
-  vs_30d: { dias: number; promedio: number | null; variacion_pct: number | null } | null;
+  fuente: IdFuente;
+  fecha_boletin: string;
+  /** Contra el promedio de la ventana de la fuente (latest.fuentes[f].texto_promedio). */
+  vs_promedio: { boletines: number; promedio: number | null; variacion_pct: number | null } | null;
 }
 
 export interface Latest {
   fecha_boletin: string;
+  fuentes: Partial<Record<IdFuente, InfoFuente>>;
   datos_de_ejemplo: boolean;
   productos: ProductoHoy[];
 }

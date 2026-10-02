@@ -46,7 +46,7 @@ def validar_fecha(fecha_plaza: date, fecha_lista: date | None, hoy: date) -> Non
 
 
 def validar(resultado: ResultadoParseo, catalogo: Catalogo, hoy: date,
-            fecha_lista: date | None = None) -> tuple[list[Registro], list[Rechazo]]:
+            fecha_lista: date | None = None, fuente: str = "diario") -> tuple[list[Registro], list[Rechazo]]:
     validar_fecha(resultado.fecha_plaza, fecha_lista, hoy)
     registros: list[Registro] = []
     rechazos: list[Rechazo] = []
@@ -68,7 +68,7 @@ def validar(resultado: ResultadoParseo, catalogo: Catalogo, hoy: date,
             motivos.append("fila sin nombre de producto")
         if not fila.unidad:
             motivos.append("fila sin unidad de comercialización")
-        producto = catalogo.buscar(fila.producto)
+        producto = catalogo.buscar(fila.producto, fuente)
         if producto is None:
             motivos.append("producto no reconocido en el catálogo")
         if len(valores) == 4:

@@ -31,7 +31,7 @@ _UNIDADES_CONOCIDAS = (
 # Líneas de texto del boletín que no son filas de precios (normalizadas, sin tildes)
 _LINEAS_INFORMATIVAS = (
     "sifpima", "simm", "sistema", "boletin", "cenada", "los precios", "exclusivamente", "fecha",
-    "precio por", "tipo de cambio", "informacion generada",
+    "precio por", "tipo de cambio", "informacion generada", "total de oferta",
 )
 _RE_UNIDAD_PEGADA =re.compile(rf"^(?P<producto>.+?)\s+(?P<unidad>(?:{_UNIDADES_CONOCIDAS})\b.*)$", re.I)
 
@@ -105,8 +105,31 @@ def _filas_por_tablas(pagina, orden, num_pagina) -> tuple[list[FilaCruda], list[
     return filas, raras
 
 
-def _filas_por_palabras(pagina, orden, num_pagina) -> tuple[list[FilaCruda], list[dict]]:
-    """Respaldo: agrupa palabras por línea y usa la x de 'Unidad' del encabezado como frontera."""
+_RE_GRUPO_INICIAL = re.compile(r"\d{1,3}(?: \d{3})*")  # "2", "1 000" (para millones)
+_RE_GRUPO_MILES = re.compile(r"\d{3}(?:[.,]\d+)?")
+
+
+def _unir_miles_con_espacio(palabras: list[dict]) -> list[dict]:
+    """Une '2' + '000,00' -> '2 000,00' cuando están pegados (< 4 px).
+
+    Formato real visto en el boletín de aromáticos del 09-07-2026: miles separados por espacio y
+    coma decimal. Entre columnas hay ~19 px, así que no se unen números de columnas distintas.
+    """
+    salida: list[dict] = []
+    for w in palabras:
+        previa = salida[-1] if salida else None
+        if (previa and _RE_GRUPO_INICIAL.fullmatch(previa["text"])
+                and _RE_GRUPO_MILES.fullmatch(w["text"]) and w["x0"] - previa["x1"] < 4):
+            salida[-1] = {**previa, "text": f"{previa['text']} {w['text']}", "x1": w["x1"]}
+        else:
+            salida.append(w)
+    return salida
+
+
+def _filas_por_palabras(pagina, orden, num_pagina, x_unidad_previa: float | None = None
+                        ) -> tuple[list[FilaCruda], list[dict], float | None]:
+    """Respaldo: agrupa palabras por línea y detecta la columna de unidad por alineación.
+    Devuelve también la x de la columna de unidad para reutilizarla en páginas con pocas filas."""
     palabras = pagina.extract_words(use_text_flow=False, keep_blank_chars=False)
     lineas: dict[int, list[dict]] = {}
     for p in palabras:
@@ -121,7 +144,7 @@ def _filas_por_palabras(pagina, orden, num_pagina) -> tuple[list[FilaCruda], lis
     encabezado_visto = False
     candidatas = []  # (palabras de texto, palabras numéricas)
     for clave in sorted(lineas):
-        ws = sorted(lineas[clave], key=lambda w: w["x0"])
+        ws = _unir_miles_con_espacio(sorted(lineas[clave], key=lambda w: w["x0"]))
         textos = [w["text"] for w in ws]
         n = normalizar(" ".join(textos))
         if not encabezado_visto:
@@ -138,7 +161,7 @@ def _filas_por_palabras(pagina, orden, num_pagina) -> tuple[list[FilaCruda], lis
             continue
         candidatas.append((ws, cola))
     if not candidatas:
-        return filas, raras
+        return filas, raras, x_unidad_previa
     # Columnas alineadas a la izquierda: la x más frecuente después de la del producto es el
     # inicio de la columna de unidad.
     x_producto = min(ws[0]["x0"] for ws, _ in candidatas)
@@ -148,6 +171,10 @@ def _filas_por_palabras(pagina, orden, num_pagina) -> tuple[list[FilaCruda], lis
             if w["x0"] > x_producto + 5:
                 conteo[round(w["x0"])] = conteo.get(round(w["x0"]), 0) + 1
     x_unidad = max(conteo, key=conteo.get) if conteo else None
+    # Con pocas filas (p. ej. una sola en la página 2) la moda no es confiable: se usa la de la
+    # página anterior. Caso real: aromáticos del 11-06-2026, "Zucchini baby" solo en la página 2.
+    if x_unidad_previa is not None and (len(candidatas) < 5 or x_unidad is None):
+        x_unidad = x_unidad_previa
     for ws, cola in candidatas:
         if x_unidad is None:
             producto, unidad = separar_unidad(" ".join(w["text"] for w in ws), "")
@@ -156,7 +183,7 @@ def _filas_por_palabras(pagina, orden, num_pagina) -> tuple[list[FilaCruda], lis
             unidad = " ".join(w["text"] for w in ws if w["x0"] >= x_unidad - 1.5)
             producto, unidad = separar_unidad(producto, unidad)
         filas.append(FilaCruda(producto, unidad, dict(zip(orden, [w["text"] for w in cola])), num_pagina))
-    return filas, raras
+    return filas, raras, x_unidad
 
 
 def parsear_pdf(origen: bytes | str | Path, usar_tablas: bool = True) -> ResultadoParseo:
@@ -169,6 +196,7 @@ def parsear_pdf(origen: bytes | str | Path, usar_tablas: bool = True) -> Resulta
         filas: list[FilaCruda] = []
         raras: list[dict] = []
         metodos: list[str] = []
+        x_unidad = None
         for i, pagina in enumerate(pdf.pages, start=1):
             texto = pagina.extract_text() or ""
             for d, m, a in _RE_FECHA_PLAZA.findall(texto):
@@ -184,7 +212,7 @@ def parsear_pdf(origen: bytes | str | Path, usar_tablas: bool = True) -> Resulta
             f, r = _filas_por_tablas(pagina, orden, i) if usar_tablas else ([], [])
             metodo = "tablas"
             if not f:
-                f, r = _filas_por_palabras(pagina, orden, i)
+                f, r, x_unidad = _filas_por_palabras(pagina, orden, i, x_unidad)
                 metodo = "palabras"
             filas += f
             raras += r

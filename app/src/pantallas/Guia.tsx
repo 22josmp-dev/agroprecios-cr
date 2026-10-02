@@ -15,10 +15,10 @@ export function Advertencias() {
     <aside class="advertencias" aria-labelledby="t-adv">
       <h2 id="t-adv"><span aria-hidden="true">⚠ </span>Antes de decidir</h2>
       <ul>
-        <li>Es una <strong>guía basada en patrones de precios de años anteriores</strong>, no una garantía.</li>
-        <li>No considera el clima, las plagas, el riego ni la semilla.</li>
-        <li>El precio que recibe en finca es distinto al precio mayorista de referencia del CENADA.</li>
-        <li>Consulte a un extensionista del MAG o del INTA antes de sembrar.</li>
+        <li>Es una <strong>guía basada en patrones de precios de años anteriores</strong>, no se garantiza el mismo comportamiento para el período actual.</li>
+        <li>No considera factores que pueden afectar el desarrollo del cultivo como clima, plagas, manejo, entre otros.</li>
+        <li>El precio que recibe en finca puede ser distinto al precio mayorista de referencia del CENADA.</li>
+        <li>Es conveniente consultar con un profesional en caso de cualquier duda.</li>
       </ul>
     </aside>
   );
@@ -115,7 +115,7 @@ function GuiaCargada({ seasonal, ciclos, inicial }: { seasonal: Seasonal; ciclos
             </div>
             <p id="g-ciclo-nota" class="nota">
               {estimado && cicloEstimado
-                ? <>Usando un <strong>valor estimado</strong> de {cicloEstimado} días para altitud {altitud} (no verificado por un técnico). Puede cambiarlo.</>
+                ? <>Usando un <strong>valor estimado</strong> de {cicloEstimado} días para altitud {altitud} (no verificado por un profesional). Puede cambiarlo.</>
                 : !cicloEstimado ? "No hay un valor estimado para esta altitud: escriba los días de su cultivo." : "Usando el ciclo que usted indicó."}
             </p>
 
@@ -171,7 +171,7 @@ function GuiaCargada({ seasonal, ciclos, inicial }: { seasonal: Seasonal; ciclos
           </section>
         </>
       )}
-      <p class="nota">Índice de precios: {producto.nombre}, {producto.years_of_data} años de datos del SIMM. Ciclos: valores estimados, sin verificar por un técnico.</p>
+      <p class="nota">Índice de precios: {producto.nombre}, {producto.years_of_data} años de datos del SIMM. Ciclos: valores estimados, sin verificar por un profesional.</p>
       <Fuente />
     </article>
   );

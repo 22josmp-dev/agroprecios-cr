@@ -88,6 +88,8 @@ small { font-size: 0.85em; color: var(--texto-2); }
 .navegacion a[aria-current="page"] { color: var(--marca); font-weight: 700; box-shadow: inset 0 3px 0 var(--marca); }
 @media (prefers-color-scheme: dark) { .navegacion a[aria-current="page"] { color: var(--enlace); box-shadow: inset 0 3px 0 var(--enlace); } }
 
+.origen-datos { margin: 12px 0 0; padding: 10px 14px; border-left: 4px solid var(--marca); background: var(--superficie); border-radius: 0 10px 10px 0; font-size: 0.95rem; }
+@media (prefers-color-scheme: dark) { .origen-datos { border-left-color: var(--enlace); } }
 .estado { background: var(--superficie); border-radius: 10px; padding: 10px 14px; margin: 12px 0; font-size: 0.95rem; }
 .estado p { margin: 2px 0; }
 .insignia {
@@ -134,6 +136,8 @@ small { font-size: 0.85em; color: var(--texto-2); }
 .tarjeta-nombre { font-weight: 700; grid-column: 1 / -1; }
 .tarjeta-precio small { font-weight: 400; }
 .tarjeta .variacion { justify-self: end; }
+.tarjeta-origen { grid-column: 1 / -1; font-size: 0.85rem; color: var(--texto-2); }
+.estado .otras { margin-top: 4px; font-size: 0.9rem; color: var(--texto-2); }
 .tarjeta .estrella { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); }
 .estrella {
   width: 48px; height: 48px; border: none; background: transparent; font-size: 1.6rem; cursor: pointer; border-radius: 50%;

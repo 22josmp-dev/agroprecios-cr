@@ -130,8 +130,8 @@ class ClientePIMA:
             pagina = cuerpo.decode("utf-8", "replace")
         return pagina
 
-    def listar_boletines(self) -> list[EntradaBoletin]:
-        entradas = parsear_listado(self.pagina_contenido(config.CM_BOLETIN))
+    def listar_boletines(self, cm: int = config.CM_BOLETIN) -> list[EntradaBoletin]:
+        entradas = parsear_listado(self.pagina_contenido(cm))
         if not entradas:
             raise ErrorFuente("La lista de boletines del PIMA vino vacía (¿cambió el portal?)")
         return entradas

@@ -76,5 +76,44 @@
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día."
   }
- ]
+ ],
+ "fuentes": {
+  "fruta": {
+   "nombre": "Fruta importada",
+   "frecuencia": "semanal",
+   "estado": "ok",
+   "mensaje": "Boletines nuevos: 2026-07-22, 2026-07-29, 2026-08-05, 2026-08-12, 2026-08-19, 2026-08-26, 2026-09-02, 2026-09-09, 2026-09-16, 2026-09-23, 2026-09-30",
+   "ultimo_intento_utc": "2026-10-02T04:11:01Z",
+   "ultima_actualizacion_exitosa_utc": "2026-10-02T04:11:01Z",
+   "fecha_boletin": "2026-09-30",
+   "registros": 24,
+   "rechazados": 0,
+   "boletines_con_datos": 11,
+   "meses_precios": [
+    "2026-07",
+    "2026-08",
+    "2026-09"
+   ]
+  },
+  "aromaticos": {
+   "nombre": "Aromáticos y gourmet",
+   "frecuencia": "quincenal",
+   "estado": "ok",
+   "mensaje": "Boletines nuevos: 2026-05-19, 2026-05-28, 2026-06-11, 2026-06-25, 2026-07-09, 2026-07-23, 2026-08-06, 2026-08-20, 2026-09-03, 2026-09-17, 2026-10-01",
+   "ultimo_intento_utc": "2026-10-02T04:11:21Z",
+   "ultima_actualizacion_exitosa_utc": "2026-10-02T04:11:21Z",
+   "fecha_boletin": "2026-10-01",
+   "registros": 44,
+   "rechazados": 0,
+   "boletines_con_datos": 11,
+   "meses_precios": [
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08",
+    "2026-09",
+    "2026-10"
+   ]
+  }
+ }
 }

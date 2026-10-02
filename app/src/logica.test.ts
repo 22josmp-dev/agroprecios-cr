@@ -91,11 +91,11 @@ describe("frescura de los datos", () => {
   });
 });
 
-const prod = (id: string, nombre: string, v30: number | null, vAnt: number | null): ProductoHoy => ({
+const prod = (id: string, nombre: string, v30: number | null, vAnt: number | null, fuente: ProductoHoy["fuente"] = "diario"): ProductoHoy => ({
   id, nombre, cultivo: null, cultivo_id: null, categoria: null, unidad: "Kilo", kg: 1, minimo: 1, maximo: 2, moda: 1.5,
-  promedio: 1.5, precio_kg: 1.5,
+  promedio: 1.5, precio_kg: 1.5, fuente, fecha_boletin: "2026-09-28",
   vs_anterior: vAnt === null ? null : { fecha: "2026-09-25", promedio: 1, variacion_pct: vAnt },
-  vs_semana: null, vs_30d: v30 === null ? null : { dias: 10, promedio: 1, variacion_pct: v30 },
+  vs_semana: null, vs_promedio: v30 === null ? null : { boletines: 10, promedio: 1, variacion_pct: v30 },
 });
 
 describe("resumen del día", () => {
@@ -105,11 +105,17 @@ describe("resumen del día", () => {
     const r = resumenDelDia(productos);
     expect(r).toContain("Hoy el precio de camote está 12 % por encima de su promedio de los últimos 30 días.");
     expect(r).toContain("Hoy el precio de tomate primera está 39 % por debajo de su promedio de los últimos 30 días.");
-    expect(r.at(-1)).toBe("Frente al boletín anterior: 1 producto subió, 1 bajó y 1 se mantuvo igual.");
+    expect(r.at(-1)).toBe("Frente al boletín diario anterior: 1 producto subió, 1 bajó y 1 se mantuvo igual.");
     const muchos = resumenDelDia([...productos, prod("a", "A", 1, 5), prod("b", "B", 1, -5)]);
-    expect(muchos.at(-1)).toBe("Frente al boletín anterior: 2 productos subieron, 2 bajaron y 1 se mantuvo igual.");
+    expect(muchos.at(-1)).toBe("Frente al boletín diario anterior: 2 productos subieron, 2 bajaron y 1 se mantuvo igual.");
   });
   it("los favoritos van primero", () => {
     expect(resumenDelDia(productos, ["brocoli"])[0]).toMatch(/brócoli está 3 % por encima/);
+  });
+  it("fuentes semanal y quincenal: sin 'Hoy' y con su propia ventana", () => {
+    const kiwi = prod("kiwi", "Kiwi", -8, 2, "fruta");
+    expect(resumenDelDia([kiwi], ["kiwi"])[0]).toBe("El precio de kiwi está 8 % por debajo de su promedio de las últimas 5 semanas.");
+    // No entra en la cuenta del boletín diario
+    expect(resumenDelDia([kiwi], ["kiwi"]).some((f) => f.startsWith("Frente"))).toBe(false);
   });
 });

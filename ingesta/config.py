@@ -1,5 +1,6 @@
 """Parámetros del motor de ingesta. Los umbrales se pueden cambiar con variables de entorno."""
 import os
+from dataclasses import dataclass
 from datetime import date, timedelta, timezone
 from pathlib import Path
 
@@ -46,6 +47,32 @@ DESVIACION_BAJA = float(os.environ.get("DESVIACION_BAJA", "0.15"))
 MIN_DIAS_MES = 10
 
 HISTORIAL_META = 30  # entradas guardadas en meta.json -> historial
+
+
+@dataclass(frozen=True)
+class Fuente:
+    """Un boletín del PIMA-CENADA. Verificado en docs/FORMATO_BOLETIN.md (§2 diario, §8 otros)."""
+    id: str
+    nombre: str
+    cm: int                        # bpm.pima.go.cr/cm.aspx?id=<cm>
+    frecuencia: str                # "diaria" | "semanal" | "quincenal"
+    dir_precios: str               # dentro de data/
+    dir_rechazos: str              # dentro de data/
+    dir_archivo: str               # dentro de la raíz (PDF originales y registro)
+    min_registros: int             # mínimo absoluto de registros válidos
+    max_dias_sin_boletin: int | None  # para semanal/quincenal: más días sin boletín nuevo = falla
+    ventana_promedio_dias: int     # ventana para "vs promedio"
+    texto_promedio: str            # cómo lo nombra la app
+
+
+DIARIO = Fuente("diario", "Boletín diario", CM_BOLETIN, "diaria", "prices", "rejects", "archivo",
+                MIN_REGISTROS_ABS, None, 30, "los últimos 30 días")
+FRUTA = Fuente("fruta", "Fruta importada", 79, "semanal", "prices/fruta", "rejects/fruta", "archivo/fruta",
+               int(os.environ.get("MIN_REGISTROS_FRUTA", "10")), 9, 35, "las últimas 5 semanas")
+AROMATICOS = Fuente("aromaticos", "Aromáticos y gourmet", 50, "quincenal", "prices/aromaticos",
+                    "rejects/aromaticos", "archivo/aromaticos",
+                    int(os.environ.get("MIN_REGISTROS_AROMATICOS", "15")), 17, 63, "los últimos 2 meses")
+FUENTES = {f.id: f for f in (DIARIO, FRUTA, AROMATICOS)}
 
 
 def _pascua(anio: int) -> date:

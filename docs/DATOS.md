@@ -8,6 +8,11 @@ comercialización indicada.
 
 Estado: ✅ generado por el motor · ⏳ pendiente (paso indicado).
 
+**Fuentes (boletines):** `diario` (frutas y hortalizas, lunes a viernes), `fruta` (fruta importada,
+semanal) y `aromaticos` (aromáticos y gourmet, quincenal). El diario usa las rutas de siempre;
+las otras dos, subcarpetas con su id: `data/prices/fruta/`, `data/rejects/aromaticos/`,
+`archivo/fruta/`, etc.
+
 ## ✅ `data/meta.json` — estado del proceso
 
 | Campo | Significado |
@@ -21,12 +26,17 @@ Estado: ✅ generado por el motor · ⏳ pendiente (paso indicado).
 | `sha256` | Huella del PDF de ese boletín |
 | `dias_con_datos` | Días de boletín acumulados |
 | `meses_precios` | Meses con archivo `data/prices/AAAA-MM.json` (la app los usa para las tendencias) |
+| `fuentes` | `{fruta: {…}, aromaticos: {…}}` con `nombre`, `frecuencia`, `estado`, `mensaje`, `ultimo_intento_utc`, `ultima_actualizacion_exitosa_utc`, `fecha_boletin`, `registros`, `rechazados`, `boletines_con_datos`, `meses_precios` (meses en `data/prices/<id>/`) |
 | `historial` | Últimos 30 intentos `{utc, estado, mensaje}` |
 
 Si un intento falla, `fecha_boletin`, `registros` y `ultima_actualizacion_exitosa_utc` conservan
 los valores del último éxito: los datos buenos nunca se reemplazan por datos fallidos.
 
-## ✅ `data/latest.json` — último boletín con comparaciones listas
+## ✅ `data/latest.json` — último boletín de cada fuente con comparaciones listas
+
+Esquema 2: `fuentes` (`{diario|fruta|aromaticos: {nombre, frecuencia, fecha_boletin,
+ventana_promedio_dias, texto_promedio}}`) y, en cada producto, `fuente` y `fecha_boletin`.
+`fecha_boletin` del nivel superior es la del boletín diario.
 
 ```json
 {"esquema":1,"fuente":"PIMA – SIMM","datos_de_ejemplo":false,
@@ -37,7 +47,8 @@ los valores del último éxito: los datos buenos nunca se reemplazan por datos f
    "minimo":10000.0,"maximo":10000.0,"moda":10000.0,"promedio":10000.0,"precio_kg":555.56,
    "vs_anterior":{"fecha":"2026-09-25","promedio":15666.67,"variacion_pct":-36.2},
    "vs_semana":{"fecha":"2026-09-21","promedio":19666.67,"variacion_pct":-49.2},
-   "vs_30d":{"dias":10,"promedio":16505.0,"variacion_pct":-39.4}}]}
+   "fuente":"diario","fecha_boletin":"2026-09-28",
+   "vs_promedio":{"boletines":10,"promedio":16505.0,"variacion_pct":-39.4}}]}
 ```
 
 - `kg`: kilos por unidad **solo si el boletín los declara** (`Malla (45 kg)`, `Bandeja (400 g)`,
@@ -45,9 +56,9 @@ los valores del último éxito: los datos buenos nunca se reemplazan por datos f
   `precio_kg = promedio / kg` cuando hay `kg`.
 - Comparaciones sobre el **promedio** y solo con la **misma unidad**:
   - `vs_anterior`: boletín anterior en que apareció el producto.
-  - `vs_semana`: boletín más cercano entre 7 y 13 días antes.
-  - `vs_30d`: media de los boletines de los 30 días previos (sin contar el de hoy); requiere
-    al menos 3 días, si no es `null`.
+  - `vs_semana`: boletín más cercano entre 7 y 13 días antes (solo el diario; `null` en los demás).
+  - `vs_promedio`: media de los boletines de la ventana de la fuente (diario 30 días, fruta 35,
+    aromáticos 63), sin contar el actual; requiere al menos 3 boletines, si no es `null`.
   - `variacion_pct` = (hoy − referencia) / referencia × 100, con 1 decimal.
 
 ## ✅ `data/prices/AAAA-MM.json` — histórico diario por mes
@@ -66,14 +77,16 @@ Aproximadamente 40 KB por mes.
 
 ```json
 {"esquema":1,"productos":[{
-  "id":"camote","nombre":"Camote","cultivo":"Camote","cultivo_id":"camote",
+  "id":"camote","nombre":"Camote","cultivo":"Camote","cultivo_id":"camote","fuente":"diario",
   "categoria":"raíz y tubérculo","sinonimos":["batata","boniato"],
   "nombres_boletin":["Camote"],"unidades":[{"unidad":"Kilo","kg":1.0}]}]}
 ```
 - `id`: identificador estable (nombre del boletín sin tildes ni signos).
 - `cultivo`/`cultivo_id`: agrupa variantes (Tomate primera/segunda/tercera → Tomate) para la
   búsqueda y la guía de siembra.
-- `sinonimos`: sin tildes, en minúscula; la búsqueda de la app los usa.
+- `fuente`: boletín al que pertenece (`diario`, `fruta`, `aromaticos`). El mismo nombre se busca
+  solo dentro de su boletín.
+- `sinonimos`: en minúscula y con su ortografía (la búsqueda ignora tildes).
 - `nombres_boletin`: nombres exactos con que el PIMA publica el producto. **Para aceptar un
   producto nuevo o renombrado**, se agrega aquí (o un producto nuevo) y se corre
   `python -m ingesta reprocesar`.

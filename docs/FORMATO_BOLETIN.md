@@ -174,3 +174,34 @@ que leer la lista; no se puede construir la URL a partir de la fecha.
 2. Solo ~2 semanas de boletines visibles: una caída larga del proceso pierde días sin recuperación.
 3. Columnas en orden distinto al supuesto: el parser lee el encabezado para mapearlas.
 4. Posible republicación el mismo día (visto el 28-09): se reprocesa si cambia el SHA-256.
+
+## 8. Boletines de fruta importada (semanal) y aromáticos y gourmet (quincenal)
+
+Analizados el 01-10-2026 con los 11 boletines visibles de cada uno (22 PDF). Mismo portal y mismo
+flujo de descarga que el boletín diario (§2), solo cambia el `cm`:
+
+| Boletín | Página | Lista | Frecuencia observada | Visibles |
+|---|---|---|---|---|
+| Fruta importada | `www.pima.go.cr/boletin-de-precios-de-fruta-importada/` | `cm.aspx?id=79` | Semanal, miércoles | 11 (22-07 a 30-09-2026) |
+| Aromáticos y gourmet | `www.pima.go.cr/boletin-de-productos-aromaticos-y-goutmet/` | `cm.aspx?id=50` | Quincenal, jueves (uno fue martes: 19-05) | 11 (19-05 a 01-10-2026) |
+
+- Título: `Boletín Semanal de Precios sugeridos de Fruta Importada PIMA-CENADA. Plaza <Día> DD-MM-AAAA`
+  y `Boletín Quincenal de Precios sugeridos de Productos Aromáticos y Gourmet PIMA-CENADA. Plaza …`.
+- Archivo: `SIMM - Boletin Fruta Importada AAAA-MM-DD.pdf` y
+  `SIMM - Boletin Quincenal de Productos Aromaticos y Gourmet AAAA-MM-DD.pdf`.
+- PDF de 1 página (aromáticos del 11-06-2026: 2 páginas, con una sola fila en la segunda).
+  Encabezado `Producto Unidad de Venta Mínimo Máximo Moda Promedio` (mismo orden que el diario) y
+  `Fecha de Plaza`. **Sin líneas de tabla**: se leen con el método de respaldo por posición de
+  palabras; en los 22 PDF da 0 registros inválidos.
+- Filas: fruta 24–27 por semana (29 productos distintos); aromáticos 43–47 por quincena
+  (48 productos distintos). Unidades nuevas: `Caja (10 kg)`, `Caja (8.2 kg)`,
+  `Caja (80-100 und)`, `Caja (150-198 und)` (sin peso: no hay precio por kilo),
+  `Bolsa (… g/kg)`, `Bandeja (… g)`, `Bandeja (2-3 unds)`, `Rollo de 5 rollitos`.
+- **Formato numérico distinto (caso real):** el boletín de aromáticos del **09-07-2026** usa
+  `2 000,00` (miles con espacio, coma decimal); los otros 21 usan `1,000.00`. El parser une
+  `2` + `000,00` cuando están a menos de 4 px (entre columnas hay ~19 px).
+- Erratas del PIMA: "Manzana Gala." (con punto) en una caja distinta de "Manzana Gala"; se tratan
+  como el mismo producto con dos unidades. Línea final "Total de Oferta en Kilos 0,00": se ignora.
+- No hay índices estacionales ni historial del SIMM para estos productos.
+- Falla "sin boletín": fruta, más de 9 días sin uno nuevo; aromáticos, más de 17 días (solo en el
+  último intento del día).

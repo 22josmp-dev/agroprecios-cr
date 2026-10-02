@@ -19,7 +19,10 @@ def main(argv=None) -> int:
     d.add_argument("--ultimo-intento", action="store_true",
                    help="si el boletín de hoy no está publicado, termina con error")
     d.add_argument("--ahora", help="momento UTC ISO a simular (solo pruebas), p. ej. 2026-09-29T19:17:00Z")
-    sub.add_parser("reprocesar", help="vuelve a parsear todos los PDF archivados")
+    d.add_argument("--fuente", choices=["todas", *config.FUENTES], default="todas",
+                   help="boletín a procesar (por defecto todos: diario, fruta, aromaticos)")
+    r = sub.add_parser("reprocesar", help="vuelve a parsear todos los PDF archivados")
+    r.add_argument("--fuente", choices=list(config.FUENTES), default="diario")
     e = sub.add_parser("estacional", help="índices estacionales (seasonal.json, historico/)")
     e.add_argument("--forzar", action="store_true", help="volver a descargar todos los PDF del SIMM")
     ps = sub.add_parser("parsear", help="muestra el resultado de parsear un PDF")
@@ -29,18 +32,19 @@ def main(argv=None) -> int:
 
     from .almacen import Almacen
     if a.comando == "diario":
-        from .diario import ejecutar_diario
+        from .diario import ejecutar_todas
         from .fuente import ClientePIMA
         from datetime import datetime
         ahora = datetime.fromisoformat(a.ahora.replace("Z", "+00:00")) if a.ahora else None
-        return ejecutar_diario(Almacen(config.RAIZ), ClientePIMA(), ahora=ahora, ultimo_intento=a.ultimo_intento)
+        ids = None if a.fuente == "todas" else [a.fuente]
+        return ejecutar_todas(config.RAIZ, ClientePIMA(), ids, ahora=ahora, ultimo_intento=a.ultimo_intento)
     if a.comando == "estacional":
         from .fuente import ClientePIMA
         from .indices import ejecutar_indices
         return ejecutar_indices(Almacen(config.RAIZ), ClientePIMA(), forzar=a.forzar)
     if a.comando == "reprocesar":
         from .diario import reprocesar
-        return reprocesar(Almacen(config.RAIZ))
+        return reprocesar(Almacen(config.RAIZ, config.FUENTES[a.fuente]))
     from .parser_boletin import parsear_pdf
     r = parsear_pdf(a.pdf, usar_tablas=not a.palabras)
     print(f"Fecha de plaza: {r.fecha_plaza} | formato {r.formato_numerico} {r.votos_formato} | "

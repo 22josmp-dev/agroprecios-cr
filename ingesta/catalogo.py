@@ -29,17 +29,18 @@ def kg_equivalente(unidad: str, producto: str = "") -> float | None:
 class Catalogo:
     def __init__(self, datos: dict):
         self.datos = datos
-        self._por_nombre: dict[str, dict] = {}
+        # Por (fuente, nombre normalizado): el mismo nombre puede existir en dos boletines
+        self._por_nombre: dict[tuple[str, str], dict] = {}
         for p in datos["productos"]:
             for nombre in [p["nombre"], *p.get("nombres_boletin", [])]:
-                self._por_nombre[normalizar(nombre)] = p
+                self._por_nombre[(p.get("fuente", "diario"), normalizar(nombre))] = p
 
     @classmethod
     def cargar(cls, ruta: Path) -> "Catalogo":
         return cls(json.loads(Path(ruta).read_text(encoding="utf-8")))
 
-    def buscar(self, nombre_boletin: str) -> dict | None:
-        return self._por_nombre.get(normalizar(nombre_boletin))
+    def buscar(self, nombre_boletin: str, fuente: str = "diario") -> dict | None:
+        return self._por_nombre.get((fuente, normalizar(nombre_boletin)))
 
     def por_id(self, id_: str) -> dict | None:
         return next((p for p in self.datos["productos"] if p["id"] == id_), None)

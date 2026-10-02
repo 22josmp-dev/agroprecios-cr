@@ -59,8 +59,12 @@ async function guardarDatos() {
   await Promise.all(DATOS_BASE.map((u) => fetch(u, { cache: "no-cache" }).then((r) => r.ok && c.put(u, r)).catch(() => {})));
   try {
     const meta = await (await c.match("data/meta.json")).json();
-    const meses = (meta.meses_precios || []).slice(-2);
-    await Promise.all(meses.map((m) => fetch("data/prices/" + m + ".json").then((r) => r.ok && c.put("data/prices/" + m + ".json", r)).catch(() => {})));
+    // Últimos 2 meses de cada boletín: diario (data/prices) y semanal/quincenal (data/prices/<id>)
+    const rutas = (meta.meses_precios || []).slice(-2).map((m) => "data/prices/" + m + ".json");
+    for (const [id, f] of Object.entries(meta.fuentes || {})) {
+      for (const m of (f.meses_precios || []).slice(-2)) rutas.push("data/prices/" + id + "/" + m + ".json");
+    }
+    await Promise.all(rutas.map((u) => fetch(u).then((r) => r.ok && c.put(u, r)).catch(() => {})));
   } catch (_) { /* sin meta: se guardará al usar la app */ }
 }
 

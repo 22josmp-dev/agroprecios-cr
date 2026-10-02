@@ -1,5 +1,5 @@
 // Lectura de /data por fetch relativo. Cada archivo se pide una sola vez por sesión.
-import type { Catalogo, Ciclos, Historico, Latest, MesPrecios, Meta, Seasonal } from "./tipos";
+import type { Catalogo, Ciclos, Historico, IdFuente, Latest, MesPrecios, Meta, Seasonal } from "./tipos";
 
 const cache = new Map<string, Promise<unknown>>();
 
@@ -26,11 +26,15 @@ export const cargarCatalogo = () => leer<Catalogo>("catalog.json");
 export const cargarSeasonal = () => leer<Seasonal>("seasonal.json");
 export const cargarCiclos = () => leer<Ciclos>("cycle_defaults.json");
 export const cargarHistorico = (id: string) => leer<Historico | null>(`historico/${id}.json`, true);
-export const cargarMes = (mes: string) => leer<MesPrecios | null>(`prices/${mes}.json`, true);
+/** Carpeta de precios de cada fuente dentro de data/ (igual que ingesta/config.py). */
+export const DIR_PRECIOS: Record<IdFuente, string> = { diario: "prices", fruta: "prices/fruta", aromaticos: "prices/aromaticos" };
+export const cargarMes = (mes: string, fuente: IdFuente = "diario") =>
+  leer<MesPrecios | null>(`${DIR_PRECIOS[fuente]}/${mes}.json`, true);
 
 /** Serie diaria (fecha, promedio) de un producto y unidad en los meses indicados. */
-export async function serieDiaria(meses: string[], id: string, unidad: string): Promise<{ fecha: string; promedio: number }[]> {
-  const contenido = await Promise.all(meses.map(cargarMes));
+export async function serieDiaria(meses: string[], id: string, unidad: string, fuente: IdFuente = "diario"
+): Promise<{ fecha: string; promedio: number }[]> {
+  const contenido = await Promise.all(meses.map((m) => cargarMes(m, fuente)));
   const puntos: { fecha: string; promedio: number }[] = [];
   for (const mes of contenido) {
     if (!mes) continue;
