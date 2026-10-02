@@ -28,15 +28,19 @@ export function fechaCorta(iso: string): string {
   return `${d} ${MESES_CORTOS[m - 1]}`;
 }
 
-/** Momento UTC ISO -> "28 de setiembre, 11:33 p. m." en hora de Costa Rica. */
-export function momentoCR(utcIso: string): string {
+/** Momento UTC ISO -> "11:33 p. m." en hora de Costa Rica. */
+export function horaCR(utcIso: string): string {
   const cr = new Date(Date.parse(utcIso) + DESFASE_CR);
-  const iso = cr.toISOString();
   let h = cr.getUTCHours();
   const mm = String(cr.getUTCMinutes()).padStart(2, "0");
   const sufijo = h < 12 ? "a. m." : "p. m.";
   h = h % 12 || 12;
-  return `${fechaLarga(iso.slice(0, 10))}, ${h}:${mm} ${sufijo}`;
+  return `${h}:${mm} ${sufijo}`;
+}
+
+/** Momento UTC ISO -> "28 de setiembre, 11:33 p. m." en hora de Costa Rica. */
+export function momentoCR(utcIso: string): string {
+  return `${fechaLarga(hoyCR(new Date(utcIso)))}, ${horaCR(utcIso)}`;
 }
 
 /** Día del año 0..364 (año no bisiesto) para un mes (1-12) y día. */

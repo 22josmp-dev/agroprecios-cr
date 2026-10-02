@@ -56,7 +56,7 @@ export function Ayuda({ meta }: { meta: Meta }) {
           <li><strong>Aromáticos y gourmet:</strong> boletín quincenal del PIMA – SIMM
             (<a href="https://www.pima.go.cr/boletin-de-productos-aromaticos-y-goutmet/" rel="noopener">ver en pima.go.cr</a>), normalmente los jueves.</li>
           <li><strong>Índices estacionales e historial mensual:</strong> publicados por el SIMM con datos desde 2018.</li>
-          <li><strong>Actualización:</strong> la app revisa automáticamente el sitio del PIMA-CENADA todos los días dos veces al día.</li>
+          <li><strong>Actualización:</strong> la app revisa automáticamente el sitio del PIMA-CENADA todos los días tres veces al día.</li>
           <li><strong>Ciclos de cultivo de la guía:</strong> valores estimados de referencia (se deben de verificar con un profesional o llenar según la experiencia).</li>
           {meta.ultima_actualizacion_exitosa_utc && <li>Última actualización correcta: {momentoCR(meta.ultima_actualizacion_exitosa_utc)}.</li>}
         </ul>

@@ -71,7 +71,7 @@ export function App() {
                 (aromáticos y gourmet). AgroPrecios CR es una app informativa independiente, no oficial del PIMA.
               </p>
             )}
-            {pantalla !== "ayuda" && <EstadoDatos f={frescura(datos.meta)} otras={datos.meta.fuentes} />}
+            {(pantalla === "inicio" || pantalla === "producto") && <EstadoDatos f={frescura(datos.meta)} fechaDiario={datos.meta.fecha_boletin} otras={datos.meta.fuentes} />}
             {pantalla === "inicio" && <Inicio datos={datos} />}
             {pantalla === "producto" && <Detalle datos={datos} id={ruta[1]} />}
             {pantalla === "guia" && <Guia inicial={ruta[1]} />}

@@ -15,17 +15,26 @@ export function AvisoEjemplo() {
   return <p class="aviso aviso-ejemplo" role="alert"><strong>DATOS DE EJEMPLO.</strong> Estos precios no son reales.</p>;
 }
 
-export function EstadoDatos({ f, otras }: { f: Frescura; otras?: Record<string, MetaFuente> }) {
+export function EstadoDatos({ f, fechaDiario, otras }: {
+  f: Frescura; fechaDiario: string | null; otras?: Record<string, MetaFuente>;
+}) {
+  // Las tres líneas con el mismo formato: "<Boletín> (<frecuencia>): boletín del <fecha>"
+  const lineas = [
+    { nombre: "Frutas y hortalizas", frecuencia: "diario", fecha: fechaDiario, error: false },
+    ...Object.values(otras || {}).map((o) => ({ nombre: o.nombre, frecuencia: o.frecuencia, fecha: o.fecha_boletin, error: o.estado === "error" })),
+  ].filter((l) => l.fecha);
   return (
     <section class="estado" aria-label="Estado de los datos">
-      <p>{f.ultimaActualizacion}</p>
-      <p><strong>{f.boletin.replace("Boletín", "Boletín diario")}</strong> {f.insigniaDato && <span class="insignia">{f.insigniaDato}</span>}</p>
-      {otras && Object.values(otras).filter((o) => o.fecha_boletin).map((o) => (
-        <p key={o.nombre} class="otras">
-          {o.nombre} ({o.frecuencia}): boletín del {fechaLarga(o.fecha_boletin!)}
-          {o.estado === "error" && " · el último intento de actualización no se completó"}
-        </p>
-      ))}
+      <p>{f.ultimaRevision}</p>
+      <ul class="boletines">
+        {lineas.map((l) => (
+          <li key={l.nombre}>
+            <strong>{l.nombre} ({l.frecuencia}):</strong> boletín del {fechaLarga(l.fecha!, true)}
+            {l.frecuencia === "diario" && f.insigniaDato && <> <span class="insignia">{f.insigniaDato}</span></>}
+            {l.error && " · el último intento de actualización no se completó"}
+          </li>
+        ))}
+      </ul>
       {f.desactualizado && <p class="aviso" role="alert"><span aria-hidden="true">⚠ </span>{f.desactualizado}</p>}
       {!f.desactualizado && f.ultimoIntentoFallo && <p class="nota">{f.ultimoIntentoFallo}</p>}
     </section>

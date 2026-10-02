@@ -12,7 +12,7 @@ quincenal (aromáticos y gourmet). Se actualiza sola cada día: nadie carga dato
 ## Cómo funciona
 
 ```
-13:17 y 17:17 (hora CR)  GitHub Actions
+11:47, 14:47 y 17:47 (hora CR)  GitHub Actions (suele llegar con 3–4 h de atraso)
   └─ python -m ingesta diario      (las 3 fuentes; una falla no detiene a las otras)
        ├─ lista de cada boletín en bpm.pima.go.cr (11 visibles de cada uno)
        ├─ descarga los que falten (1 solicitud/s) y guarda el PDF en archivo/

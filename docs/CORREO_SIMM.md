@@ -43,7 +43,7 @@ Les escribo para:
 4. **Pedirles que, si planean cambiar** el formato del boletín o la forma de publicarlo en el
    sitio, nos lo avisen por este medio para ajustar la app a tiempo.
 
-La app consulta el sitio del PIMA como máximo dos veces al día, a un ritmo de una solicitud por
+La app consulta el sitio del PIMA como máximo tres veces al día, a un ritmo de una solicitud por
 segundo, e identificándose como "AgroPreciosCR-bot". Si prefieren otro horario o mecanismo, con
 gusto lo ajustamos.
 

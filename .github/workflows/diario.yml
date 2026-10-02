@@ -1,19 +1,25 @@
 # Actualización diaria de precios PIMA-CENADA y publicación de la app en GitHub Pages.
 #
 # Horario (hora de Costa Rica): el PDF se genera entre 10:20 y 12:00 (docs/FORMATO_BOLETIN.md).
-#   13:17 -> primer intento. Si el boletín de hoy aún no está, queda "pendiente" (sin error).
-#   17:17 -> último intento. Si sigue sin aparecer, el workflow termina en error y GitHub
+#   11:47 -> primer intento. Si el boletín de hoy aún no está, queda "pendiente" (sin error).
+#   14:47 -> segundo intento (también "pendiente" si aún no está).
+#   17:47 -> último intento. Si sigue sin aparecer, el workflow termina en error y GitHub
 #            envía un correo al propietario del repositorio.
-# Minuto :17 para evitar el inicio de cada hora, cuando GitHub retrasa más los cron.
+# Del 29-09 al 01-10-2026 GitHub ejecutó los cron con 3 a 4 horas de atraso (13:17 -> ~17:00,
+# 17:17 -> ~20:10). Por eso los intentos se adelantaron y se agregó un tercero: aun con atraso,
+# los datos llegan por la tarde. GitHub no garantiza la hora exacta.
+# Minuto :47 para evitar el inicio de cada hora, cuando GitHub retrasa más los cron.
 # También corre sábados y domingos: no se espera boletín, pero confirma que todo sigue al día
 # y mantiene la actividad del repositorio.
 name: Actualización diaria
 
 on:
   schedule:
-    - cron: "17 13 * * *"
+    - cron: "47 11 * * *"
       timezone: "America/Costa_Rica"
-    - cron: "17 17 * * *"
+    - cron: "47 14 * * *"
+      timezone: "America/Costa_Rica"
+    - cron: "47 17 * * *"
       timezone: "America/Costa_Rica"
   workflow_dispatch:
     inputs:
@@ -53,12 +59,13 @@ jobs:
         id: ingesta
         continue-on-error: true   # se guarda meta.json igual y se falla al final
         env:
-          ULTIMO: ${{ github.event.schedule == '17 17 * * *' || inputs.ultimo_intento == true }}
+          ULTIMO: ${{ github.event.schedule == '47 17 * * *' || inputs.ultimo_intento == true }}
           EVENTO: ${{ github.event_name }}
         run: |
-          # También es el último intento si el cron llega tarde (16:00 o más, hora de Costa Rica)
+          # También es el último intento si un cron llega muy tarde (20:00 o más, hora de Costa Rica).
+          # No antes: con el atraso habitual de GitHub, el intento de las 14:47 puede llegar después de las 17:00.
           hora=$(TZ=America/Costa_Rica date +%H)
-          if [ "$EVENTO" = "schedule" ] && [ "$hora" -ge 16 ]; then ULTIMO=true; fi
+          if [ "$EVENTO" = "schedule" ] && [ "$hora" -ge 20 ]; then ULTIMO=true; fi
           echo "Hora de Costa Rica: $hora — último intento: $ULTIMO"
           if [ "$ULTIMO" = "true" ]; then
             python -m ingesta diario --ultimo-intento
