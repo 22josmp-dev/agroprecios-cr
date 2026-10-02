@@ -139,7 +139,8 @@ completos del boletín diario desde 2026 cuando la unidad coincide.
 | `indice` | 12 valores (enero…diciembre), promedio 1.0. `null` en meses sin mercado |
 | `metodo` | `media_movil_12`: ratio = precio / media móvil centrada 2×12; índice = mediana de ratios entre años. `promedio_anual`: respaldo para frutas de temporada con meses sin dato (ratio contra el promedio de los meses con dato del año) |
 | `desviacion` | Desviación estándar de los ratios de cada mes (riesgo); `desviacion_media` su promedio |
-| `years_of_data` | Años con al menos un precio mensual |
+| `years_of_data` | Años con al menos 3 meses con precio (un año recién empezado no cuenta) |
+| `anios` | `[primero, último]` de esos años, p. ej. `[2018, 2025]` |
 | `confianza` | `alta`: ≥ 5 años y `desviacion_media` ≤ 0,15 · `media`: 3–4 años · `baja`: cualquier otro caso (incluye < 3 años y precios muy variables) |
 | `indice_oficial_simm` | Índice publicado por el SIMM (método porcentaje promedio), como referencia |
 | `productos_boletin` | Ids de `catalog.json` con el mismo producto y calidad; vacío si solo coincide el cultivo |

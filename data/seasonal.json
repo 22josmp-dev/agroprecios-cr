@@ -2,7 +2,7 @@
  "esquema": 1,
  "fuente": "PIMA – SIMM",
  "datos_de_ejemplo": false,
- "generado_utc": "2026-10-02T04:32:07Z",
+ "generado_utc": "2026-10-02T04:48:50Z",
  "edicion_simm": [
   2026
  ],
@@ -21,6 +21,10 @@
    "productos_boletin": [],
    "unidad_precio": "Unidad",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     0.0,
@@ -107,6 +111,10 @@
    "productos_boletin": [],
    "unidad_precio": "Kilo",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.9879,
@@ -194,7 +202,11 @@
     "apio-verde-mata"
    ],
    "unidad_precio": "Mata",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.903,
@@ -281,6 +293,10 @@
    "productos_boletin": [],
    "unidad_precio": "Bandeja (500 g)",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     0.9418,
@@ -368,7 +384,11 @@
     "ayote-sazon"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     0.9947,
@@ -455,6 +475,10 @@
    "productos_boletin": [],
    "unidad_precio": "Kilo",
    "years_of_data": 5,
+   "anios": [
+    2021,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.191,
@@ -543,6 +567,10 @@
    ],
    "unidad_precio": "Unidad",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.2031,
@@ -630,7 +658,11 @@
     "banano-maduro-criollo"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.9862,
@@ -717,6 +749,10 @@
    "productos_boletin": [],
    "unidad_precio": "Caja",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.9957,
@@ -803,6 +839,10 @@
    "productos_boletin": [],
    "unidad_precio": "Caja",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.9929,
@@ -890,7 +930,11 @@
     "brocoli"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.1324,
@@ -978,7 +1022,11 @@
     "camote"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.1049,
@@ -1065,6 +1113,10 @@
    "productos_boletin": [],
    "unidad_precio": "Kilo",
    "years_of_data": 5,
+   "anios": [
+    2021,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.9467,
@@ -1151,6 +1203,10 @@
    "productos_boletin": [],
    "unidad_precio": "Kilo",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.1218,
@@ -1238,7 +1294,11 @@
     "cebolla-seca-amarilla-burra"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.151,
@@ -1326,7 +1386,11 @@
     "cebolla-seca-amarilla-suelta"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.0797,
@@ -1414,7 +1478,11 @@
     "cebolla-seca-amarilla-trenza"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.0803,
@@ -1502,7 +1570,11 @@
     "cebolla-seca-morada"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.2088,
@@ -1591,6 +1663,10 @@
    ],
    "unidad_precio": "Rollo",
    "years_of_data": 5,
+   "anios": [
+    2021,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.0845,
@@ -1678,7 +1754,11 @@
     "chayote-tierno-criollo"
    ],
    "unidad_precio": "Java",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     0.7298,
@@ -1766,7 +1846,11 @@
     "chayote-tierno-quelite"
    ],
    "unidad_precio": "Java",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     0.9978,
@@ -1853,6 +1937,10 @@
    "productos_boletin": [],
    "unidad_precio": "Caja plástica 23 kilogramos",
    "years_of_data": 8,
+   "anios": [
+    2017,
+    2024
+   ],
    "confianza": "baja",
    "indice": [
     0.9004,
@@ -1938,8 +2026,12 @@
    "cultivo": "Chiverre",
    "productos_boletin": [],
    "unidad_precio": "Unidad",
-   "years_of_data": 8,
-   "confianza": "alta",
+   "years_of_data": 3,
+   "anios": [
+    2019,
+    2025
+   ],
+   "confianza": "media",
    "indice": [
     null,
     0.9932,
@@ -2035,6 +2127,10 @@
    "productos_boletin": [],
    "unidad_precio": "Unidad",
    "years_of_data": 5,
+   "anios": [
+    2021,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.9873,
@@ -2122,7 +2218,11 @@
     "coliflor"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     0.9562,
@@ -2210,7 +2310,11 @@
     "culantro-castilla"
    ],
    "unidad_precio": "Rollo de 10 rollitos",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     0.7544,
@@ -2298,7 +2402,11 @@
     "elote"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.0604,
@@ -2387,6 +2495,10 @@
    ],
    "unidad_precio": "Rollo",
    "years_of_data": 5,
+   "anios": [
+    2021,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.0266,
@@ -2473,6 +2585,10 @@
    "productos_boletin": [],
    "unidad_precio": "Bandeja (1 kg)",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.0132,
@@ -2559,6 +2675,10 @@
    "productos_boletin": [],
    "unidad_precio": "Unidad",
    "years_of_data": 7,
+   "anios": [
+    2019,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.0235,
@@ -2650,6 +2770,10 @@
    "productos_boletin": [],
    "unidad_precio": "Kilo",
    "years_of_data": 5,
+   "anios": [
+    2021,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.0561,
@@ -2736,6 +2860,10 @@
    "productos_boletin": [],
    "unidad_precio": "Kilo",
    "years_of_data": 5,
+   "anios": [
+    2021,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.8796,
@@ -2823,8 +2951,12 @@
     "jengibre-sazon"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 5,
-   "confianza": "alta",
+   "years_of_data": 4,
+   "anios": [
+    2022,
+    2025
+   ],
+   "confianza": "media",
    "indice": [
     0.9615,
     0.9472,
@@ -2910,6 +3042,10 @@
    "productos_boletin": [],
    "unidad_precio": "Caja plástica (27 kg)",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     null,
@@ -3006,7 +3142,11 @@
     "lechuga-americana"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.0102,
@@ -3094,7 +3234,11 @@
     "limon-mandarina"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.746,
@@ -3182,7 +3326,11 @@
     "limon-mesino"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.5234,
@@ -3270,7 +3418,11 @@
     "mamon-chino-injertado"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     null,
@@ -3364,6 +3516,10 @@
    "productos_boletin": [],
    "unidad_precio": "Unidad",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.9366,
@@ -3454,7 +3610,11 @@
     "manga-grande-cavallini"
    ],
    "unidad_precio": "Caja plástica (17 kg)",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.4545,
@@ -3541,6 +3701,10 @@
    "productos_boletin": [],
    "unidad_precio": "Caja plástica (17 kg)",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.8235,
@@ -3634,7 +3798,11 @@
     "manga-grande-keitt"
    ],
    "unidad_precio": "Caja plástica (17 kg)",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.4813,
@@ -3721,6 +3889,10 @@
    "productos_boletin": [],
    "unidad_precio": "Caja plástica (17 kg)",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.492,
@@ -3806,7 +3978,11 @@
    "cultivo": "Mango",
    "productos_boletin": [],
    "unidad_precio": "Caja plástica (17 kg)",
-   "years_of_data": 8,
+   "years_of_data": 7,
+   "anios": [
+    2018,
+    2024
+   ],
    "confianza": "baja",
    "indice": [
     1.3061,
@@ -3895,6 +4071,10 @@
    "productos_boletin": [],
    "unidad_precio": "Caja plástica (17 kg)",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.3591,
@@ -3981,6 +4161,10 @@
    "productos_boletin": [],
    "unidad_precio": "Kilo",
    "years_of_data": 5,
+   "anios": [
+    2021,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     null,
@@ -4071,6 +4255,10 @@
    "productos_boletin": [],
    "unidad_precio": "Kilo",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.0431,
@@ -4158,7 +4346,11 @@
     "melon-cantaloupe"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.8572,
@@ -4245,6 +4437,10 @@
    "productos_boletin": [],
    "unidad_precio": "Kilo",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     0.9998,
@@ -4335,8 +4531,12 @@
    "cultivo": "Melón",
    "productos_boletin": [],
    "unidad_precio": "Kilo",
-   "years_of_data": 5,
-   "confianza": "alta",
+   "years_of_data": 4,
+   "anios": [
+    2021,
+    2025
+   ],
+   "confianza": "media",
    "indice": [
     1.117,
     0.9523,
@@ -4430,6 +4630,10 @@
    "productos_boletin": [],
    "unidad_precio": "Kilo",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.9524,
@@ -4516,6 +4720,10 @@
    "productos_boletin": [],
    "unidad_precio": "Kilo",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.9339,
@@ -4603,7 +4811,11 @@
     "nampi"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.8307,
@@ -4691,7 +4903,11 @@
     "naranja-dulce"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.9737,
@@ -4778,6 +4994,10 @@
    "productos_boletin": [],
    "unidad_precio": "Kilo",
    "years_of_data": 5,
+   "anios": [
+    2021,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.9927,
@@ -4866,6 +5086,10 @@
    ],
    "unidad_precio": "Bolsa",
    "years_of_data": 5,
+   "anios": [
+    2021,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.983,
@@ -4953,7 +5177,11 @@
     "papa-amarilla-primera"
    ],
    "unidad_precio": "Malla (45 kg)",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.0388,
@@ -5041,7 +5269,11 @@
     "papa-blanca-primera"
    ],
    "unidad_precio": "Malla (45 kg)",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.1045,
@@ -5128,6 +5360,10 @@
    "productos_boletin": [],
    "unidad_precio": "Malla (45 kg)",
    "years_of_data": 5,
+   "anios": [
+    2021,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.161,
@@ -5215,7 +5451,11 @@
     "papaya-hibrida"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.2522,
@@ -5302,6 +5542,10 @@
    "productos_boletin": [],
    "unidad_precio": "Kilo",
    "years_of_data": 5,
+   "anios": [
+    2021,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.174,
@@ -5391,7 +5635,11 @@
     "pepino"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.2328,
@@ -5479,7 +5727,11 @@
     "pina-grande"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.0187,
@@ -5566,6 +5818,10 @@
    "productos_boletin": [],
    "unidad_precio": "Unidad",
    "years_of_data": 5,
+   "anios": [
+    2021,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.9872,
@@ -5654,6 +5910,10 @@
    ],
    "unidad_precio": "Kilo",
    "years_of_data": 6,
+   "anios": [
+    2020,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     null,
@@ -5747,6 +6007,10 @@
    "productos_boletin": [],
    "unidad_precio": "Unidad",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.0505,
@@ -5833,6 +6097,10 @@
    "productos_boletin": [],
    "unidad_precio": "Unidad",
    "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.0508,
@@ -5920,7 +6188,11 @@
     "remolacha"
    ],
    "unidad_precio": "Unidad",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.106,
@@ -6008,7 +6280,11 @@
     "repollo-morado"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.1567,
@@ -6096,7 +6372,11 @@
     "repollo-verde"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.2919,
@@ -6184,7 +6464,11 @@
     "sandia-de-campo-grande"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.0245,
@@ -6272,7 +6556,11 @@
     "sandia-de-campo-mediana"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.0031,
@@ -6359,6 +6647,10 @@
    "productos_boletin": [],
    "unidad_precio": "Kilo",
    "years_of_data": 5,
+   "anios": [
+    2021,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     1.0045,
@@ -6446,7 +6738,11 @@
     "tiquisque"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "alta",
    "indice": [
     0.984,
@@ -6534,7 +6830,11 @@
     "tomate-primera"
    ],
    "unidad_precio": "Caja plástica (18 kg)",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.0937,
@@ -6622,7 +6922,11 @@
     "vainica"
    ],
    "unidad_precio": "Kilo",
-   "years_of_data": 9,
+   "years_of_data": 8,
+   "anios": [
+    2018,
+    2025
+   ],
    "confianza": "baja",
    "indice": [
     1.2356,

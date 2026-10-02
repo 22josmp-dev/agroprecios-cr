@@ -90,6 +90,7 @@ export interface IndiceProducto {
   productos_boletin: string[];
   unidad_precio: string | null;
   years_of_data: number;
+  anios: [number, number] | null;
   confianza: "alta" | "media" | "baja";
   indice: (number | null)[] | null;
   desviacion: (number | null)[] | null;

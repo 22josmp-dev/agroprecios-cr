@@ -66,6 +66,14 @@ describe("guía de siembra", () => {
     expect(calcularGuia(entrada(conPico(8), 4, 0.05), 90, 30).mejores[0].confianza).toBe("media");
   });
 
+  it("explica el motivo de la confianza", () => {
+    expect(calcularGuia(entrada(conPico(8), 8, 0.4), 90, 30).mejores[0].motivoConfianza)
+      .toBe("Aunque hay 8 años de datos, en esas fechas el precio cambió mucho de un año a otro.");
+    expect(calcularGuia(entrada(conPico(8), 4, 0.05), 90, 30).mejores[0].motivoConfianza).toBe("Hay solo 4 años de datos.");
+    expect(calcularGuia(entrada(conPico(8), 2, 0.05), 90, 30).mejores[0].motivoConfianza).toBe("Hay pocos datos: 2 años.");
+    expect(calcularGuia(entrada(conPico(8), 8, 0.05), 90, 30).mejores[0].motivoConfianza).toMatch(/^Hay 8 años de datos y/);
+  });
+
   it("sin índice no hay recomendación", () => {
     const r = calcularGuia({ indice: null, desviacion: null, desviacion_media: null, years_of_data: 0 }, 90, 30);
     expect(r.valido).toBe(false);

@@ -78,18 +78,21 @@ function GuiaCargada({ seasonal, ciclos, inicial }: { seasonal: Seasonal; ciclos
   return (
     <article>
       <h1>Guía de siembra</h1>
-      <p>Muestra en qué fechas sembrar para que la cosecha caiga en los meses en que, en años anteriores, el precio mayorista fue mejor.</p>
+      <p>Muestra en qué fechas sembrar para que la cosecha se dé en los meses en que, en años anteriores, el precio mayorista fue mejor.</p>
       <Advertencias />
 
       <section class="formulario-guia" aria-labelledby="t-datos">
         <h2 id="t-datos">Su cultivo</h2>
         <label for="g-producto">Cultivo</label>
         <select id="g-producto" value={id} onChange={(e) => { setId((e.target as HTMLSelectElement).value); location.hash = `#/guia/${(e.target as HTMLSelectElement).value}`; }}>
-          {[...porCultivo.entries()].map(([cultivo, lista]) => (
-            <optgroup key={cultivo} label={cultivo}>
-              {lista.map((p) => <option key={p.id} value={p.id}>{p.nombre}</option>)}
-            </optgroup>
-          ))}
+          {/* Grupo solo si el cultivo tiene varias opciones; si tiene una, va como opción suelta */}
+          {[...porCultivo.entries()].map(([cultivo, lista]) => lista.length === 1
+            ? <option key={lista[0].id} value={lista[0].id}>{lista[0].nombre}</option>
+            : (
+              <optgroup key={cultivo} label={cultivo}>
+                {lista.map((p) => <option key={p.id} value={p.id}>{p.nombre}</option>)}
+              </optgroup>
+            ))}
         </select>
 
         {ciclo?.tipo === "perenne" ? (
@@ -119,7 +122,7 @@ function GuiaCargada({ seasonal, ciclos, inicial }: { seasonal: Seasonal; ciclos
                 : !cicloEstimado ? "No hay un valor estimado para esta altitud: escriba los días de su cultivo." : "Usando el ciclo que usted indicó."}
             </p>
 
-            <label for="g-ventana">Días que dura la cosecha</label>
+            <label for="g-ventana">Días que tarda la labor de cosecha</label>
             <input id="g-ventana" type="number" inputMode="numeric" min={0} max={365} value={ventanaTxt}
               onInput={(e) => setVentanaTxt((e.target as HTMLInputElement).value)} />
           </>
@@ -157,7 +160,7 @@ function GuiaCargada({ seasonal, ciclos, inicial }: { seasonal: Seasonal; ciclos
             <TablaMensual resultado={resultado} />
           </section>
 
-          <section aria-labelledby="t-comparar">
+          <section class="formulario-guia" aria-labelledby="t-comparar">
             <h2 id="t-comparar">Comparar dos ciclos</h2>
             <p class="nota">Por ejemplo, una variedad más rápida o más lenta.</p>
             <label for="g-ciclo-b">Otro ciclo (días)</label>
@@ -171,7 +174,8 @@ function GuiaCargada({ seasonal, ciclos, inicial }: { seasonal: Seasonal; ciclos
           </section>
         </>
       )}
-      <p class="nota">Índice de precios: {producto.nombre}, {producto.years_of_data} años de datos del SIMM. Ciclos: valores estimados, sin verificar por un profesional.</p>
+      <p class="nota">Índice de precios de {producto.nombre}: {producto.years_of_data} años de datos
+        {producto.anios ? ` (${producto.anios[0]}–${producto.anios[1]})` : ""}. Ciclos: valores estimados, sin verificar por un profesional.</p>
       <Fuente />
     </article>
   );
@@ -193,6 +197,7 @@ function TarjetaRecomendacion({ r, n, activa, alElegir }: { r: Recomendacion; n:
           <span>Cosecha: {textoDiaDelAnio(r.cosechaInicio)} al {textoDiaDelAnio(r.cosechaFin)}</span>
           <span>Precio esperado: <strong>{signo(r.difPromedioPct)}</strong> frente al promedio del año · {signo(r.difPeorPct)} frente a la peor fecha</span>
           <span class={`insignia confianza-${r.confianza}`}><span aria-hidden="true">{CONFIANZA[r.confianza].icono} </span>{CONFIANZA[r.confianza].texto}</span>
+          <span class="rec-motivo">{r.motivoConfianza}</span>
           <span class="rec-explicacion">{r.explicacion}</span>
         </span>
       </button>

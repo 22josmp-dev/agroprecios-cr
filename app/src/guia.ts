@@ -28,6 +28,8 @@ export interface Recomendacion extends Candidato {
   difPromedioPct: number;
   difPeorPct: number;
   confianza: Confianza;
+  /** Por qué tiene esa confianza, en lenguaje simple. */
+  motivoConfianza: string;
   explicacion: string;
 }
 
@@ -127,9 +129,17 @@ export function calcularGuia(entrada: EntradaGuia, ciclo: number, ventana: numbe
     const difPromedioPct = (c.indiceEsperado / promedioAnual - 1) * 100;
     const difPeorPct = (c.indiceEsperado / peor.indiceEsperado - 1) * 100;
     const confianza = confianzaVentana(entrada.years_of_data, c.riesgo);
-    return { ...c, difPromedioPct, difPeorPct, confianza, explicacion: explicar(c, difPromedioPct) };
+    return { ...c, difPromedioPct, difPeorPct, confianza, motivoConfianza: motivoConfianza(confianza, entrada.years_of_data),
+      explicacion: explicar(c, difPromedioPct) };
   });
   return { valido: true, indiceDiario, riesgoDiario, candidatos, mejores, peor, promedioAnual };
+}
+
+export function motivoConfianza(confianza: Confianza, anios: number): string {
+  if (confianza === "alta") return `Hay ${anios} años de datos y en esas fechas el precio se repite parecido cada año.`;
+  if (confianza === "media") return `Hay solo ${anios} años de datos.`;
+  if (anios < 3) return `Hay pocos datos: ${anios === 1 ? "1 año" : `${anios} años`}.`;
+  return `Aunque hay ${anios} años de datos, en esas fechas el precio cambió mucho de un año a otro.`;
 }
 
 export function explicar(c: Candidato, difPromedioPct: number): string {

@@ -157,7 +157,7 @@ def construir(alm: Almacen, catalogo: Catalogo, hoy: date, momento: str, log=pri
         productos.append({
             "id": id_, "nombre": ind.nombre, "cultivo_id": cultivo_id, "cultivo": cultivo,
             "productos_boletin": ids, "unidad_precio": ind.unidad_precio,
-            "years_of_data": calc["years_of_data"], "confianza": calc["confianza"],
+            "years_of_data": calc["years_of_data"], "anios": calc["anios"], "confianza": calc["confianza"],
             "indice": calc["indice"], "desviacion": calc["desviacion"], "desviacion_media": calc["desviacion_media"],
             "n_ratios": calc["n_ratios"], "metodo": calc["metodo"], "meses_sin_dato": calc["meses_sin_dato"],
             "motivo": calc.get("motivo"),

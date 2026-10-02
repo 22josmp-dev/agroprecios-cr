@@ -218,7 +218,8 @@ small { font-size: 0.85em; color: var(--texto-2); }
 .formulario-guia select, .formulario-guia input[type="number"], #g-ciclo-b {
   width: 100%; max-width: 420px; min-height: 52px; padding: 10px 12px; border: 2px solid var(--texto-2); border-radius: 10px; background: var(--fondo);
 }
-.formulario-guia fieldset { border: none; padding: 0; margin: 0; }
+.formulario-guia fieldset { border: none; padding: 0; margin: 20px 0 0; }
+.formulario-guia fieldset legend { margin-top: 0; }
 .formulario-guia .opcion { font-weight: 400; display: flex; align-items: center; gap: 10px; margin: 4px 0; min-height: 44px; }
 .opcion input { width: 22px; height: 22px; }
 .fila-campo { display: flex; gap: 8px; align-items: stretch; max-width: 420px; }
@@ -236,6 +237,7 @@ small { font-size: 0.85em; color: var(--texto-2); }
 .rec-cuerpo { display: flex; flex-direction: column; gap: 4px; }
 .rec-fecha { font-size: 1.15rem; font-weight: 700; }
 .rec-explicacion { color: var(--texto-2); font-size: 0.92rem; }
+.rec-motivo { font-size: 0.92rem; }
 .comparador { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
 .escenario { background: var(--superficie); border-radius: 12px; padding: 10px 12px; font-size: 0.95rem; }
 .escenario h3 { margin-top: 4px; }

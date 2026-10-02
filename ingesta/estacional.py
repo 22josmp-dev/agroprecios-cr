@@ -74,8 +74,22 @@ def _ratios_promedio_anual(serie: Serie) -> dict[int, list[float]]:
     return ratios
 
 
+MIN_MESES_ANIO = 3  # un año cuenta en years_of_data solo con al menos 3 meses con precio
+
+
+def anios_con_datos(serie: Serie) -> list[int]:
+    """Años con al menos MIN_MESES_ANIO meses con precio. Un año recién empezado (p. ej. 2026 con
+    solo setiembre del boletín diario) no cuenta como un año más de datos."""
+    meses: dict[int, int] = {}
+    for (a, _), v in serie.items():
+        if v is not None:
+            meses[a] = meses.get(a, 0) + 1
+    return sorted(a for a, n in meses.items() if n >= MIN_MESES_ANIO)
+
+
 def indice_estacional(serie: Serie) -> dict:
-    anios = len({a for (a, _), v in serie.items() if v is not None})
+    lista_anios = anios_con_datos(serie)
+    anios = len(lista_anios)
     ratios = _ratios_media_movil(serie)
     metodo = "media_movil_12"
     if min(len(r) for r in ratios.values()) == 0:
@@ -83,7 +97,8 @@ def indice_estacional(serie: Serie) -> dict:
         ratios = _ratios_promedio_anual(serie)
         metodo = "promedio_anual"
     n_ratios = [len(ratios[m]) for m in range(1, 13)]
-    resultado = {"years_of_data": anios, "n_ratios": n_ratios, "indice": None, "desviacion": None,
+    resultado = {"years_of_data": anios, "anios": [lista_anios[0], lista_anios[-1]] if lista_anios else None,
+                 "n_ratios": n_ratios, "indice": None, "desviacion": None,
                  "desviacion_media": None, "confianza": "baja", "suficiente": False, "metodo": metodo,
                  "meses_sin_dato": [m for m in range(1, 13) if not ratios[m]]}
     con_dato = [m for m in range(1, 13) if ratios[m]]

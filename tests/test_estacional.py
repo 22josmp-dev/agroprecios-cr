@@ -43,6 +43,17 @@ def test_years_of_data_y_ratios():
     assert r["n_ratios"] == [7] * 12  # la media móvil pierde 6 meses en cada extremo
 
 
+def test_anio_recien_empezado_no_cuenta():
+    """Error real: 2026 con solo setiembre (boletín diario) se contaba como un noveno año."""
+    s = serie_sintetica(anios=8)
+    s[(2026, 9)] = 1000.0
+    r = indice_estacional(s)
+    assert r["years_of_data"] == 8 and r["anios"] == [2018, 2025]
+    for m in (10, 11):
+        s[(2026, m)] = 1000.0
+    assert indice_estacional(s)["years_of_data"] == 9  # con 3 meses ya cuenta
+
+
 def test_patron_limpio_confianza_alta():
     r = indice_estacional(serie_sintetica(anios=6))
     assert r["desviacion_media"] < 0.01 and r["confianza"] == "alta"
