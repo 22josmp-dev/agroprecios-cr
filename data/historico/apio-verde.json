@@ -5,7 +5,7 @@
  "id": "apio-verde",
  "nombre": "Apio Verde",
  "unidad_precio": "Mata",
- "generado_utc": "2026-10-03T00:00:24Z",
+ "generado_utc": "2026-10-03T02:20:14Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2018": [
