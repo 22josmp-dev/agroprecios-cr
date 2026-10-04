@@ -5,7 +5,7 @@
  "id": "ayote-sazon",
  "nombre": "Ayote Sazón",
  "unidad_precio": "Kilo",
- "generado_utc": "2026-10-04T02:53:02Z",
+ "generado_utc": "2026-10-04T20:29:13Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2018": [
