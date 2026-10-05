@@ -5,7 +5,7 @@
  "id": "chayote-tierno-criollo",
  "nombre": "Chayote Tierno Criollo",
  "unidad_precio": "Java",
- "generado_utc": "2026-10-04T23:37:15Z",
+ "generado_utc": "2026-10-05T02:25:06Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2018": [
