@@ -5,7 +5,7 @@
  "id": "naranja-dulce",
  "nombre": "Naranja Dulce",
  "unidad_precio": "Unidad",
- "generado_utc": "2026-10-05T23:22:56Z",
+ "generado_utc": "2026-10-06T01:30:00Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2018": [
