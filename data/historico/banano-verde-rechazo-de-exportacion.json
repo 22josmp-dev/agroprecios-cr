@@ -5,7 +5,7 @@
  "id": "banano-verde-rechazo-de-exportacion",
  "nombre": "Banano Verde Rechazo de Exportación",
  "unidad_precio": "Caja",
- "generado_utc": "2026-10-08T00:25:38Z",
+ "generado_utc": "2026-10-08T02:57:25Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2018": [
