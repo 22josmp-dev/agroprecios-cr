@@ -5,7 +5,7 @@
  "id": "papa-roja",
  "nombre": "Papa Roja",
  "unidad_precio": "Malla (45 kg)",
- "generado_utc": "2026-10-07T22:17:42Z",
+ "generado_utc": "2026-10-08T00:25:38Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2021": [
