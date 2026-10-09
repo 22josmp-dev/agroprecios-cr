@@ -245,5 +245,18 @@
   "rechazados": 2,
   "formato_numerico": "1,000.00",
   "error": null
+ },
+ {
+  "fecha": "2026-10-09",
+  "sha256": "d48a372dd7436ee3fb05cecc308a3c158efad41ab0075b7793c012d0cac513be",
+  "archivo": "archivo/boletines/2026/2026-10-09_d48a372dd743.pdf",
+  "nombre_original": "SIMM-Boletin de Precios PIMA-Plaza 2026-10-09.pdf",
+  "url_lista": "https://bpm.pima.go.cr/AccessDoc.aspx?Us9MxE9rVjvM7z0tphOEB01UR8YkyxwyxG2fUJ131xdmjHr7vI/mlaC1M0Wztqxp",
+  "descargado_utc": "2026-10-09T21:53:07Z",
+  "estado": "procesado",
+  "registros": 57,
+  "rechazados": 2,
+  "formato_numerico": "1,000.00",
+  "error": null
  }
 ]
