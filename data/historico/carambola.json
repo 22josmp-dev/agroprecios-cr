@@ -5,7 +5,7 @@
  "id": "carambola",
  "nombre": "Carambola",
  "unidad_precio": "Kilo",
- "generado_utc": "2026-10-08T22:30:31Z",
+ "generado_utc": "2026-10-09T00:41:09Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2021": [
