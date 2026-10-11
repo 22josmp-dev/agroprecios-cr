@@ -5,7 +5,7 @@
  "id": "sandia-de-campo-mediana",
  "nombre": "Sandía de Campo Mediana",
  "unidad_precio": "Kilo",
- "generado_utc": "2026-10-10T23:52:11Z",
+ "generado_utc": "2026-10-11T02:12:28Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2018": [
