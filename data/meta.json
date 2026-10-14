@@ -3,9 +3,9 @@
  "fuente": "PIMA – SIMM",
  "datos_de_ejemplo": false,
  "estado": "ok",
- "mensaje": "Boletines nuevos: 2026-10-14",
- "ultimo_intento_utc": "2026-10-14T20:58:59Z",
- "ultima_actualizacion_exitosa_utc": "2026-10-14T20:58:59Z",
+ "mensaje": "Sin boletines nuevos; los datos están al día.",
+ "ultimo_intento_utc": "2026-10-14T23:27:38Z",
+ "ultima_actualizacion_exitosa_utc": "2026-10-14T23:27:38Z",
  "fecha_boletin": "2026-10-14",
  "registros": 65,
  "rechazados": 0,
@@ -16,11 +16,6 @@
   "2026-10"
  ],
  "historial": [
-  {
-   "utc": "2026-10-04T23:36:44Z",
-   "estado": "ok",
-   "mensaje": "Sin boletines nuevos; los datos están al día."
-  },
   {
    "utc": "2026-10-05T02:24:36Z",
    "estado": "ok",
@@ -165,6 +160,11 @@
    "utc": "2026-10-14T20:58:59Z",
    "estado": "ok",
    "mensaje": "Boletines nuevos: 2026-10-14"
+  },
+  {
+   "utc": "2026-10-14T23:27:38Z",
+   "estado": "ok",
+   "mensaje": "Sin boletines nuevos; los datos están al día."
   }
  ],
  "fuentes": {
@@ -172,9 +172,9 @@
    "nombre": "Fruta importada",
    "frecuencia": "semanal",
    "estado": "ok",
-   "mensaje": "Boletines nuevos: 2026-10-14",
-   "ultimo_intento_utc": "2026-10-14T20:59:11Z",
-   "ultima_actualizacion_exitosa_utc": "2026-10-14T20:59:11Z",
+   "mensaje": "Sin boletines nuevos; los datos están al día.",
+   "ultimo_intento_utc": "2026-10-14T23:27:50Z",
+   "ultima_actualizacion_exitosa_utc": "2026-10-14T23:27:50Z",
    "fecha_boletin": "2026-10-14",
    "registros": 23,
    "rechazados": 0,
@@ -191,8 +191,8 @@
    "frecuencia": "quincenal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-10-14T20:59:19Z",
-   "ultima_actualizacion_exitosa_utc": "2026-10-14T20:59:19Z",
+   "ultimo_intento_utc": "2026-10-14T23:27:58Z",
+   "ultima_actualizacion_exitosa_utc": "2026-10-14T23:27:58Z",
    "fecha_boletin": "2026-10-01",
    "registros": 44,
    "rechazados": 0,
