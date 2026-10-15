@@ -2,13 +2,13 @@
  "esquema": 2,
  "fuente": "PIMA – SIMM",
  "datos_de_ejemplo": false,
- "fecha_boletin": "2026-10-14",
- "generado_utc": "2026-10-14T20:59:11Z",
+ "fecha_boletin": "2026-10-15",
+ "generado_utc": "2026-10-15T20:33:31Z",
  "fuentes": {
   "diario": {
    "nombre": "Boletín diario",
    "frecuencia": "diaria",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "ventana_promedio_dias": 30,
    "texto_promedio": "los últimos 30 días"
   },
@@ -22,7 +22,7 @@
   "aromaticos": {
    "nombre": "Aromáticos y gourmet",
    "frecuencia": "quincenal",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "ventana_promedio_dias": 63,
    "texto_promedio": "los últimos 2 meses"
   }
@@ -116,24 +116,24 @@
    "cultivo_id": "ajo",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bolsa (1 kg)",
    "kg": 1.0,
-   "minimo": 2200.0,
-   "maximo": 2800.0,
-   "moda": 2500.0,
-   "promedio": 2450.0,
-   "precio_kg": 2450.0,
+   "minimo": 1800.0,
+   "maximo": 2100.0,
+   "moda": 2100.0,
+   "promedio": 2000.0,
+   "precio_kg": 2000.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 2571.43,
-    "variacion_pct": -4.7
+    "fecha": "2026-10-01",
+    "promedio": 2450.0,
+    "variacion_pct": -18.4
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 2429.11,
-    "variacion_pct": 0.9
+    "promedio": 2372.86,
+    "variacion_pct": -15.7
    }
   },
   {
@@ -332,7 +332,7 @@
    "cultivo_id": "albahaca",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Rollo",
    "kg": null,
    "minimo": 250.0,
@@ -341,15 +341,15 @@
    "promedio": 255.0,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 260.0,
-    "variacion_pct": -1.9
+    "fecha": "2026-10-01",
+    "promedio": 255.0,
+    "variacion_pct": 0.0
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 257.48,
-    "variacion_pct": -1.0
+    "promedio": 259.77,
+    "variacion_pct": -1.8
    }
   },
   {
@@ -359,24 +359,24 @@
    "cultivo_id": "alfalfa",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bandeja (90 g)",
    "kg": 0.09,
    "minimo": 900.0,
    "maximo": 1000.0,
    "moda": 900.0,
-   "promedio": 940.0,
-   "precio_kg": 10444.44,
+   "promedio": 930.0,
+   "precio_kg": 10333.33,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 942.86,
-    "variacion_pct": -0.3
+    "fecha": "2026-10-01",
+    "promedio": 940.0,
+    "variacion_pct": -1.1
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 932.74,
-    "variacion_pct": 0.8
+    "promedio": 936.49,
+    "variacion_pct": -0.7
    }
   },
   {
@@ -386,55 +386,28 @@
    "cultivo_id": "apio",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Mata",
    "kg": null,
    "minimo": 1000.0,
    "maximo": 1300.0,
-   "moda": 1300.0,
-   "promedio": 1170.0,
+   "moda": 1200.0,
+   "promedio": 1188.24,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 1180.0,
-    "variacion_pct": -0.8
+    "fecha": "2026-10-14",
+    "promedio": 1170.0,
+    "variacion_pct": 1.6
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 1264.29,
-    "variacion_pct": -7.5
+    "fecha": "2026-10-08",
+    "promedio": 1200.0,
+    "variacion_pct": -1.0
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 1201.58,
-    "variacion_pct": -2.6
-   }
-  },
-  {
-   "id": "arracache-picado",
-   "nombre": "Arracache picado",
-   "cultivo": "Arracache",
-   "cultivo_id": "arracache",
-   "categoria": "aromático y gourmet",
-   "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
-   "unidad": "Bolsa (900 g)",
-   "kg": 0.9,
-   "minimo": 2000.0,
-   "maximo": 2000.0,
-   "moda": 2000.0,
-   "promedio": 2000.0,
-   "precio_kg": 2222.22,
-   "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 1920.0,
-    "variacion_pct": 4.2
-   },
-   "vs_semana": null,
-   "vs_promedio": {
-    "boletines": 4,
-    "promedio": 1884.76,
-    "variacion_pct": 6.1
+    "promedio": 1197.69,
+    "variacion_pct": -0.8
    }
   },
   {
@@ -471,24 +444,24 @@
    "cultivo_id": "arugula",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
    "minimo": 3500.0,
-   "maximo": 4000.0,
+   "maximo": 3800.0,
    "moda": 3500.0,
-   "promedio": 3642.86,
-   "precio_kg": 3642.86,
+   "promedio": 3550.0,
+   "precio_kg": 3550.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 3444.44,
-    "variacion_pct": 5.8
+    "fecha": "2026-10-01",
+    "promedio": 3642.86,
+    "variacion_pct": -2.5
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 3469.75,
-    "variacion_pct": 5.0
+    "promedio": 3516.82,
+    "variacion_pct": 0.9
    }
   },
   {
@@ -498,59 +471,28 @@
    "cultivo_id": "ayote",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
    "minimo": 300.0,
    "maximo": 350.0,
    "moda": 300.0,
-   "promedio": 312.5,
-   "precio_kg": 312.5,
+   "promedio": 318.18,
+   "precio_kg": 318.18,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 320.83,
-    "variacion_pct": -2.6
+    "fecha": "2026-10-14",
+    "promedio": 312.5,
+    "variacion_pct": 1.8
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 307.14,
-    "variacion_pct": 1.7
+    "fecha": "2026-10-08",
+    "promedio": 312.5,
+    "variacion_pct": 1.8
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 318.39,
-    "variacion_pct": -1.8
-   }
-  },
-  {
-   "id": "ayote-tierno",
-   "nombre": "Ayote tierno",
-   "cultivo": "Ayote",
-   "cultivo_id": "ayote",
-   "categoria": "hortaliza",
-   "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
-   "unidad": "Unidad",
-   "kg": null,
-   "minimo": 400.0,
-   "maximo": 500.0,
-   "moda": 400.0,
-   "promedio": 440.0,
-   "precio_kg": null,
-   "vs_anterior": {
-    "fecha": "2026-10-07",
-    "promedio": 460.71,
-    "variacion_pct": -4.5
-   },
-   "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 460.71,
-    "variacion_pct": -4.5
-   },
-   "vs_promedio": {
-    "boletines": 4,
-    "promedio": 571.86,
-    "variacion_pct": -23.1
+    "promedio": 318.26,
+    "variacion_pct": -0.0
    }
   },
   {
@@ -560,28 +502,28 @@
    "cultivo_id": "banano",
    "categoria": "fruta",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
    "minimo": 30.0,
-   "maximo": 30.0,
+   "maximo": 35.0,
    "moda": 30.0,
-   "promedio": 30.0,
+   "promedio": 31.25,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
+    "fecha": "2026-10-14",
     "promedio": 30.0,
-    "variacion_pct": 0.0
+    "variacion_pct": 4.2
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-08",
     "promedio": 31.0,
-    "variacion_pct": -3.2
+    "variacion_pct": 0.8
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 30.32,
-    "variacion_pct": -1.1
+    "promedio": 30.27,
+    "variacion_pct": 3.2
    }
   },
   {
@@ -591,28 +533,28 @@
    "cultivo_id": "banano",
    "categoria": "fruta",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Caja",
    "kg": null,
    "minimo": 2800.0,
    "maximo": 3000.0,
    "moda": 3000.0,
-   "promedio": 2960.0,
+   "promedio": 2950.0,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 3000.0,
-    "variacion_pct": -1.3
+    "fecha": "2026-10-14",
+    "promedio": 2960.0,
+    "variacion_pct": -0.3
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 2966.67,
-    "variacion_pct": -0.2
+    "fecha": "2026-10-08",
+    "promedio": 2960.0,
+    "variacion_pct": -0.3
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 2993.33,
-    "variacion_pct": -1.1
+    "promedio": 2991.52,
+    "variacion_pct": -1.4
    }
   },
   {
@@ -622,24 +564,24 @@
    "cultivo_id": "berenjena",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
-   "minimo": 400.0,
-   "maximo": 500.0,
-   "moda": 500.0,
-   "promedio": 458.33,
+   "minimo": 350.0,
+   "maximo": 450.0,
+   "moda": 400.0,
+   "promedio": 391.67,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 471.43,
-    "variacion_pct": -2.8
+    "fecha": "2026-10-01",
+    "promedio": 458.33,
+    "variacion_pct": -14.5
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 459.7,
-    "variacion_pct": -0.3
+    "promedio": 471.5,
+    "variacion_pct": -16.9
    }
   },
   {
@@ -649,28 +591,28 @@
    "cultivo_id": "brocoli",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
    "minimo": 1500.0,
-   "maximo": 1800.0,
-   "moda": 1500.0,
-   "promedio": 1600.0,
-   "precio_kg": 1600.0,
+   "maximo": 2000.0,
+   "moda": 1800.0,
+   "promedio": 1776.92,
+   "precio_kg": 1776.92,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 1873.33,
-    "variacion_pct": -14.6
+    "fecha": "2026-10-14",
+    "promedio": 1600.0,
+    "variacion_pct": 11.1
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 1922.22,
-    "variacion_pct": -16.8
+    "fecha": "2026-10-08",
+    "promedio": 1760.87,
+    "variacion_pct": 0.9
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 1920.45,
-    "variacion_pct": -16.7
+    "promedio": 1909.92,
+    "variacion_pct": -7.0
    }
   },
   {
@@ -680,7 +622,7 @@
    "cultivo_id": "camote",
    "categoria": "raíz y tubérculo",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
    "minimo": 1200.0,
@@ -689,50 +631,19 @@
    "promedio": 1275.0,
    "precio_kg": 1275.0,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 1357.14,
-    "variacion_pct": -6.1
+    "fecha": "2026-10-14",
+    "promedio": 1275.0,
+    "variacion_pct": 0.0
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 1362.5,
-    "variacion_pct": -6.4
+    "fecha": "2026-10-08",
+    "promedio": 1337.5,
+    "variacion_pct": -4.7
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 1469.17,
-    "variacion_pct": -13.2
-   }
-  },
-  {
-   "id": "camote-zanahoria",
-   "nombre": "Camote Zanahoria",
-   "cultivo": "Camote",
-   "cultivo_id": "camote",
-   "categoria": "raíz y tubérculo",
-   "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
-   "unidad": "Kilo",
-   "kg": 1.0,
-   "minimo": 1300.0,
-   "maximo": 1500.0,
-   "moda": 1400.0,
-   "promedio": 1388.89,
-   "precio_kg": 1388.89,
-   "vs_anterior": {
-    "fecha": "2026-10-07",
-    "promedio": 1400.0,
-    "variacion_pct": -0.8
-   },
-   "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 1400.0,
-    "variacion_pct": -0.8
-   },
-   "vs_promedio": {
-    "boletines": 4,
-    "promedio": 1229.52,
-    "variacion_pct": 13.0
+    "promedio": 1457.24,
+    "variacion_pct": -12.5
    }
   },
   {
@@ -742,7 +653,7 @@
    "cultivo_id": "cebolla",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
    "minimo": 650.0,
@@ -751,19 +662,19 @@
    "promedio": 700.0,
    "precio_kg": 700.0,
    "vs_anterior": {
-    "fecha": "2026-10-13",
+    "fecha": "2026-10-14",
     "promedio": 700.0,
     "variacion_pct": 0.0
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 725.0,
-    "variacion_pct": -3.4
+    "fecha": "2026-10-08",
+    "promedio": 727.27,
+    "variacion_pct": -3.7
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 659.69,
-    "variacion_pct": 6.1
+    "promedio": 662.68,
+    "variacion_pct": 5.6
    }
   },
   {
@@ -773,28 +684,28 @@
    "cultivo_id": "cebolla",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
    "minimo": 650.0,
    "maximo": 700.0,
    "moda": 700.0,
-   "promedio": 680.0,
-   "precio_kg": 680.0,
+   "promedio": 692.86,
+   "precio_kg": 692.86,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 685.0,
-    "variacion_pct": -0.7
+    "fecha": "2026-10-14",
+    "promedio": 680.0,
+    "variacion_pct": 1.9
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 690.91,
-    "variacion_pct": -1.6
+    "fecha": "2026-10-08",
+    "promedio": 691.67,
+    "variacion_pct": 0.2
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 641.61,
-    "variacion_pct": 6.0
+    "promedio": 643.55,
+    "variacion_pct": 7.7
    }
   },
   {
@@ -804,28 +715,28 @@
    "cultivo_id": "cebolla",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
-   "minimo": 750.0,
-   "maximo": 800.0,
+   "minimo": 700.0,
+   "maximo": 750.0,
    "moda": 750.0,
-   "promedio": 770.0,
-   "precio_kg": 770.0,
+   "promedio": 733.33,
+   "precio_kg": 733.33,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 750.0,
-    "variacion_pct": 2.7
+    "fecha": "2026-10-14",
+    "promedio": 770.0,
+    "variacion_pct": -4.8
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 758.33,
-    "variacion_pct": 1.5
+    "fecha": "2026-10-08",
+    "promedio": 768.75,
+    "variacion_pct": -4.6
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 713.61,
-    "variacion_pct": 7.9
+    "promedio": 718.15,
+    "variacion_pct": 2.1
    }
   },
   {
@@ -835,28 +746,28 @@
    "cultivo_id": "cebolla",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
    "minimo": 650.0,
-   "maximo": 750.0,
+   "maximo": 700.0,
    "moda": 700.0,
-   "promedio": 700.0,
-   "precio_kg": 700.0,
+   "promedio": 692.86,
+   "precio_kg": 692.86,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 685.0,
-    "variacion_pct": 2.2
+    "fecha": "2026-10-14",
+    "promedio": 700.0,
+    "variacion_pct": -1.0
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 690.91,
-    "variacion_pct": 1.3
+    "fecha": "2026-10-08",
+    "promedio": 704.55,
+    "variacion_pct": -1.7
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 642.67,
-    "variacion_pct": 8.9
+    "promedio": 645.65,
+    "variacion_pct": 7.3
    }
   },
   {
@@ -866,59 +777,28 @@
    "cultivo_id": "cebolla",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
    "minimo": 900.0,
    "maximo": 1100.0,
    "moda": 1000.0,
-   "promedio": 981.82,
-   "precio_kg": 981.82,
+   "promedio": 978.57,
+   "precio_kg": 978.57,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 954.55,
-    "variacion_pct": 2.9
+    "fecha": "2026-10-14",
+    "promedio": 981.82,
+    "variacion_pct": -0.3
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 1000.0,
-    "variacion_pct": -1.8
+    "fecha": "2026-10-08",
+    "promedio": 1054.55,
+    "variacion_pct": -7.2
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 1009.48,
-    "variacion_pct": -2.7
-   }
-  },
-  {
-   "id": "cebollino",
-   "nombre": "Cebollino",
-   "cultivo": "Cebollino",
-   "cultivo_id": "cebollino",
-   "categoria": "hortaliza",
-   "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
-   "unidad": "Rollo",
-   "kg": null,
-   "minimo": 200.0,
-   "maximo": 250.0,
-   "moda": 250.0,
-   "promedio": 228.57,
-   "precio_kg": null,
-   "vs_anterior": {
-    "fecha": "2026-10-07",
-    "promedio": 238.46,
-    "variacion_pct": -4.1
-   },
-   "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 238.46,
-    "variacion_pct": -4.1
-   },
-   "vs_promedio": {
-    "boletines": 4,
-    "promedio": 240.68,
-    "variacion_pct": -5.0
+    "promedio": 1007.9,
+    "variacion_pct": -2.9
    }
   },
   {
@@ -928,24 +808,24 @@
    "cultivo_id": "chayote",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bolsa (1 kg)",
    "kg": 1.0,
-   "minimo": 600.0,
-   "maximo": 700.0,
-   "moda": 600.0,
-   "promedio": 642.86,
-   "precio_kg": 642.86,
+   "minimo": 400.0,
+   "maximo": 500.0,
+   "moda": 400.0,
+   "promedio": 442.86,
+   "precio_kg": 442.86,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 614.29,
-    "variacion_pct": 4.7
+    "fecha": "2026-10-01",
+    "promedio": 642.86,
+    "variacion_pct": -31.1
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 572.32,
-    "variacion_pct": 12.3
+    "promedio": 604.91,
+    "variacion_pct": -26.8
    }
   },
   {
@@ -955,28 +835,28 @@
    "cultivo_id": "chayote",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Java",
    "kg": null,
    "minimo": 25000.0,
-   "maximo": 30000.0,
+   "maximo": 28000.0,
    "moda": 25000.0,
-   "promedio": 26800.0,
+   "promedio": 26000.0,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 27000.0,
-    "variacion_pct": -0.7
+    "fecha": "2026-10-14",
+    "promedio": 26800.0,
+    "variacion_pct": -3.0
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 31454.55,
-    "variacion_pct": -14.8
+    "fecha": "2026-10-08",
+    "promedio": 31818.18,
+    "variacion_pct": -18.3
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 36980.5,
-    "variacion_pct": -27.5
+    "promedio": 36322.65,
+    "variacion_pct": -28.4
    }
   },
   {
@@ -986,7 +866,7 @@
    "cultivo_id": "chayote",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Java",
    "kg": null,
    "minimo": 18000.0,
@@ -995,19 +875,19 @@
    "promedio": 19250.0,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 19142.86,
-    "variacion_pct": 0.6
+    "fecha": "2026-10-14",
+    "promedio": 19250.0,
+    "variacion_pct": 0.0
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 24666.67,
-    "variacion_pct": -22.0
+    "fecha": "2026-10-08",
+    "promedio": 24777.78,
+    "variacion_pct": -22.3
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 27992.5,
-    "variacion_pct": -31.2
+    "promedio": 27333.41,
+    "variacion_pct": -29.6
    }
   },
   {
@@ -1017,7 +897,7 @@
    "cultivo_id": "chile",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
    "minimo": 3000.0,
@@ -1026,15 +906,15 @@
    "promedio": 3625.0,
    "precio_kg": 3625.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 3100.0,
-    "variacion_pct": 16.9
+    "fecha": "2026-10-01",
+    "promedio": 3625.0,
+    "variacion_pct": 0.0
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 3368.75,
-    "variacion_pct": 7.6
+    "promedio": 3420.83,
+    "variacion_pct": 6.0
    }
   },
   {
@@ -1044,28 +924,28 @@
    "cultivo_id": "chile-dulce",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Caja plástica",
    "kg": null,
-   "minimo": 38000.0,
-   "maximo": 40000.0,
-   "moda": 38000.0,
-   "promedio": 38875.0,
+   "minimo": 33000.0,
+   "maximo": 34000.0,
+   "moda": 33000.0,
+   "promedio": 33333.33,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 39142.86,
-    "variacion_pct": -0.7
+    "fecha": "2026-10-14",
+    "promedio": 38875.0,
+    "variacion_pct": -14.3
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 28625.0,
-    "variacion_pct": 35.8
+    "fecha": "2026-10-08",
+    "promedio": 28714.29,
+    "variacion_pct": 16.1
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 27479.65,
-    "variacion_pct": 41.5
+    "promedio": 28148.21,
+    "variacion_pct": 18.4
    }
   },
   {
@@ -1075,28 +955,28 @@
    "cultivo_id": "chile-dulce",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Caja plástica",
    "kg": null,
-   "minimo": 36000.0,
-   "maximo": 38000.0,
-   "moda": 36000.0,
-   "promedio": 36857.14,
+   "minimo": 30000.0,
+   "maximo": 31000.0,
+   "moda": 30000.0,
+   "promedio": 30333.33,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 37750.0,
-    "variacion_pct": -2.4
+    "fecha": "2026-10-14",
+    "promedio": 36857.14,
+    "variacion_pct": -17.7
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 26000.0,
-    "variacion_pct": 41.8
+    "fecha": "2026-10-08",
+    "promedio": 25714.29,
+    "variacion_pct": 18.0
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 24730.25,
-    "variacion_pct": 49.0
+    "promedio": 25405.57,
+    "variacion_pct": 19.4
    }
   },
   {
@@ -1106,28 +986,28 @@
    "cultivo_id": "chile-dulce",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Caja plástica",
    "kg": null,
-   "minimo": 36000.0,
-   "maximo": 37000.0,
-   "moda": 36000.0,
-   "promedio": 36375.0,
+   "minimo": 28000.0,
+   "maximo": 30000.0,
+   "moda": 28000.0,
+   "promedio": 28857.14,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 36800.0,
-    "variacion_pct": -1.2
+    "fecha": "2026-10-14",
+    "promedio": 36375.0,
+    "variacion_pct": -20.7
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 25000.0,
-    "variacion_pct": 45.5
+    "fecha": "2026-10-08",
+    "promedio": 25714.29,
+    "variacion_pct": 12.2
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 23719.38,
-    "variacion_pct": 53.4
+    "promedio": 24384.15,
+    "variacion_pct": 18.3
    }
   },
   {
@@ -1137,28 +1017,28 @@
    "cultivo_id": "chile-dulce",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Caja plástica",
    "kg": null,
-   "minimo": 24000.0,
-   "maximo": 25000.0,
-   "moda": 24000.0,
-   "promedio": 24428.57,
+   "minimo": 15000.0,
+   "maximo": 16000.0,
+   "moda": 15000.0,
+   "promedio": 15400.0,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 24400.0,
-    "variacion_pct": 0.1
+    "fecha": "2026-10-14",
+    "promedio": 24428.57,
+    "variacion_pct": -37.0
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 15166.67,
-    "variacion_pct": 61.1
+    "fecha": "2026-10-08",
+    "promedio": 18571.43,
+    "variacion_pct": -17.1
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 17139.88,
-    "variacion_pct": 42.5
+    "promedio": 17530.57,
+    "variacion_pct": -12.2
    }
   },
   {
@@ -1168,24 +1048,24 @@
    "cultivo_id": "chile",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
-   "minimo": 2000.0,
-   "maximo": 2500.0,
-   "moda": 2500.0,
-   "promedio": 2333.33,
-   "precio_kg": 2333.33,
+   "minimo": 2500.0,
+   "maximo": 3000.0,
+   "moda": 3000.0,
+   "promedio": 2800.0,
+   "precio_kg": 2800.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 1920.0,
-    "variacion_pct": 21.5
+    "fecha": "2026-10-01",
+    "promedio": 2333.33,
+    "variacion_pct": 20.0
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 1743.33,
-    "variacion_pct": 33.8
+    "promedio": 1914.16,
+    "variacion_pct": 46.3
    }
   },
   {
@@ -1195,24 +1075,24 @@
    "cultivo_id": "chile",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
    "minimo": 2500.0,
-   "maximo": 3000.0,
+   "maximo": 2600.0,
    "moda": 2500.0,
-   "promedio": 2600.0,
-   "precio_kg": 2600.0,
+   "promedio": 2520.0,
+   "precio_kg": 2520.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 2200.0,
-    "variacion_pct": 18.2
+    "fecha": "2026-10-01",
+    "promedio": 2600.0,
+    "variacion_pct": -3.1
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 2353.57,
-    "variacion_pct": 10.5
+    "promedio": 2450.0,
+    "variacion_pct": 2.9
    }
   },
   {
@@ -1249,29 +1129,52 @@
    "cultivo_id": "coliflor",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
-   "minimo": 1200.0,
+   "minimo": 1000.0,
    "maximo": 1300.0,
    "moda": 1200.0,
-   "promedio": 1246.67,
+   "promedio": 1170.0,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 1300.0,
-    "variacion_pct": -4.1
+    "fecha": "2026-10-14",
+    "promedio": 1246.67,
+    "variacion_pct": -6.1
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 1160.0,
-    "variacion_pct": 7.5
+    "fecha": "2026-10-08",
+    "promedio": 1335.71,
+    "variacion_pct": -12.4
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 1159.95,
-    "variacion_pct": 7.5
+    "promedio": 1154.85,
+    "variacion_pct": 1.3
    }
+  },
+  {
+   "id": "cubaces-hidratados",
+   "nombre": "Cubaces hidratados",
+   "cultivo": "Cubaces",
+   "cultivo_id": "cubaces",
+   "categoria": "aromático y gourmet",
+   "fuente": "aromaticos",
+   "fecha_boletin": "2026-10-15",
+   "unidad": "Bandeja (500 g)",
+   "kg": 0.5,
+   "minimo": 1700.0,
+   "maximo": 2000.0,
+   "moda": 2000.0,
+   "promedio": 1900.0,
+   "precio_kg": 3800.0,
+   "vs_anterior": {
+    "fecha": "2026-09-17",
+    "promedio": 1866.67,
+    "variacion_pct": 1.8
+   },
+   "vs_semana": null,
+   "vs_promedio": null
   },
   {
    "id": "culantro-castilla",
@@ -1280,28 +1183,28 @@
    "cultivo_id": "culantro",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Rollo de 10 rollitos",
    "kg": null,
    "minimo": 1000.0,
    "maximo": 1400.0,
-   "moda": 1200.0,
-   "promedio": 1200.0,
+   "moda": 1300.0,
+   "promedio": 1257.14,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 1371.43,
-    "variacion_pct": -12.5
+    "fecha": "2026-10-14",
+    "promedio": 1200.0,
+    "variacion_pct": 4.8
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 1442.86,
-    "variacion_pct": -16.8
+    "fecha": "2026-10-08",
+    "promedio": 1362.5,
+    "variacion_pct": -7.7
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 1317.45,
-    "variacion_pct": -8.9
+    "promedio": 1305.46,
+    "variacion_pct": -3.7
    }
   },
   {
@@ -1311,24 +1214,24 @@
    "cultivo_id": "culantro",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Rollo de 10 rollitos",
    "kg": null,
    "minimo": 500.0,
-   "maximo": 700.0,
-   "moda": 600.0,
-   "promedio": 576.92,
+   "maximo": 600.0,
+   "moda": 500.0,
+   "promedio": 546.43,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 581.82,
-    "variacion_pct": -0.8
+    "fecha": "2026-10-01",
+    "promedio": 576.92,
+    "variacion_pct": -5.3
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 574.55,
-    "variacion_pct": 0.4
+    "promedio": 574.14,
+    "variacion_pct": -4.8
    }
   },
   {
@@ -1338,7 +1241,7 @@
    "cultivo_id": "curcuma",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
    "minimo": 1000.0,
@@ -1347,7 +1250,7 @@
    "promedio": 1000.0,
    "precio_kg": 1000.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
+    "fecha": "2026-10-01",
     "promedio": 1000.0,
     "variacion_pct": 0.0
    },
@@ -1365,28 +1268,28 @@
    "cultivo_id": "elote",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
    "minimo": 150.0,
-   "maximo": 170.0,
+   "maximo": 180.0,
    "moda": 150.0,
-   "promedio": 153.33,
+   "promedio": 160.0,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 158.0,
-    "variacion_pct": -3.0
+    "fecha": "2026-10-14",
+    "promedio": 153.33,
+    "variacion_pct": 4.4
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 164.29,
-    "variacion_pct": -6.7
+    "fecha": "2026-10-08",
+    "promedio": 169.0,
+    "variacion_pct": -5.3
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 165.91,
-    "variacion_pct": -7.6
+    "promedio": 166.06,
+    "variacion_pct": -3.6
    }
   },
   {
@@ -1396,24 +1299,24 @@
    "cultivo_id": "eneldo",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Rollo",
    "kg": null,
    "minimo": 250.0,
    "maximo": 350.0,
    "moda": 300.0,
-   "promedio": 300.0,
+   "promedio": 308.33,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 314.29,
-    "variacion_pct": -4.5
+    "fecha": "2026-10-01",
+    "promedio": 300.0,
+    "variacion_pct": 2.8
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 314.71,
-    "variacion_pct": -4.7
+    "promedio": 311.59,
+    "variacion_pct": -1.0
    }
   },
   {
@@ -1423,55 +1326,24 @@
    "cultivo_id": "escalopines",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bandeja (500 g)",
    "kg": 0.5,
    "minimo": 1000.0,
    "maximo": 1200.0,
    "moda": 1200.0,
-   "promedio": 1120.0,
-   "precio_kg": 2240.0,
+   "promedio": 1150.0,
+   "precio_kg": 2300.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 1171.43,
-    "variacion_pct": -4.4
+    "fecha": "2026-10-01",
+    "promedio": 1120.0,
+    "variacion_pct": 2.7
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 1149.32,
-    "variacion_pct": -2.6
-   }
-  },
-  {
-   "id": "espinaca",
-   "nombre": "Espinaca",
-   "cultivo": "Espinaca",
-   "cultivo_id": "espinaca",
-   "categoria": "hortaliza",
-   "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
-   "unidad": "Rollo",
-   "kg": null,
-   "minimo": 200.0,
-   "maximo": 300.0,
-   "moda": 250.0,
-   "promedio": 250.0,
-   "precio_kg": null,
-   "vs_anterior": {
-    "fecha": "2026-10-07",
-    "promedio": 250.0,
-    "variacion_pct": 0.0
-   },
-   "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 250.0,
-    "variacion_pct": 0.0
-   },
-   "vs_promedio": {
-    "boletines": 4,
-    "promedio": 251.56,
-    "variacion_pct": -0.6
+    "promedio": 1138.69,
+    "variacion_pct": 1.0
    }
   },
   {
@@ -1481,86 +1353,24 @@
    "cultivo_id": "estragon",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Rollo",
    "kg": null,
-   "minimo": 250.0,
-   "maximo": 350.0,
+   "minimo": 300.0,
+   "maximo": 400.0,
    "moda": 300.0,
-   "promedio": 300.0,
+   "promedio": 327.78,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 314.29,
-    "variacion_pct": -4.5
+    "fecha": "2026-10-01",
+    "promedio": 300.0,
+    "variacion_pct": 9.3
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 319.97,
-    "variacion_pct": -6.2
-   }
-  },
-  {
-   "id": "fresa-1-kg",
-   "nombre": "Fresa (1 Kg)",
-   "cultivo": "Fresa",
-   "cultivo_id": "fresa",
-   "categoria": "fruta",
-   "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
-   "unidad": "Bandeja (1 kg)",
-   "kg": 1.0,
-   "minimo": 2200.0,
-   "maximo": 2500.0,
-   "moda": 2500.0,
-   "promedio": 2390.0,
-   "precio_kg": 2390.0,
-   "vs_anterior": {
-    "fecha": "2026-10-07",
-    "promedio": 2090.91,
-    "variacion_pct": 14.3
-   },
-   "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 2090.91,
-    "variacion_pct": 14.3
-   },
-   "vs_promedio": {
-    "boletines": 4,
-    "promedio": 2055.68,
-    "variacion_pct": 16.3
-   }
-  },
-  {
-   "id": "fresa-400-g",
-   "nombre": "Fresa (400 g)",
-   "cultivo": "Fresa",
-   "cultivo_id": "fresa",
-   "categoria": "fruta",
-   "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
-   "unidad": "Bandeja (400 g)",
-   "kg": 0.4,
-   "minimo": 1000.0,
-   "maximo": 1200.0,
-   "moda": 1200.0,
-   "promedio": 1133.33,
-   "precio_kg": 2833.32,
-   "vs_anterior": {
-    "fecha": "2026-10-07",
-    "promedio": 1111.11,
-    "variacion_pct": 2.0
-   },
-   "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 1111.11,
-    "variacion_pct": 2.0
-   },
-   "vs_promedio": {
-    "boletines": 4,
-    "promedio": 1026.94,
-    "variacion_pct": 10.4
+    "promedio": 312.83,
+    "variacion_pct": 4.8
    }
   },
   {
@@ -1570,24 +1380,24 @@
    "cultivo_id": "frijol",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bandeja (500 g)",
    "kg": 0.5,
-   "minimo": 650.0,
+   "minimo": 600.0,
    "maximo": 700.0,
    "moda": 700.0,
-   "promedio": 687.5,
-   "precio_kg": 1375.0,
+   "promedio": 660.0,
+   "precio_kg": 1320.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 662.5,
-    "variacion_pct": 3.8
+    "fecha": "2026-10-01",
+    "promedio": 687.5,
+    "variacion_pct": -4.0
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
     "promedio": 660.62,
-    "variacion_pct": 4.1
+    "variacion_pct": -0.1
    }
   },
   {
@@ -1597,24 +1407,24 @@
    "cultivo_id": "frijol",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bandeja (200 g)",
    "kg": 0.2,
    "minimo": 900.0,
-   "maximo": 1000.0,
-   "moda": 1000.0,
-   "promedio": 970.0,
-   "precio_kg": 4850.0,
+   "maximo": 1200.0,
+   "moda": 1200.0,
+   "promedio": 1050.0,
+   "precio_kg": 5250.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 978.57,
-    "variacion_pct": -0.9
+    "fecha": "2026-10-01",
+    "promedio": 970.0,
+    "variacion_pct": 8.2
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 930.06,
-    "variacion_pct": 4.3
+    "promedio": 953.81,
+    "variacion_pct": 10.1
    }
   },
   {
@@ -1624,24 +1434,24 @@
    "cultivo_id": "frijol",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
-   "minimo": 1500.0,
+   "minimo": 1400.0,
    "maximo": 1600.0,
    "moda": 1600.0,
-   "promedio": 1555.56,
-   "precio_kg": 1555.56,
+   "promedio": 1550.0,
+   "precio_kg": 1550.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 1533.33,
-    "variacion_pct": 1.4
+    "fecha": "2026-10-01",
+    "promedio": 1555.56,
+    "variacion_pct": -0.4
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 1550.0,
-    "variacion_pct": 0.4
+    "promedio": 1538.89,
+    "variacion_pct": 0.7
    }
   },
   {
@@ -1651,24 +1461,24 @@
    "cultivo_id": "hierbabuena",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Rollo",
    "kg": null,
    "minimo": 250.0,
    "maximo": 300.0,
    "moda": 250.0,
-   "promedio": 255.56,
+   "promedio": 265.0,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 259.09,
-    "variacion_pct": -1.4
+    "fecha": "2026-10-01",
+    "promedio": 255.56,
+    "variacion_pct": 3.7
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 253.41,
-    "variacion_pct": 0.8
+    "promedio": 254.8,
+    "variacion_pct": 4.0
    }
   },
   {
@@ -1678,18 +1488,18 @@
    "cultivo_id": "hinojo",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bandeja (500 g)",
    "kg": 0.5,
-   "minimo": 1400.0,
+   "minimo": 1300.0,
    "maximo": 1500.0,
    "moda": 1500.0,
-   "promedio": 1475.0,
-   "precio_kg": 2950.0,
+   "promedio": 1425.0,
+   "precio_kg": 2850.0,
    "vs_anterior": {
-    "fecha": "2026-09-03",
-    "promedio": 1350.0,
-    "variacion_pct": 9.3
+    "fecha": "2026-10-01",
+    "promedio": 1475.0,
+    "variacion_pct": -3.4
    },
    "vs_semana": null,
    "vs_promedio": null
@@ -1701,24 +1511,24 @@
    "cultivo_id": "hongo",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bandeja (250 g)",
    "kg": 0.25,
    "minimo": 1200.0,
    "maximo": 1300.0,
-   "moda": 1300.0,
-   "promedio": 1257.14,
-   "precio_kg": 5028.56,
+   "moda": 1200.0,
+   "promedio": 1237.5,
+   "precio_kg": 4950.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 1244.44,
-    "variacion_pct": 1.0
+    "fecha": "2026-10-01",
+    "promedio": 1257.14,
+    "variacion_pct": -1.6
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
     "promedio": 1249.2,
-    "variacion_pct": 0.6
+    "variacion_pct": -0.9
    }
   },
   {
@@ -1728,24 +1538,24 @@
    "cultivo_id": "hongo",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bandeja (300 g)",
    "kg": 0.3,
    "minimo": 1500.0,
-   "maximo": 1800.0,
-   "moda": 1600.0,
-   "promedio": 1642.86,
-   "precio_kg": 5476.2,
+   "maximo": 1700.0,
+   "moda": 1500.0,
+   "promedio": 1583.33,
+   "precio_kg": 5277.77,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 1583.33,
-    "variacion_pct": 3.8
+    "fecha": "2026-10-01",
+    "promedio": 1642.86,
+    "variacion_pct": -3.6
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 1625.3,
-    "variacion_pct": 1.1
+    "promedio": 1617.26,
+    "variacion_pct": -2.1
    }
   },
   {
@@ -1755,24 +1565,24 @@
    "cultivo_id": "hongo",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bandeja (300 g)",
    "kg": 0.3,
    "minimo": 2000.0,
    "maximo": 2200.0,
    "moda": 2000.0,
-   "promedio": 2066.67,
-   "precio_kg": 6888.9,
+   "promedio": 2050.0,
+   "precio_kg": 6833.33,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 2000.0,
-    "variacion_pct": 3.3
+    "fecha": "2026-10-01",
+    "promedio": 2066.67,
+    "variacion_pct": -0.8
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 2060.84,
-    "variacion_pct": 0.3
+    "promedio": 2062.5,
+    "variacion_pct": -0.6
    }
   },
   {
@@ -1782,90 +1592,28 @@
    "cultivo_id": "jengibre",
    "categoria": "raíz y tubérculo",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
    "minimo": 1000.0,
-   "maximo": 1000.0,
+   "maximo": 1200.0,
    "moda": 1000.0,
-   "promedio": 1000.0,
-   "precio_kg": 1000.0,
+   "promedio": 1028.57,
+   "precio_kg": 1028.57,
    "vs_anterior": {
-    "fecha": "2026-10-13",
+    "fecha": "2026-10-14",
     "promedio": 1000.0,
-    "variacion_pct": 0.0
+    "variacion_pct": 2.9
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-08",
     "promedio": 1000.0,
-    "variacion_pct": 0.0
+    "variacion_pct": 2.9
    },
    "vs_promedio": {
     "boletines": 22,
     "promedio": 1004.26,
-    "variacion_pct": -0.4
-   }
-  },
-  {
-   "id": "jocote-tronador-primera",
-   "nombre": "Jocote tronador primera",
-   "cultivo": "Jocote",
-   "cultivo_id": "jocote",
-   "categoria": "fruta",
-   "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
-   "unidad": "Caja plástica (27 kg)",
-   "kg": 27.0,
-   "minimo": 15000.0,
-   "maximo": 20000.0,
-   "moda": 15000.0,
-   "promedio": 16666.67,
-   "precio_kg": 617.28,
-   "vs_anterior": {
-    "fecha": "2026-10-07",
-    "promedio": 14750.0,
-    "variacion_pct": 13.0
-   },
-   "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 14750.0,
-    "variacion_pct": 13.0
-   },
-   "vs_promedio": {
-    "boletines": 4,
-    "promedio": 12504.17,
-    "variacion_pct": 33.3
-   }
-  },
-  {
-   "id": "jocote-tronador-seleccionado",
-   "nombre": "Jocote tronador seleccionado",
-   "cultivo": "Jocote",
-   "cultivo_id": "jocote",
-   "categoria": "fruta",
-   "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
-   "unidad": "Caja plástica (27 kg)",
-   "kg": 27.0,
-   "minimo": 30000.0,
-   "maximo": 40000.0,
-   "moda": 40000.0,
-   "promedio": 37500.0,
-   "precio_kg": 1388.89,
-   "vs_anterior": {
-    "fecha": "2026-10-07",
-    "promedio": 33333.33,
-    "variacion_pct": 12.5
-   },
-   "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 33333.33,
-    "variacion_pct": 12.5
-   },
-   "vs_promedio": {
-    "boletines": 4,
-    "promedio": 28342.26,
-    "variacion_pct": 32.3
+    "variacion_pct": 2.4
    }
   },
   {
@@ -1902,28 +1650,28 @@
    "cultivo_id": "lechuga",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
-   "minimo": 200.0,
+   "minimo": 250.0,
    "maximo": 300.0,
    "moda": 250.0,
-   "promedio": 250.0,
+   "promedio": 260.71,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 258.33,
-    "variacion_pct": -3.2
+    "fecha": "2026-10-14",
+    "promedio": 250.0,
+    "variacion_pct": 4.3
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-08",
     "promedio": 250.0,
-    "variacion_pct": 0.0
+    "variacion_pct": 4.3
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 241.71,
-    "variacion_pct": 3.4
+    "promedio": 242.74,
+    "variacion_pct": 7.4
    }
   },
   {
@@ -1933,24 +1681,24 @@
    "cultivo_id": "lechuga",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
    "minimo": 250.0,
-   "maximo": 250.0,
+   "maximo": 300.0,
    "moda": 250.0,
-   "promedio": 250.0,
+   "promedio": 255.56,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
+    "fecha": "2026-10-01",
     "promedio": 250.0,
-    "variacion_pct": 0.0
+    "variacion_pct": 2.2
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 247.57,
-    "variacion_pct": 1.0
+    "promedio": 248.61,
+    "variacion_pct": 2.8
    }
   },
   {
@@ -1960,24 +1708,24 @@
    "cultivo_id": "lechuga",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
    "minimo": 250.0,
-   "maximo": 250.0,
+   "maximo": 300.0,
    "moda": 250.0,
-   "promedio": 250.0,
+   "promedio": 255.56,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
+    "fecha": "2026-10-01",
     "promedio": 250.0,
-    "variacion_pct": 0.0
+    "variacion_pct": 2.2
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 247.57,
-    "variacion_pct": 1.0
+    "promedio": 248.61,
+    "variacion_pct": 2.8
    }
   },
   {
@@ -1987,24 +1735,24 @@
    "cultivo_id": "lechuga",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bandeja (2-3 unds)",
    "kg": null,
    "minimo": 1000.0,
-   "maximo": 1200.0,
+   "maximo": 1300.0,
    "moda": 1000.0,
-   "promedio": 1080.0,
+   "promedio": 1100.0,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 1085.71,
-    "variacion_pct": -0.5
+    "fecha": "2026-10-01",
+    "promedio": 1080.0,
+    "variacion_pct": 1.9
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 1118.09,
-    "variacion_pct": -3.4
+    "promedio": 1117.26,
+    "variacion_pct": -1.5
    }
   },
   {
@@ -2014,24 +1762,24 @@
    "cultivo_id": "lechuga",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
    "minimo": 250.0,
-   "maximo": 250.0,
+   "maximo": 300.0,
    "moda": 250.0,
-   "promedio": 250.0,
+   "promedio": 255.56,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
+    "fecha": "2026-10-01",
     "promedio": 250.0,
-    "variacion_pct": 0.0
+    "variacion_pct": 2.2
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 247.65,
-    "variacion_pct": 0.9
+    "promedio": 248.61,
+    "variacion_pct": 2.8
    }
   },
   {
@@ -2041,28 +1789,28 @@
    "cultivo_id": "limon-mandarina",
    "categoria": "fruta",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
    "minimo": 50.0,
    "maximo": 70.0,
    "moda": 60.0,
-   "promedio": 60.0,
+   "promedio": 57.5,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 58.0,
-    "variacion_pct": 3.4
+    "fecha": "2026-10-14",
+    "promedio": 60.0,
+    "variacion_pct": -4.2
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 57.5,
-    "variacion_pct": 4.3
+    "fecha": "2026-10-08",
+    "promedio": 57.69,
+    "variacion_pct": -0.3
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 60.02,
-    "variacion_pct": -0.0
+    "promedio": 60.13,
+    "variacion_pct": -4.4
    }
   },
   {
@@ -2072,28 +1820,28 @@
    "cultivo_id": "limon-mesino",
    "categoria": "fruta",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
    "minimo": 60.0,
    "maximo": 80.0,
    "moda": 70.0,
-   "promedio": 71.11,
+   "promedio": 70.0,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 70.0,
-    "variacion_pct": 1.6
+    "fecha": "2026-10-14",
+    "promedio": 71.11,
+    "variacion_pct": -1.6
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 65.71,
-    "variacion_pct": 8.2
+    "fecha": "2026-10-08",
+    "promedio": 65.56,
+    "variacion_pct": 6.8
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 63.05,
-    "variacion_pct": 12.8
+    "promedio": 63.62,
+    "variacion_pct": 10.0
    }
   },
   {
@@ -2103,28 +1851,28 @@
    "cultivo_id": "mamon-chino",
    "categoria": "fruta",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
    "minimo": 600.0,
    "maximo": 700.0,
-   "moda": 600.0,
-   "promedio": 625.0,
-   "precio_kg": 625.0,
+   "moda": 650.0,
+   "promedio": 658.33,
+   "precio_kg": 658.33,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 581.82,
-    "variacion_pct": 7.4
+    "fecha": "2026-10-14",
+    "promedio": 625.0,
+    "variacion_pct": 5.3
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 580.0,
-    "variacion_pct": 7.8
+    "fecha": "2026-10-08",
+    "promedio": 562.5,
+    "variacion_pct": 17.0
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 494.49,
-    "variacion_pct": 26.4
+    "promedio": 502.06,
+    "variacion_pct": 31.1
    }
   },
   {
@@ -2155,96 +1903,34 @@
    }
   },
   {
-   "id": "mandarina-primera",
-   "nombre": "Mandarina primera",
-   "cultivo": "Mandarina",
-   "cultivo_id": "mandarina",
-   "categoria": "fruta",
-   "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
-   "unidad": "Unidad",
-   "kg": null,
-   "minimo": 200.0,
-   "maximo": 220.0,
-   "moda": 200.0,
-   "promedio": 204.0,
-   "precio_kg": null,
-   "vs_anterior": {
-    "fecha": "2026-10-12",
-    "promedio": 204.44,
-    "variacion_pct": -0.2
-   },
-   "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 200.0,
-    "variacion_pct": 2.0
-   },
-   "vs_promedio": {
-    "boletines": 13,
-    "promedio": 203.88,
-    "variacion_pct": 0.1
-   }
-  },
-  {
-   "id": "mandarina-segunda",
-   "nombre": "Mandarina segunda",
-   "cultivo": "Mandarina",
-   "cultivo_id": "mandarina",
-   "categoria": "fruta",
-   "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
-   "unidad": "Unidad",
-   "kg": null,
-   "minimo": 150.0,
-   "maximo": 150.0,
-   "moda": 150.0,
-   "promedio": 150.0,
-   "precio_kg": null,
-   "vs_anterior": {
-    "fecha": "2026-10-12",
-    "promedio": 149.0,
-    "variacion_pct": 0.7
-   },
-   "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 150.0,
-    "variacion_pct": 0.0
-   },
-   "vs_promedio": {
-    "boletines": 13,
-    "promedio": 149.65,
-    "variacion_pct": 0.2
-   }
-  },
-  {
    "id": "manga-grande-cavallini",
    "nombre": "Manga grande Cavallini",
    "cultivo": "Mango",
    "cultivo_id": "mango",
    "categoria": "fruta",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Caja plástica (17 kg)",
    "kg": 17.0,
    "minimo": 20000.0,
-   "maximo": 22000.0,
-   "moda": 20000.0,
-   "promedio": 20666.67,
-   "precio_kg": 1215.69,
+   "maximo": 23000.0,
+   "moda": 22000.0,
+   "promedio": 21800.0,
+   "precio_kg": 1282.35,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 23300.0,
-    "variacion_pct": -11.3
+    "fecha": "2026-10-14",
+    "promedio": 20666.67,
+    "variacion_pct": 5.5
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 21200.0,
-    "variacion_pct": -2.5
+    "fecha": "2026-10-08",
+    "promedio": 21666.67,
+    "variacion_pct": 0.6
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 19359.23,
-    "variacion_pct": 6.8
+    "promedio": 19518.32,
+    "variacion_pct": 11.7
    }
   },
   {
@@ -2254,28 +1940,28 @@
    "cultivo_id": "mango",
    "categoria": "fruta",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Caja plástica (17 kg)",
    "kg": 17.0,
    "minimo": 15000.0,
    "maximo": 18000.0,
    "moda": 16000.0,
-   "promedio": 16000.0,
-   "precio_kg": 941.18,
+   "promedio": 16250.0,
+   "precio_kg": 955.88,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 17111.11,
-    "variacion_pct": -6.5
+    "fecha": "2026-10-14",
+    "promedio": 16000.0,
+    "variacion_pct": 1.6
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 17777.78,
-    "variacion_pct": -10.0
+    "fecha": "2026-10-08",
+    "promedio": 18200.0,
+    "variacion_pct": -10.7
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 15753.23,
-    "variacion_pct": 1.6
+    "promedio": 15883.1,
+    "variacion_pct": 2.3
    }
   },
   {
@@ -2393,24 +2079,24 @@
    "cultivo_id": "maiz-dulce",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bandeja (800 g)",
    "kg": 0.8,
-   "minimo": 1700.0,
-   "maximo": 1800.0,
-   "moda": 1800.0,
-   "promedio": 1766.67,
-   "precio_kg": 2208.34,
+   "minimo": 1200.0,
+   "maximo": 1500.0,
+   "moda": 1300.0,
+   "promedio": 1344.44,
+   "precio_kg": 1680.55,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 1737.5,
-    "variacion_pct": 1.7
+    "fecha": "2026-10-01",
+    "promedio": 1766.67,
+    "variacion_pct": -23.9
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 1630.21,
-    "variacion_pct": 8.4
+    "promedio": 1701.04,
+    "variacion_pct": -21.0
    }
   },
   {
@@ -2447,28 +2133,28 @@
    "cultivo_id": "melon",
    "categoria": "fruta",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
-   "minimo": 800.0,
-   "maximo": 900.0,
-   "moda": 800.0,
-   "promedio": 840.0,
-   "precio_kg": 840.0,
+   "minimo": 900.0,
+   "maximo": 1000.0,
+   "moda": 900.0,
+   "promedio": 933.33,
+   "precio_kg": 933.33,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 779.41,
-    "variacion_pct": 7.8
+    "fecha": "2026-10-14",
+    "promedio": 840.0,
+    "variacion_pct": 11.1
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 681.25,
-    "variacion_pct": 23.3
+    "fecha": "2026-10-08",
+    "promedio": 737.5,
+    "variacion_pct": 26.6
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 717.54,
-    "variacion_pct": 17.1
+    "promedio": 724.16,
+    "variacion_pct": 28.9
    }
   },
   {
@@ -2478,23 +2164,23 @@
    "cultivo_id": "mini-vegetales",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bandeja (500 g)",
    "kg": 0.5,
    "minimo": 1000.0,
    "maximo": 1200.0,
    "moda": 1000.0,
-   "promedio": 1042.86,
-   "precio_kg": 2085.72,
+   "promedio": 1050.0,
+   "precio_kg": 2100.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
+    "fecha": "2026-10-01",
     "promedio": 1042.86,
-    "variacion_pct": 0.0
+    "variacion_pct": 0.7
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 1039.29,
+    "promedio": 1046.43,
     "variacion_pct": 0.3
    }
   },
@@ -2505,24 +2191,24 @@
    "cultivo_id": "mostaza",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
    "minimo": 400.0,
    "maximo": 500.0,
    "moda": 500.0,
-   "promedio": 456.25,
+   "promedio": 454.55,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 455.56,
-    "variacion_pct": 0.2
+    "fecha": "2026-10-01",
+    "promedio": 456.25,
+    "variacion_pct": -0.4
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 462.0,
-    "variacion_pct": -1.2
+    "promedio": 462.17,
+    "variacion_pct": -1.6
    }
   },
   {
@@ -2559,28 +2245,28 @@
    "cultivo_id": "naranja",
    "categoria": "fruta",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
    "minimo": 100.0,
    "maximo": 120.0,
    "moda": 120.0,
-   "promedio": 114.29,
+   "promedio": 113.33,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 114.55,
-    "variacion_pct": -0.2
+    "fecha": "2026-10-14",
+    "promedio": 114.29,
+    "variacion_pct": -0.8
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 113.33,
-    "variacion_pct": 0.8
+    "fecha": "2026-10-08",
+    "promedio": 112.5,
+    "variacion_pct": 0.7
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 113.87,
-    "variacion_pct": 0.4
+    "promedio": 113.91,
+    "variacion_pct": -0.5
    }
   },
   {
@@ -2590,24 +2276,24 @@
    "cultivo_id": "oregano",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Rollo de 5 rollitos",
    "kg": null,
    "minimo": 400.0,
    "maximo": 500.0,
    "moda": 500.0,
-   "promedio": 475.0,
+   "promedio": 466.67,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 460.0,
-    "variacion_pct": 3.3
+    "fecha": "2026-10-01",
+    "promedio": 475.0,
+    "variacion_pct": -1.8
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 456.53,
-    "variacion_pct": 4.0
+    "promedio": 464.86,
+    "variacion_pct": 0.4
    }
   },
   {
@@ -2617,24 +2303,24 @@
    "cultivo_id": "palmito",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bolsa (400 g)",
    "kg": 0.4,
-   "minimo": 800.0,
-   "maximo": 900.0,
+   "minimo": 700.0,
+   "maximo": 800.0,
    "moda": 800.0,
-   "promedio": 825.0,
-   "precio_kg": 2062.5,
+   "promedio": 771.43,
+   "precio_kg": 1928.57,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 766.67,
-    "variacion_pct": 7.6
+    "fecha": "2026-10-01",
+    "promedio": 825.0,
+    "variacion_pct": -6.5
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 810.42,
-    "variacion_pct": 1.8
+    "promedio": 806.25,
+    "variacion_pct": -4.3
    }
   },
   {
@@ -2644,28 +2330,28 @@
    "cultivo_id": "papa",
    "categoria": "raíz y tubérculo",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Malla (45 kg)",
    "kg": 45.0,
-   "minimo": 17000.0,
+   "minimo": 18000.0,
    "maximo": 20000.0,
    "moda": 18000.0,
-   "promedio": 18625.0,
-   "precio_kg": 413.89,
+   "promedio": 18473.68,
+   "precio_kg": 410.53,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 19652.17,
-    "variacion_pct": -5.2
+    "fecha": "2026-10-14",
+    "promedio": 18625.0,
+    "variacion_pct": -0.8
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 20117.65,
-    "variacion_pct": -7.4
+    "fecha": "2026-10-08",
+    "promedio": 20647.06,
+    "variacion_pct": -10.5
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 18929.28,
-    "variacion_pct": -1.6
+    "promedio": 18952.82,
+    "variacion_pct": -2.5
    }
   },
   {
@@ -2675,90 +2361,28 @@
    "cultivo_id": "papa",
    "categoria": "raíz y tubérculo",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Malla (45 kg)",
    "kg": 45.0,
-   "minimo": 18000.0,
+   "minimo": 20000.0,
    "maximo": 22000.0,
    "moda": 20000.0,
-   "promedio": 19666.67,
-   "precio_kg": 437.04,
+   "promedio": 20428.57,
+   "precio_kg": 453.97,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 20909.09,
-    "variacion_pct": -5.9
+    "fecha": "2026-10-14",
+    "promedio": 19666.67,
+    "variacion_pct": 3.9
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 21571.43,
-    "variacion_pct": -8.8
+    "fecha": "2026-10-08",
+    "promedio": 23000.0,
+    "variacion_pct": -11.2
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 20323.86,
-    "variacion_pct": -3.2
-   }
-  },
-  {
-   "id": "papa-semilla",
-   "nombre": "Papa semilla",
-   "cultivo": "Papa",
-   "cultivo_id": "papa",
-   "categoria": "raíz y tubérculo",
-   "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
-   "unidad": "Malla (45 kg)",
-   "kg": 45.0,
-   "minimo": 8000.0,
-   "maximo": 12000.0,
-   "moda": 10000.0,
-   "promedio": 10173.91,
-   "precio_kg": 226.09,
-   "vs_anterior": {
-    "fecha": "2026-10-12",
-    "promedio": 10538.46,
-    "variacion_pct": -3.5
-   },
-   "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 10866.67,
-    "variacion_pct": -6.4
-   },
-   "vs_promedio": {
-    "boletines": 13,
-    "promedio": 10447.24,
-    "variacion_pct": -2.6
-   }
-  },
-  {
-   "id": "papa-semillon",
-   "nombre": "Papa semillón",
-   "cultivo": "Papa",
-   "cultivo_id": "papa",
-   "categoria": "raíz y tubérculo",
-   "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
-   "unidad": "Malla (45 kg)",
-   "kg": 45.0,
-   "minimo": 8000.0,
-   "maximo": 12000.0,
-   "moda": 10000.0,
-   "promedio": 10260.87,
-   "precio_kg": 228.02,
-   "vs_anterior": {
-    "fecha": "2026-10-12",
-    "promedio": 10583.33,
-    "variacion_pct": -3.0
-   },
-   "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 10866.67,
-    "variacion_pct": -5.6
-   },
-   "vs_promedio": {
-    "boletines": 13,
-    "promedio": 10444.43,
-    "variacion_pct": -1.8
+    "promedio": 20327.65,
+    "variacion_pct": 0.5
    }
   },
   {
@@ -2768,28 +2392,28 @@
    "cultivo_id": "papaya",
    "categoria": "fruta",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
-   "minimo": 650.0,
-   "maximo": 750.0,
-   "moda": 700.0,
-   "promedio": 700.0,
-   "precio_kg": 700.0,
+   "minimo": 550.0,
+   "maximo": 650.0,
+   "moda": 600.0,
+   "promedio": 591.67,
+   "precio_kg": 591.67,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 688.46,
-    "variacion_pct": 1.7
+    "fecha": "2026-10-14",
+    "promedio": 700.0,
+    "variacion_pct": -15.5
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 744.44,
-    "variacion_pct": -6.0
+    "fecha": "2026-10-08",
+    "promedio": 706.25,
+    "variacion_pct": -16.2
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 690.35,
-    "variacion_pct": 1.4
+    "promedio": 691.33,
+    "variacion_pct": -14.4
    }
   },
   {
@@ -2799,28 +2423,28 @@
    "cultivo_id": "pepino",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
-   "minimo": 300.0,
-   "maximo": 400.0,
-   "moda": 300.0,
-   "promedio": 325.0,
-   "precio_kg": 325.0,
+   "minimo": 200.0,
+   "maximo": 300.0,
+   "moda": 200.0,
+   "promedio": 229.17,
+   "precio_kg": 229.17,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 322.73,
-    "variacion_pct": 0.7
+    "fecha": "2026-10-14",
+    "promedio": 325.0,
+    "variacion_pct": -29.5
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 345.0,
-    "variacion_pct": -5.8
+    "fecha": "2026-10-08",
+    "promedio": 279.17,
+    "variacion_pct": -17.9
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 397.84,
-    "variacion_pct": -18.3
+    "promedio": 397.08,
+    "variacion_pct": -42.3
    }
   },
   {
@@ -2857,7 +2481,7 @@
    "cultivo_id": "perejil",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Rollo de 5 rollitos",
    "kg": null,
    "minimo": 500.0,
@@ -2866,46 +2490,15 @@
    "promedio": 520.0,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 540.0,
-    "variacion_pct": -3.7
+    "fecha": "2026-10-01",
+    "promedio": 520.0,
+    "variacion_pct": 0.0
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 542.78,
-    "variacion_pct": -4.2
-   }
-  },
-  {
-   "id": "pitahaya",
-   "nombre": "Pitahaya",
-   "cultivo": "Pitahaya",
-   "cultivo_id": "pitahaya",
-   "categoria": "fruta",
-   "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
-   "unidad": "Kilo",
-   "kg": 1.0,
-   "minimo": 1600.0,
-   "maximo": 2000.0,
-   "moda": 1800.0,
-   "promedio": 1833.33,
-   "precio_kg": 1833.33,
-   "vs_anterior": {
-    "fecha": "2026-10-12",
-    "promedio": 1933.33,
-    "variacion_pct": -5.2
-   },
-   "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 1900.0,
-    "variacion_pct": -3.5
-   },
-   "vs_promedio": {
-    "boletines": 13,
-    "promedio": 1790.96,
-    "variacion_pct": 2.4
+    "promedio": 522.78,
+    "variacion_pct": -0.5
    }
   },
   {
@@ -2915,28 +2508,28 @@
    "cultivo_id": "pina",
    "categoria": "fruta",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
    "minimo": 1100.0,
    "maximo": 1200.0,
    "moda": 1100.0,
-   "promedio": 1125.0,
+   "promedio": 1120.0,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 1154.55,
-    "variacion_pct": -2.6
+    "fecha": "2026-10-14",
+    "promedio": 1125.0,
+    "variacion_pct": -0.4
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 1160.0,
-    "variacion_pct": -3.0
+    "fecha": "2026-10-08",
+    "promedio": 1166.67,
+    "variacion_pct": -4.0
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 1163.53,
-    "variacion_pct": -3.3
+    "promedio": 1161.94,
+    "variacion_pct": -3.6
    }
   },
   {
@@ -2946,28 +2539,28 @@
    "cultivo_id": "pina",
    "categoria": "fruta",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
    "minimo": 800.0,
    "maximo": 900.0,
    "moda": 900.0,
-   "promedio": 860.0,
+   "promedio": 857.14,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 945.45,
-    "variacion_pct": -9.0
+    "fecha": "2026-10-14",
+    "promedio": 860.0,
+    "variacion_pct": -0.3
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 928.57,
-    "variacion_pct": -7.4
+    "fecha": "2026-10-08",
+    "promedio": 942.86,
+    "variacion_pct": -9.1
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 945.6,
-    "variacion_pct": -9.1
+    "promedio": 941.05,
+    "variacion_pct": -8.9
    }
   },
   {
@@ -2977,28 +2570,28 @@
    "cultivo_id": "pina",
    "categoria": "fruta",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
    "minimo": 600.0,
    "maximo": 700.0,
    "moda": 700.0,
-   "promedio": 675.0,
+   "promedio": 666.67,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 645.83,
-    "variacion_pct": 4.5
+    "fecha": "2026-10-14",
+    "promedio": 675.0,
+    "variacion_pct": -1.2
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 683.33,
-    "variacion_pct": -1.2
+    "fecha": "2026-10-08",
+    "promedio": 725.0,
+    "variacion_pct": -8.0
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 703.38,
-    "variacion_pct": -4.0
+    "promedio": 701.11,
+    "variacion_pct": -4.9
    }
   },
   {
@@ -3008,28 +2601,28 @@
    "cultivo_id": "platano",
    "categoria": "fruta",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
    "minimo": 200.0,
    "maximo": 220.0,
    "moda": 200.0,
-   "promedio": 205.71,
+   "promedio": 207.5,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 197.86,
-    "variacion_pct": 4.0
+    "fecha": "2026-10-14",
+    "promedio": 205.71,
+    "variacion_pct": 0.9
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 202.86,
-    "variacion_pct": 1.4
+    "fecha": "2026-10-08",
+    "promedio": 201.43,
+    "variacion_pct": 3.0
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 204.66,
-    "variacion_pct": 0.5
+    "promedio": 204.92,
+    "variacion_pct": 1.3
    }
   },
   {
@@ -3039,28 +2632,28 @@
    "cultivo_id": "platano",
    "categoria": "fruta",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
    "minimo": 150.0,
-   "maximo": 180.0,
-   "moda": 150.0,
-   "promedio": 163.33,
+   "maximo": 170.0,
+   "moda": 160.0,
+   "promedio": 157.5,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 147.69,
-    "variacion_pct": 10.6
+    "fecha": "2026-10-14",
+    "promedio": 163.33,
+    "variacion_pct": -3.6
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 157.5,
-    "variacion_pct": 3.7
+    "fecha": "2026-10-08",
+    "promedio": 158.0,
+    "variacion_pct": -0.3
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 157.21,
-    "variacion_pct": 3.9
+    "promedio": 157.54,
+    "variacion_pct": -0.0
    }
   },
   {
@@ -3070,24 +2663,24 @@
    "cultivo_id": "puerro",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
    "minimo": 400.0,
    "maximo": 500.0,
    "moda": 500.0,
-   "promedio": 466.67,
+   "promedio": 477.78,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
+    "fecha": "2026-10-01",
     "promedio": 466.67,
-    "variacion_pct": 0.0
+    "variacion_pct": 2.4
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 475.52,
-    "variacion_pct": -1.9
+    "promedio": 471.88,
+    "variacion_pct": 1.3
    }
   },
   {
@@ -3097,24 +2690,24 @@
    "cultivo_id": "rabano",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Rollo",
    "kg": null,
-   "minimo": 200.0,
-   "maximo": 250.0,
+   "minimo": 250.0,
+   "maximo": 300.0,
    "moda": 250.0,
-   "promedio": 238.89,
+   "promedio": 261.11,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 255.0,
-    "variacion_pct": -6.3
+    "fecha": "2026-10-01",
+    "promedio": 238.89,
+    "variacion_pct": 9.3
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 251.68,
-    "variacion_pct": -5.1
+    "promedio": 249.86,
+    "variacion_pct": 4.5
    }
   },
   {
@@ -3124,28 +2717,28 @@
    "cultivo_id": "remolacha",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Unidad",
    "kg": null,
    "minimo": 250.0,
    "maximo": 350.0,
    "moda": 300.0,
-   "promedio": 292.86,
+   "promedio": 295.45,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 295.83,
-    "variacion_pct": -1.0
+    "fecha": "2026-10-14",
+    "promedio": 292.86,
+    "variacion_pct": 0.9
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 290.74,
-    "variacion_pct": 0.7
+    "fecha": "2026-10-08",
+    "promedio": 333.33,
+    "variacion_pct": -11.4
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 285.55,
-    "variacion_pct": 2.6
+    "promedio": 285.7,
+    "variacion_pct": 3.4
    }
   },
   {
@@ -3155,28 +2748,28 @@
    "cultivo_id": "repollo",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
-   "minimo": 1500.0,
-   "maximo": 1800.0,
-   "moda": 1500.0,
-   "promedio": 1550.0,
-   "precio_kg": 1550.0,
+   "minimo": 1800.0,
+   "maximo": 2200.0,
+   "moda": 2000.0,
+   "promedio": 1940.0,
+   "precio_kg": 1940.0,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 1722.22,
-    "variacion_pct": -10.0
+    "fecha": "2026-10-14",
+    "promedio": 1550.0,
+    "variacion_pct": 25.2
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 1490.91,
-    "variacion_pct": 4.0
+    "fecha": "2026-10-08",
+    "promedio": 1470.59,
+    "variacion_pct": 31.9
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 1457.48,
-    "variacion_pct": 6.3
+    "promedio": 1460.8,
+    "variacion_pct": 32.8
    }
   },
   {
@@ -3186,28 +2779,28 @@
    "cultivo_id": "repollo",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
    "minimo": 700.0,
    "maximo": 800.0,
    "moda": 700.0,
-   "promedio": 746.15,
-   "precio_kg": 746.15,
+   "promedio": 716.67,
+   "precio_kg": 716.67,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 745.24,
-    "variacion_pct": 0.1
+    "fecha": "2026-10-14",
+    "promedio": 746.15,
+    "variacion_pct": -4.0
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 900.0,
-    "variacion_pct": -17.1
+    "fecha": "2026-10-08",
+    "promedio": 890.0,
+    "variacion_pct": -19.5
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 934.11,
-    "variacion_pct": -20.1
+    "promedio": 932.01,
+    "variacion_pct": -23.1
    }
   },
   {
@@ -3217,24 +2810,24 @@
    "cultivo_id": "romero",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Rollo",
    "kg": null,
    "minimo": 250.0,
    "maximo": 300.0,
    "moda": 300.0,
-   "promedio": 277.78,
+   "promedio": 278.57,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 272.22,
-    "variacion_pct": 2.0
+    "fecha": "2026-10-01",
+    "promedio": 277.78,
+    "variacion_pct": 0.3
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 263.85,
-    "variacion_pct": 5.3
+    "promedio": 267.05,
+    "variacion_pct": 4.3
    }
   },
   {
@@ -3244,24 +2837,24 @@
    "cultivo_id": "rabano",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Rollo",
    "kg": null,
    "minimo": 250.0,
    "maximo": 300.0,
    "moda": 300.0,
-   "promedio": 285.71,
+   "promedio": 288.89,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 283.33,
-    "variacion_pct": 0.8
+    "fecha": "2026-10-01",
+    "promedio": 285.71,
+    "variacion_pct": 1.1
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 287.74,
-    "variacion_pct": -0.7
+    "promedio": 287.57,
+    "variacion_pct": 0.5
    }
   },
   {
@@ -3271,28 +2864,28 @@
    "cultivo_id": "sandia",
    "categoria": "fruta",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
    "minimo": 900.0,
    "maximo": 1000.0,
    "moda": 900.0,
-   "promedio": 931.25,
-   "precio_kg": 931.25,
+   "promedio": 928.57,
+   "precio_kg": 928.57,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 953.13,
-    "variacion_pct": -2.3
+    "fecha": "2026-10-14",
+    "promedio": 931.25,
+    "variacion_pct": -0.3
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 877.78,
-    "variacion_pct": 6.1
+    "fecha": "2026-10-08",
+    "promedio": 968.75,
+    "variacion_pct": -4.1
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 796.88,
-    "variacion_pct": 16.9
+    "promedio": 807.01,
+    "variacion_pct": 15.1
    }
   },
   {
@@ -3302,28 +2895,28 @@
    "cultivo_id": "sandia",
    "categoria": "fruta",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
-   "minimo": 700.0,
-   "maximo": 800.0,
-   "moda": 800.0,
-   "promedio": 755.56,
-   "precio_kg": 755.56,
+   "minimo": 650.0,
+   "maximo": 750.0,
+   "moda": 700.0,
+   "promedio": 700.0,
+   "precio_kg": 700.0,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 759.38,
-    "variacion_pct": -0.5
+    "fecha": "2026-10-14",
+    "promedio": 755.56,
+    "variacion_pct": -7.4
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 687.5,
-    "variacion_pct": 9.9
+    "fecha": "2026-10-08",
+    "promedio": 744.44,
+    "variacion_pct": -6.0
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 615.41,
-    "variacion_pct": 22.8
+    "promedio": 625.89,
+    "variacion_pct": 11.8
    }
   },
   {
@@ -3333,24 +2926,24 @@
    "cultivo_id": "tacaco",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
    "minimo": 1500.0,
-   "maximo": 1500.0,
-   "moda": 1500.0,
-   "promedio": 1500.0,
-   "precio_kg": 1500.0,
+   "maximo": 2000.0,
+   "moda": 2000.0,
+   "promedio": 1800.0,
+   "precio_kg": 1800.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 1387.5,
-    "variacion_pct": 8.1
+    "fecha": "2026-10-01",
+    "promedio": 1500.0,
+    "variacion_pct": 20.0
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 1458.78,
-    "variacion_pct": 2.8
+    "promedio": 1500.45,
+    "variacion_pct": 20.0
    }
   },
   {
@@ -3360,28 +2953,28 @@
    "cultivo_id": "tiquisque",
    "categoria": "raíz y tubérculo",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
-   "minimo": 3000.0,
+   "minimo": 2800.0,
    "maximo": 3300.0,
    "moda": 3000.0,
-   "promedio": 3100.0,
-   "precio_kg": 3100.0,
+   "promedio": 3016.67,
+   "precio_kg": 3016.67,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 2950.0,
-    "variacion_pct": 5.1
+    "fecha": "2026-10-14",
+    "promedio": 3100.0,
+    "variacion_pct": -2.7
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 3016.67,
-    "variacion_pct": 2.8
+    "fecha": "2026-10-08",
+    "promedio": 3120.0,
+    "variacion_pct": -3.3
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 3032.74,
-    "variacion_pct": 2.2
+    "promedio": 3036.15,
+    "variacion_pct": -0.6
    }
   },
   {
@@ -3391,24 +2984,24 @@
    "cultivo_id": "tomate",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bandeja (500 g)",
    "kg": 0.5,
    "minimo": 800.0,
    "maximo": 1000.0,
    "moda": 1000.0,
-   "promedio": 920.0,
-   "precio_kg": 1840.0,
+   "promedio": 912.5,
+   "precio_kg": 1825.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 883.33,
-    "variacion_pct": 4.2
+    "fecha": "2026-10-01",
+    "promedio": 920.0,
+    "variacion_pct": -0.8
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 874.4,
-    "variacion_pct": 5.2
+    "promedio": 890.12,
+    "variacion_pct": 2.5
    }
   },
   {
@@ -3418,28 +3011,28 @@
    "cultivo_id": "tomate",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Caja plástica (18 kg)",
    "kg": 18.0,
-   "minimo": 18000.0,
-   "maximo": 19000.0,
-   "moda": 18000.0,
-   "promedio": 18444.44,
-   "precio_kg": 1024.69,
+   "minimo": 20000.0,
+   "maximo": 21000.0,
+   "moda": 20000.0,
+   "promedio": 20181.82,
+   "precio_kg": 1121.21,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 18375.0,
-    "variacion_pct": 0.4
+    "fecha": "2026-10-14",
+    "promedio": 18444.44,
+    "variacion_pct": 9.4
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 14888.89,
-    "variacion_pct": 23.9
+    "fecha": "2026-10-08",
+    "promedio": 17750.0,
+    "variacion_pct": 13.7
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 15604.31,
-    "variacion_pct": 18.2
+    "promedio": 15786.85,
+    "variacion_pct": 27.8
    }
   },
   {
@@ -3449,28 +3042,28 @@
    "cultivo_id": "tomate",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Caja plástica (18 kg)",
    "kg": 18.0,
-   "minimo": 18000.0,
-   "maximo": 19000.0,
-   "moda": 18000.0,
-   "promedio": 18222.22,
-   "precio_kg": 1012.35,
+   "minimo": 20000.0,
+   "maximo": 20000.0,
+   "moda": 20000.0,
+   "promedio": 20000.0,
+   "precio_kg": 1111.11,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 18000.0,
-    "variacion_pct": 1.2
+    "fecha": "2026-10-14",
+    "promedio": 18222.22,
+    "variacion_pct": 9.8
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 14250.0,
-    "variacion_pct": 27.9
+    "fecha": "2026-10-08",
+    "promedio": 17250.0,
+    "variacion_pct": 15.9
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 14864.5,
-    "variacion_pct": 22.6
+    "promedio": 15083.69,
+    "variacion_pct": 32.6
    }
   },
   {
@@ -3480,28 +3073,28 @@
    "cultivo_id": "tomate",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Caja plástica (18 kg)",
    "kg": 18.0,
-   "minimo": 16000.0,
-   "maximo": 17000.0,
-   "moda": 17000.0,
-   "promedio": 16888.89,
-   "precio_kg": 938.27,
+   "minimo": 19000.0,
+   "maximo": 20000.0,
+   "moda": 19000.0,
+   "promedio": 19222.22,
+   "precio_kg": 1067.9,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 17000.0,
-    "variacion_pct": -0.7
+    "fecha": "2026-10-14",
+    "promedio": 16888.89,
+    "variacion_pct": 13.8
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 13875.0,
-    "variacion_pct": 21.7
+    "fecha": "2026-10-08",
+    "promedio": 16727.27,
+    "variacion_pct": 14.9
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 13892.11,
-    "variacion_pct": 21.6
+    "promedio": 14101.35,
+    "variacion_pct": 36.3
    }
   },
   {
@@ -3511,7 +3104,7 @@
    "cultivo_id": "tomillo",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Rollo de 5 rollitos",
    "kg": null,
    "minimo": 500.0,
@@ -3520,15 +3113,15 @@
    "promedio": 500.0,
    "precio_kg": null,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 470.0,
-    "variacion_pct": 6.4
+    "fecha": "2026-10-01",
+    "promedio": 500.0,
+    "variacion_pct": 0.0
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 479.4,
-    "variacion_pct": 4.3
+    "promedio": 482.81,
+    "variacion_pct": 3.6
    }
   },
   {
@@ -3592,28 +3185,28 @@
    "cultivo_id": "vainica",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
-   "minimo": 900.0,
+   "minimo": 1000.0,
    "maximo": 1200.0,
    "moda": 1000.0,
-   "promedio": 1052.94,
-   "precio_kg": 1052.94,
+   "promedio": 1061.9,
+   "precio_kg": 1061.9,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 1029.41,
-    "variacion_pct": 2.3
+    "fecha": "2026-10-14",
+    "promedio": 1052.94,
+    "variacion_pct": 0.9
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 747.37,
-    "variacion_pct": 40.9
+    "fecha": "2026-10-08",
+    "promedio": 857.89,
+    "variacion_pct": 23.8
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 1109.16,
-    "variacion_pct": -5.1
+    "promedio": 1094.52,
+    "variacion_pct": -3.0
    }
   },
   {
@@ -3623,24 +3216,24 @@
    "cultivo_id": "vainica",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bolsa (500 g)",
    "kg": 0.5,
    "minimo": 1200.0,
-   "maximo": 1400.0,
+   "maximo": 1300.0,
    "moda": 1200.0,
-   "promedio": 1260.0,
-   "precio_kg": 2520.0,
+   "promedio": 1240.0,
+   "precio_kg": 2480.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 1283.33,
-    "variacion_pct": -1.8
+    "fecha": "2026-10-01",
+    "promedio": 1260.0,
+    "variacion_pct": -1.6
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 1244.4,
-    "variacion_pct": 1.3
+    "promedio": 1255.83,
+    "variacion_pct": -1.3
    }
   },
   {
@@ -3650,28 +3243,28 @@
    "cultivo_id": "yuca",
    "categoria": "raíz y tubérculo",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
    "minimo": 300.0,
    "maximo": 400.0,
    "moda": 350.0,
-   "promedio": 341.67,
-   "precio_kg": 341.67,
+   "promedio": 337.5,
+   "precio_kg": 337.5,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 333.33,
-    "variacion_pct": 2.5
+    "fecha": "2026-10-14",
+    "promedio": 341.67,
+    "variacion_pct": -1.2
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 340.91,
-    "variacion_pct": 0.2
+    "fecha": "2026-10-08",
+    "promedio": 328.57,
+    "variacion_pct": 2.7
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 330.61,
-    "variacion_pct": 3.3
+    "promedio": 329.59,
+    "variacion_pct": 2.4
    }
   },
   {
@@ -3681,24 +3274,24 @@
    "cultivo_id": "zanahoria",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bandeja (500 g)",
    "kg": 0.5,
    "minimo": 1000.0,
-   "maximo": 1000.0,
+   "maximo": 1200.0,
    "moda": 1000.0,
-   "promedio": 1000.0,
-   "precio_kg": 2000.0,
+   "promedio": 1050.0,
+   "precio_kg": 2100.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
+    "fecha": "2026-10-01",
     "promedio": 1000.0,
-    "variacion_pct": 0.0
+    "variacion_pct": 5.0
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 1058.75,
-    "variacion_pct": -5.5
+    "promedio": 1052.5,
+    "variacion_pct": -0.2
    }
   },
   {
@@ -3708,28 +3301,28 @@
    "cultivo_id": "zanahoria",
    "categoria": "hortaliza",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Malla (45 kg)",
    "kg": 45.0,
-   "minimo": 20000.0,
-   "maximo": 24000.0,
-   "moda": 22000.0,
-   "promedio": 22030.3,
-   "precio_kg": 489.56,
+   "minimo": 22000.0,
+   "maximo": 25000.0,
+   "moda": 23000.0,
+   "promedio": 22791.67,
+   "precio_kg": 506.48,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 23550.0,
-    "variacion_pct": -6.5
+    "fecha": "2026-10-14",
+    "promedio": 22030.3,
+    "variacion_pct": 3.5
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 21285.71,
-    "variacion_pct": 3.5
+    "fecha": "2026-10-08",
+    "promedio": 21961.54,
+    "variacion_pct": 3.8
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 20811.92,
-    "variacion_pct": 5.9
+    "promedio": 20894.1,
+    "variacion_pct": 9.1
    }
   },
   {
@@ -3739,55 +3332,24 @@
    "cultivo_id": "zapallo",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bandeja (500 g)",
    "kg": 0.5,
    "minimo": 1000.0,
-   "maximo": 1200.0,
+   "maximo": 1000.0,
    "moda": 1000.0,
-   "promedio": 1037.5,
-   "precio_kg": 2075.0,
+   "promedio": 1000.0,
+   "precio_kg": 2000.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 1057.14,
-    "variacion_pct": -1.9
+    "fecha": "2026-10-01",
+    "promedio": 1037.5,
+    "variacion_pct": -3.6
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 1005.12,
-    "variacion_pct": 3.2
-   }
-  },
-  {
-   "id": "zucchini",
-   "nombre": "Zucchini",
-   "cultivo": "Zucchini",
-   "cultivo_id": "zucchini",
-   "categoria": "hortaliza",
-   "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
-   "unidad": "Unidad",
-   "kg": null,
-   "minimo": 250.0,
-   "maximo": 350.0,
-   "moda": 300.0,
-   "promedio": 290.0,
-   "precio_kg": null,
-   "vs_anterior": {
-    "fecha": "2026-10-12",
-    "promedio": 315.79,
-    "variacion_pct": -8.2
-   },
-   "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 333.33,
-    "variacion_pct": -13.0
-   },
-   "vs_promedio": {
-    "boletines": 13,
-    "promedio": 430.78,
-    "variacion_pct": -32.7
+    "promedio": 1014.49,
+    "variacion_pct": -1.4
    }
   },
   {
@@ -3797,24 +3359,24 @@
    "cultivo_id": "zucchini",
    "categoria": "aromático y gourmet",
    "fuente": "aromaticos",
-   "fecha_boletin": "2026-10-01",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Bandeja (500 g)",
    "kg": 0.5,
    "minimo": 1000.0,
    "maximo": 1200.0,
-   "moda": 1200.0,
-   "promedio": 1133.33,
-   "precio_kg": 2266.66,
+   "moda": 1000.0,
+   "promedio": 1080.0,
+   "precio_kg": 2160.0,
    "vs_anterior": {
-    "fecha": "2026-09-17",
-    "promedio": 1228.57,
-    "variacion_pct": -7.8
+    "fecha": "2026-10-01",
+    "promedio": 1133.33,
+    "variacion_pct": -4.7
    },
    "vs_semana": null,
    "vs_promedio": {
     "boletines": 4,
-    "promedio": 1200.06,
-    "variacion_pct": -5.6
+    "promedio": 1188.39,
+    "variacion_pct": -9.1
    }
   },
   {
@@ -3824,28 +3386,28 @@
    "cultivo_id": "nampi",
    "categoria": "raíz y tubérculo",
    "fuente": "diario",
-   "fecha_boletin": "2026-10-14",
+   "fecha_boletin": "2026-10-15",
    "unidad": "Kilo",
    "kg": 1.0,
-   "minimo": 900.0,
+   "minimo": 800.0,
    "maximo": 1000.0,
    "moda": 1000.0,
-   "promedio": 983.33,
-   "precio_kg": 983.33,
+   "promedio": 966.67,
+   "precio_kg": 966.67,
    "vs_anterior": {
-    "fecha": "2026-10-13",
-    "promedio": 915.38,
-    "variacion_pct": 7.4
+    "fecha": "2026-10-14",
+    "promedio": 983.33,
+    "variacion_pct": -1.7
    },
    "vs_semana": {
-    "fecha": "2026-10-07",
-    "promedio": 937.5,
-    "variacion_pct": 4.9
+    "fecha": "2026-10-08",
+    "promedio": 957.14,
+    "variacion_pct": 1.0
    },
    "vs_promedio": {
     "boletines": 22,
-    "promedio": 962.35,
-    "variacion_pct": 2.2
+    "promedio": 961.59,
+    "variacion_pct": 0.5
    }
   }
  ]
