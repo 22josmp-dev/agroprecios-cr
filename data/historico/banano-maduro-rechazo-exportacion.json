@@ -5,7 +5,7 @@
  "id": "banano-maduro-rechazo-exportacion",
  "nombre": "Banano Maduro Rechazo Exportación",
  "unidad_precio": "Caja",
- "generado_utc": "2026-10-21T20:55:14Z",
+ "generado_utc": "2026-10-21T23:40:09Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2018": [
