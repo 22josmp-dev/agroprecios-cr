@@ -3,24 +3,19 @@
  "fuente": "PIMA – SIMM",
  "datos_de_ejemplo": false,
  "estado": "ok",
- "mensaje": "Sin boletines nuevos; los datos están al día.",
- "ultimo_intento_utc": "2026-10-21T02:02:58Z",
- "ultima_actualizacion_exitosa_utc": "2026-10-21T02:02:58Z",
- "fecha_boletin": "2026-10-20",
- "registros": 50,
- "rechazados": 0,
- "sha256": "46ef53abde1ed13331c28735f054b7c41d777574db83f98ad3004c1e1dd433f0",
- "dias_con_datos": 27,
+ "mensaje": "Boletines nuevos: 2026-10-21",
+ "ultimo_intento_utc": "2026-10-21T20:54:44Z",
+ "ultima_actualizacion_exitosa_utc": "2026-10-21T20:54:44Z",
+ "fecha_boletin": "2026-10-21",
+ "registros": 59,
+ "rechazados": 2,
+ "sha256": "fea313dc310646e7ae307f4559ed7168b93e6aa41f2639563f0ed1c661a43956",
+ "dias_con_datos": 28,
  "meses_precios": [
   "2026-09",
   "2026-10"
  ],
  "historial": [
-  {
-   "utc": "2026-10-11T21:04:48Z",
-   "estado": "ok",
-   "mensaje": "Sin boletines nuevos; los datos están al día."
-  },
   {
    "utc": "2026-10-11T23:59:51Z",
    "estado": "ok",
@@ -165,6 +160,11 @@
    "utc": "2026-10-21T02:02:58Z",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día."
+  },
+  {
+   "utc": "2026-10-21T20:54:44Z",
+   "estado": "ok",
+   "mensaje": "Boletines nuevos: 2026-10-21"
   }
  ],
  "fuentes": {
@@ -172,13 +172,13 @@
    "nombre": "Fruta importada",
    "frecuencia": "semanal",
    "estado": "ok",
-   "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-10-21T02:03:10Z",
-   "ultima_actualizacion_exitosa_utc": "2026-10-21T02:03:10Z",
-   "fecha_boletin": "2026-10-14",
-   "registros": 23,
+   "mensaje": "Boletines nuevos: 2026-10-21",
+   "ultimo_intento_utc": "2026-10-21T20:54:57Z",
+   "ultima_actualizacion_exitosa_utc": "2026-10-21T20:54:57Z",
+   "fecha_boletin": "2026-10-21",
+   "registros": 22,
    "rechazados": 0,
-   "boletines_con_datos": 13,
+   "boletines_con_datos": 14,
    "meses_precios": [
     "2026-07",
     "2026-08",
@@ -191,8 +191,8 @@
    "frecuencia": "quincenal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-10-21T02:03:18Z",
-   "ultima_actualizacion_exitosa_utc": "2026-10-21T02:03:18Z",
+   "ultimo_intento_utc": "2026-10-21T20:55:05Z",
+   "ultima_actualizacion_exitosa_utc": "2026-10-21T20:55:05Z",
    "fecha_boletin": "2026-10-15",
    "registros": 44,
    "rechazados": 0,
