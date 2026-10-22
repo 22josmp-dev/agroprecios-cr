@@ -5,7 +5,7 @@
  "id": "mora-fresca",
  "nombre": "Mora Fresca",
  "unidad_precio": "Kilo",
- "generado_utc": "2026-10-21T23:40:09Z",
+ "generado_utc": "2026-10-22T01:52:54Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2018": [
