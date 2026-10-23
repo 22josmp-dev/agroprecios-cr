@@ -1,0 +1,37 @@
+{
+ "esquema": 1,
+ "fecha_boletin": "2026-10-23",
+ "sha256": "13de1e4c33fa443d854f2d6df76d349c349844726dd05b4844c5e84b81dedef6",
+ "generado_utc": "2026-10-23T20:40:01Z",
+ "total": 2,
+ "rechazados": [
+  {
+   "producto": "Sandía importada - grande",
+   "unidad": "Kilo",
+   "valores": {
+    "minimo": "700.00",
+    "maximo": "800.00",
+    "moda": "800.00",
+    "promedio": "781.25"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 2
+  },
+  {
+   "producto": "Sandía importada - mediana",
+   "unidad": "Kilo",
+   "valores": {
+    "minimo": "600.00",
+    "maximo": "650.00",
+    "moda": "600.00",
+    "promedio": "614.29"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 2
+  }
+ ]
+}

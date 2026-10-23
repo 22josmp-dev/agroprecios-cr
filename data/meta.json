@@ -3,24 +3,19 @@
  "fuente": "PIMA – SIMM",
  "datos_de_ejemplo": false,
  "estado": "ok",
- "mensaje": "Sin boletines nuevos; los datos están al día.",
- "ultimo_intento_utc": "2026-10-23T01:59:14Z",
- "ultima_actualizacion_exitosa_utc": "2026-10-23T01:59:14Z",
- "fecha_boletin": "2026-10-22",
- "registros": 50,
+ "mensaje": "Boletines nuevos: 2026-10-23",
+ "ultimo_intento_utc": "2026-10-23T20:40:01Z",
+ "ultima_actualizacion_exitosa_utc": "2026-10-23T20:40:01Z",
+ "fecha_boletin": "2026-10-23",
+ "registros": 56,
  "rechazados": 2,
- "sha256": "324b011d27c565014c95021f15fd9fe748a5549ab4262bdbe6cef84333702724",
- "dias_con_datos": 29,
+ "sha256": "13de1e4c33fa443d854f2d6df76d349c349844726dd05b4844c5e84b81dedef6",
+ "dias_con_datos": 30,
  "meses_precios": [
   "2026-09",
   "2026-10"
  ],
  "historial": [
-  {
-   "utc": "2026-10-13T21:58:41Z",
-   "estado": "ok",
-   "mensaje": "Boletines nuevos: 2026-10-13"
-  },
   {
    "utc": "2026-10-13T23:56:04Z",
    "estado": "ok",
@@ -165,6 +160,11 @@
    "utc": "2026-10-23T01:59:14Z",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día."
+  },
+  {
+   "utc": "2026-10-23T20:40:01Z",
+   "estado": "ok",
+   "mensaje": "Boletines nuevos: 2026-10-23"
   }
  ],
  "fuentes": {
@@ -173,8 +173,8 @@
    "frecuencia": "semanal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-10-23T01:59:26Z",
-   "ultima_actualizacion_exitosa_utc": "2026-10-23T01:59:26Z",
+   "ultimo_intento_utc": "2026-10-23T20:40:14Z",
+   "ultima_actualizacion_exitosa_utc": "2026-10-23T20:40:14Z",
    "fecha_boletin": "2026-10-21",
    "registros": 22,
    "rechazados": 0,
@@ -191,8 +191,8 @@
    "frecuencia": "quincenal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-10-23T01:59:35Z",
-   "ultima_actualizacion_exitosa_utc": "2026-10-23T01:59:35Z",
+   "ultimo_intento_utc": "2026-10-23T20:40:23Z",
+   "ultima_actualizacion_exitosa_utc": "2026-10-23T20:40:23Z",
    "fecha_boletin": "2026-10-15",
    "registros": 44,
    "rechazados": 0,
