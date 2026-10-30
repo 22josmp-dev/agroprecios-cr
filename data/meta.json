@@ -3,9 +3,9 @@
  "fuente": "PIMA – SIMM",
  "datos_de_ejemplo": false,
  "estado": "ok",
- "mensaje": "Boletines nuevos: 2026-10-29",
- "ultimo_intento_utc": "2026-10-29T22:01:52Z",
- "ultima_actualizacion_exitosa_utc": "2026-10-29T22:01:52Z",
+ "mensaje": "Sin boletines nuevos; los datos están al día.",
+ "ultimo_intento_utc": "2026-10-30T00:24:46Z",
+ "ultima_actualizacion_exitosa_utc": "2026-10-30T00:24:46Z",
  "fecha_boletin": "2026-10-29",
  "registros": 49,
  "rechazados": 0,
@@ -16,11 +16,6 @@
   "2026-10"
  ],
  "historial": [
-  {
-   "utc": "2026-10-19T23:57:07Z",
-   "estado": "ok",
-   "mensaje": "Sin boletines nuevos; los datos están al día."
-  },
   {
    "utc": "2026-10-20T02:05:53Z",
    "estado": "ok",
@@ -165,6 +160,11 @@
    "utc": "2026-10-29T22:01:52Z",
    "estado": "ok",
    "mensaje": "Boletines nuevos: 2026-10-29"
+  },
+  {
+   "utc": "2026-10-30T00:24:46Z",
+   "estado": "ok",
+   "mensaje": "Sin boletines nuevos; los datos están al día."
   }
  ],
  "fuentes": {
@@ -173,8 +173,8 @@
    "frecuencia": "semanal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-10-29T22:02:05Z",
-   "ultima_actualizacion_exitosa_utc": "2026-10-29T22:02:05Z",
+   "ultimo_intento_utc": "2026-10-30T00:24:59Z",
+   "ultima_actualizacion_exitosa_utc": "2026-10-30T00:24:59Z",
    "fecha_boletin": "2026-10-28",
    "registros": 23,
    "rechazados": 0,
@@ -190,9 +190,9 @@
    "nombre": "Aromáticos y gourmet",
    "frecuencia": "quincenal",
    "estado": "ok",
-   "mensaje": "Boletines nuevos: 2026-10-29",
-   "ultimo_intento_utc": "2026-10-29T22:02:14Z",
-   "ultima_actualizacion_exitosa_utc": "2026-10-29T22:02:14Z",
+   "mensaje": "Sin boletines nuevos; los datos están al día.",
+   "ultimo_intento_utc": "2026-10-30T00:25:09Z",
+   "ultima_actualizacion_exitosa_utc": "2026-10-30T00:25:09Z",
    "fecha_boletin": "2026-10-29",
    "registros": 43,
    "rechazados": 0,
