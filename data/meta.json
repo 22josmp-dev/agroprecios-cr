@@ -4,8 +4,8 @@
  "datos_de_ejemplo": false,
  "estado": "ok",
  "mensaje": "Sin boletines nuevos; los datos están al día.",
- "ultimo_intento_utc": "2026-10-31T00:06:21Z",
- "ultima_actualizacion_exitosa_utc": "2026-10-31T00:06:21Z",
+ "ultimo_intento_utc": "2026-10-31T02:43:53Z",
+ "ultima_actualizacion_exitosa_utc": "2026-10-31T02:43:53Z",
  "fecha_boletin": "2026-10-30",
  "registros": 58,
  "rechazados": 0,
@@ -16,11 +16,6 @@
   "2026-10"
  ],
  "historial": [
-  {
-   "utc": "2026-10-21T02:02:58Z",
-   "estado": "ok",
-   "mensaje": "Sin boletines nuevos; los datos están al día."
-  },
   {
    "utc": "2026-10-21T20:54:44Z",
    "estado": "ok",
@@ -165,6 +160,11 @@
    "utc": "2026-10-31T00:06:21Z",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día."
+  },
+  {
+   "utc": "2026-10-31T02:43:53Z",
+   "estado": "ok",
+   "mensaje": "Sin boletines nuevos; los datos están al día."
   }
  ],
  "fuentes": {
@@ -173,8 +173,8 @@
    "frecuencia": "semanal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-10-31T00:06:33Z",
-   "ultima_actualizacion_exitosa_utc": "2026-10-31T00:06:33Z",
+   "ultimo_intento_utc": "2026-10-31T02:44:06Z",
+   "ultima_actualizacion_exitosa_utc": "2026-10-31T02:44:06Z",
    "fecha_boletin": "2026-10-28",
    "registros": 23,
    "rechazados": 0,
@@ -191,8 +191,8 @@
    "frecuencia": "quincenal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-10-31T00:06:42Z",
-   "ultima_actualizacion_exitosa_utc": "2026-10-31T00:06:42Z",
+   "ultimo_intento_utc": "2026-10-31T02:44:15Z",
+   "ultima_actualizacion_exitosa_utc": "2026-10-31T02:44:15Z",
    "fecha_boletin": "2026-10-29",
    "registros": 43,
    "rechazados": 0,
