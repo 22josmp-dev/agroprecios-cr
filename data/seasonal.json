@@ -2,7 +2,7 @@
  "esquema": 1,
  "fuente": "PIMA – SIMM",
  "datos_de_ejemplo": false,
- "generado_utc": "2026-11-01T02:36:11Z",
+ "generado_utc": "2026-11-01T21:23:20Z",
  "edicion_simm": [
   2026
  ],
@@ -282,7 +282,7 @@
     0.9695,
     0.9136
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -464,7 +464,7 @@
     1.1663,
     1.0234
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -738,7 +738,7 @@
     0.9114,
     0.8914
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -1010,7 +1010,7 @@
     1.0025,
     0.8309
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -1102,7 +1102,7 @@
     1.0298,
     0.8928
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -1374,7 +1374,7 @@
     1.1032,
     0.916
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -1466,7 +1466,7 @@
     0.9289,
     0.7088
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -1558,7 +1558,7 @@
     0.9659,
     0.7436
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -1650,7 +1650,7 @@
     1.0649,
     0.8351
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -1834,7 +1834,7 @@
     1.1756,
     1.0848
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -1926,7 +1926,7 @@
     1.0793,
     1.0137
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -2298,7 +2298,7 @@
     0.953,
     0.8853
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -2390,7 +2390,7 @@
     0.9187,
     0.9273
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -2482,7 +2482,7 @@
     1.0538,
     0.9016
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -3031,7 +3031,7 @@
     0.921,
     0.8447
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -3222,7 +3222,7 @@
     1.0106,
     0.9305
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -3314,7 +3314,7 @@
     1.056,
     0.9384
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -3406,7 +3406,7 @@
     0.9182,
     0.7399
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -3505,7 +3505,7 @@
     0.3222,
     null
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": null
   },
   {
@@ -3690,7 +3690,7 @@
     0.4936,
     0.3844
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -3878,7 +3878,7 @@
     0.5314,
     0.5172
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -4426,7 +4426,7 @@
     0.341,
     0.5446
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -4891,7 +4891,7 @@
     0.9964,
     1.0056
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -4983,7 +4983,7 @@
     0.9774,
     0.8804
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -5257,7 +5257,7 @@
     1.0604,
     0.976
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -5349,7 +5349,7 @@
     0.8828,
     0.8872
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -5531,7 +5531,7 @@
     0.9736,
     0.7216
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -5715,7 +5715,7 @@
     1.0198,
     0.8843
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -5807,7 +5807,7 @@
     1.03,
     0.7923
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -5996,7 +5996,7 @@
     null,
     null
    ],
-   "meses_del_boletin_diario": 0,
+   "meses_del_boletin_diario": 1,
    "verificacion_dif_max": null
   },
   {
@@ -6268,7 +6268,7 @@
     0.8878,
     0.7823
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -6360,7 +6360,7 @@
     1.0443,
     0.8612
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -6452,7 +6452,7 @@
     0.9321,
     0.8384
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -6544,7 +6544,7 @@
     0.8499,
     0.8451
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -6636,7 +6636,7 @@
     0.8207,
     0.7644
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -6818,7 +6818,7 @@
     0.9861,
     0.9242
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -6910,7 +6910,7 @@
     1.0087,
     0.8064
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   },
   {
@@ -7002,7 +7002,7 @@
     0.969,
     0.9009
    ],
-   "meses_del_boletin_diario": 1,
+   "meses_del_boletin_diario": 2,
    "verificacion_dif_max": 0.0
   }
  ],
