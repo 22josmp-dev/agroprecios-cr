@@ -3,9 +3,9 @@
  "fuente": "PIMA – SIMM",
  "datos_de_ejemplo": false,
  "estado": "ok",
- "mensaje": "Boletines nuevos: 2026-11-02",
- "ultimo_intento_utc": "2026-11-03T00:03:21Z",
- "ultima_actualizacion_exitosa_utc": "2026-11-03T00:03:21Z",
+ "mensaje": "Sin boletines nuevos; los datos están al día.",
+ "ultimo_intento_utc": "2026-11-03T02:39:31Z",
+ "ultima_actualizacion_exitosa_utc": "2026-11-03T02:39:31Z",
  "fecha_boletin": "2026-11-02",
  "registros": 54,
  "rechazados": 2,
@@ -17,11 +17,6 @@
   "2026-11"
  ],
  "historial": [
-  {
-   "utc": "2026-10-23T23:32:03Z",
-   "estado": "ok",
-   "mensaje": "Sin boletines nuevos; los datos están al día."
-  },
   {
    "utc": "2026-10-24T01:59:42Z",
    "estado": "ok",
@@ -166,6 +161,11 @@
    "utc": "2026-11-03T00:03:21Z",
    "estado": "ok",
    "mensaje": "Boletines nuevos: 2026-11-02"
+  },
+  {
+   "utc": "2026-11-03T02:39:31Z",
+   "estado": "ok",
+   "mensaje": "Sin boletines nuevos; los datos están al día."
   }
  ],
  "fuentes": {
@@ -174,8 +174,8 @@
    "frecuencia": "semanal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-11-03T00:03:33Z",
-   "ultima_actualizacion_exitosa_utc": "2026-11-03T00:03:33Z",
+   "ultimo_intento_utc": "2026-11-03T02:39:42Z",
+   "ultima_actualizacion_exitosa_utc": "2026-11-03T02:39:42Z",
    "fecha_boletin": "2026-10-28",
    "registros": 23,
    "rechazados": 0,
@@ -192,8 +192,8 @@
    "frecuencia": "quincenal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-11-03T00:03:41Z",
-   "ultima_actualizacion_exitosa_utc": "2026-11-03T00:03:41Z",
+   "ultimo_intento_utc": "2026-11-03T02:39:51Z",
+   "ultima_actualizacion_exitosa_utc": "2026-11-03T02:39:51Z",
    "fecha_boletin": "2026-10-29",
    "registros": 43,
    "rechazados": 0,
