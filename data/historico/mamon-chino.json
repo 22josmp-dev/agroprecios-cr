@@ -5,7 +5,7 @@
  "id": "mamon-chino",
  "nombre": "Mamón Chino",
  "unidad_precio": "Kilo",
- "generado_utc": "2026-11-03T22:34:24Z",
+ "generado_utc": "2026-11-04T00:56:16Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2018": [
