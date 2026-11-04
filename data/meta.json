@@ -3,25 +3,20 @@
  "fuente": "PIMA – SIMM",
  "datos_de_ejemplo": false,
  "estado": "ok",
- "mensaje": "Sin boletines nuevos; los datos están al día.",
- "ultimo_intento_utc": "2026-11-04T03:19:02Z",
- "ultima_actualizacion_exitosa_utc": "2026-11-04T03:19:02Z",
- "fecha_boletin": "2026-11-03",
- "registros": 49,
+ "mensaje": "Boletines nuevos: 2026-11-04",
+ "ultimo_intento_utc": "2026-11-04T22:54:30Z",
+ "ultima_actualizacion_exitosa_utc": "2026-11-04T22:54:30Z",
+ "fecha_boletin": "2026-11-04",
+ "registros": 55,
  "rechazados": 2,
- "sha256": "c3dd283fea325b5ede06054121825c99029ad5c0cddae13b448091e6c8baa0e1",
- "dias_con_datos": 37,
+ "sha256": "34150266d3165e20771ff6373b358681d6393f2660b148822750e2392aa18770",
+ "dias_con_datos": 38,
  "meses_precios": [
   "2026-09",
   "2026-10",
   "2026-11"
  ],
  "historial": [
-  {
-   "utc": "2026-10-25T19:59:24Z",
-   "estado": "ok",
-   "mensaje": "Sin boletines nuevos; los datos están al día."
-  },
   {
    "utc": "2026-10-25T22:49:10Z",
    "estado": "ok",
@@ -166,6 +161,11 @@
    "utc": "2026-11-04T03:19:02Z",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día."
+  },
+  {
+   "utc": "2026-11-04T22:54:30Z",
+   "estado": "ok",
+   "mensaje": "Boletines nuevos: 2026-11-04"
   }
  ],
  "fuentes": {
@@ -174,8 +174,8 @@
    "frecuencia": "semanal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-11-04T03:19:15Z",
-   "ultima_actualizacion_exitosa_utc": "2026-11-04T03:19:15Z",
+   "ultimo_intento_utc": "2026-11-04T22:54:42Z",
+   "ultima_actualizacion_exitosa_utc": "2026-11-04T22:54:42Z",
    "fecha_boletin": "2026-10-28",
    "registros": 23,
    "rechazados": 0,
@@ -192,8 +192,8 @@
    "frecuencia": "quincenal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-11-04T03:19:25Z",
-   "ultima_actualizacion_exitosa_utc": "2026-11-04T03:19:25Z",
+   "ultimo_intento_utc": "2026-11-04T22:54:50Z",
+   "ultima_actualizacion_exitosa_utc": "2026-11-04T22:54:50Z",
    "fecha_boletin": "2026-10-29",
    "registros": 43,
    "rechazados": 0,
