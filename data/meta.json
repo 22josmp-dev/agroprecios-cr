@@ -4,8 +4,8 @@
  "datos_de_ejemplo": false,
  "estado": "ok",
  "mensaje": "Sin boletines nuevos; los datos están al día.",
- "ultimo_intento_utc": "2026-11-07T03:13:27Z",
- "ultima_actualizacion_exitosa_utc": "2026-11-07T03:13:27Z",
+ "ultimo_intento_utc": "2026-11-07T21:05:43Z",
+ "ultima_actualizacion_exitosa_utc": "2026-11-07T21:05:43Z",
  "fecha_boletin": "2026-11-06",
  "registros": 58,
  "rechazados": 2,
@@ -17,11 +17,6 @@
   "2026-11"
  ],
  "historial": [
-  {
-   "utc": "2026-10-28T21:55:22Z",
-   "estado": "ok",
-   "mensaje": "Boletines nuevos: 2026-10-28"
-  },
   {
    "utc": "2026-10-29T00:26:17Z",
    "estado": "ok",
@@ -166,16 +161,21 @@
    "utc": "2026-11-07T03:13:27Z",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día."
+  },
+  {
+   "utc": "2026-11-07T21:05:43Z",
+   "estado": "ok",
+   "mensaje": "Sin boletines nuevos; los datos están al día."
   }
  ],
  "fuentes": {
   "fruta": {
    "nombre": "Fruta importada",
    "frecuencia": "semanal",
-   "estado": "ok",
-   "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-11-07T03:13:39Z",
-   "ultima_actualizacion_exitosa_utc": "2026-11-07T03:13:39Z",
+   "estado": "pendiente",
+   "mensaje": "Aún no hay boletín nuevo de fruta importada (el último es del 2026-10-28); se reintentará más tarde.",
+   "ultimo_intento_utc": "2026-11-07T21:05:56Z",
+   "ultima_actualizacion_exitosa_utc": "2026-11-07T21:05:56Z",
    "fecha_boletin": "2026-10-28",
    "registros": 23,
    "rechazados": 0,
@@ -192,8 +192,8 @@
    "frecuencia": "quincenal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-11-07T03:13:47Z",
-   "ultima_actualizacion_exitosa_utc": "2026-11-07T03:13:47Z",
+   "ultimo_intento_utc": "2026-11-07T21:06:06Z",
+   "ultima_actualizacion_exitosa_utc": "2026-11-07T21:06:06Z",
    "fecha_boletin": "2026-10-29",
    "registros": 43,
    "rechazados": 0,
