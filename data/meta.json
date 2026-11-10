@@ -3,9 +3,9 @@
  "fuente": "PIMA – SIMM",
  "datos_de_ejemplo": false,
  "estado": "ok",
- "mensaje": "Boletines nuevos: 2026-11-09",
- "ultimo_intento_utc": "2026-11-10T00:52:20Z",
- "ultima_actualizacion_exitosa_utc": "2026-11-10T00:52:20Z",
+ "mensaje": "Sin boletines nuevos; los datos están al día.",
+ "ultimo_intento_utc": "2026-11-10T02:56:16Z",
+ "ultima_actualizacion_exitosa_utc": "2026-11-10T02:56:16Z",
  "fecha_boletin": "2026-11-09",
  "registros": 53,
  "rechazados": 2,
@@ -17,11 +17,6 @@
   "2026-11"
  ],
  "historial": [
-  {
-   "utc": "2026-10-31T00:06:21Z",
-   "estado": "ok",
-   "mensaje": "Sin boletines nuevos; los datos están al día."
-  },
   {
    "utc": "2026-10-31T02:43:53Z",
    "estado": "ok",
@@ -166,15 +161,20 @@
    "utc": "2026-11-10T00:52:20Z",
    "estado": "ok",
    "mensaje": "Boletines nuevos: 2026-11-09"
+  },
+  {
+   "utc": "2026-11-10T02:56:16Z",
+   "estado": "ok",
+   "mensaje": "Sin boletines nuevos; los datos están al día."
   }
  ],
  "fuentes": {
   "fruta": {
    "nombre": "Fruta importada",
    "frecuencia": "semanal",
-   "estado": "pendiente",
-   "mensaje": "Aún no hay boletín nuevo de fruta importada (el último es del 2026-10-28); se reintentará más tarde.",
-   "ultimo_intento_utc": "2026-11-10T00:52:31Z",
+   "estado": "error",
+   "mensaje": "No hay boletín nuevo de fruta importada desde el 2026-10-28 (más de 9 días)",
+   "ultimo_intento_utc": "2026-11-10T02:56:28Z",
    "ultima_actualizacion_exitosa_utc": "2026-11-10T00:52:31Z",
    "fecha_boletin": "2026-10-28",
    "registros": 23,
@@ -192,8 +192,8 @@
    "frecuencia": "quincenal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-11-10T00:52:38Z",
-   "ultima_actualizacion_exitosa_utc": "2026-11-10T00:52:38Z",
+   "ultimo_intento_utc": "2026-11-10T02:56:36Z",
+   "ultima_actualizacion_exitosa_utc": "2026-11-10T02:56:36Z",
    "fecha_boletin": "2026-10-29",
    "registros": 43,
    "rechazados": 0,
