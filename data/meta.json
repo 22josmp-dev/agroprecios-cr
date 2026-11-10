@@ -3,25 +3,20 @@
  "fuente": "PIMA – SIMM",
  "datos_de_ejemplo": false,
  "estado": "ok",
- "mensaje": "Sin boletines nuevos; los datos están al día.",
- "ultimo_intento_utc": "2026-11-09T02:58:50Z",
- "ultima_actualizacion_exitosa_utc": "2026-11-09T02:58:50Z",
- "fecha_boletin": "2026-11-06",
- "registros": 58,
+ "mensaje": "Boletines nuevos: 2026-11-09",
+ "ultimo_intento_utc": "2026-11-10T00:52:20Z",
+ "ultima_actualizacion_exitosa_utc": "2026-11-10T00:52:20Z",
+ "fecha_boletin": "2026-11-09",
+ "registros": 53,
  "rechazados": 2,
- "sha256": "8ab33f54d53c867fa4ff2199b7128518df51fd4ab9758a833d3c69a649dd8eaf",
- "dias_con_datos": 40,
+ "sha256": "eecb7ec5ee69eedefcd9b642aaf838714f2714881bcb7dd6b178ca68f5f9a8eb",
+ "dias_con_datos": 41,
  "meses_precios": [
   "2026-09",
   "2026-10",
   "2026-11"
  ],
  "historial": [
-  {
-   "utc": "2026-10-30T21:42:09Z",
-   "estado": "ok",
-   "mensaje": "Boletines nuevos: 2026-10-30"
-  },
   {
    "utc": "2026-10-31T00:06:21Z",
    "estado": "ok",
@@ -166,16 +161,21 @@
    "utc": "2026-11-09T02:58:50Z",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día."
+  },
+  {
+   "utc": "2026-11-10T00:52:20Z",
+   "estado": "ok",
+   "mensaje": "Boletines nuevos: 2026-11-09"
   }
  ],
  "fuentes": {
   "fruta": {
    "nombre": "Fruta importada",
    "frecuencia": "semanal",
-   "estado": "error",
-   "mensaje": "No hay boletín nuevo de fruta importada desde el 2026-10-28 (más de 9 días)",
-   "ultimo_intento_utc": "2026-11-09T02:59:01Z",
-   "ultima_actualizacion_exitosa_utc": "2026-11-09T00:04:19Z",
+   "estado": "pendiente",
+   "mensaje": "Aún no hay boletín nuevo de fruta importada (el último es del 2026-10-28); se reintentará más tarde.",
+   "ultimo_intento_utc": "2026-11-10T00:52:31Z",
+   "ultima_actualizacion_exitosa_utc": "2026-11-10T00:52:31Z",
    "fecha_boletin": "2026-10-28",
    "registros": 23,
    "rechazados": 0,
@@ -192,8 +192,8 @@
    "frecuencia": "quincenal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-11-09T02:59:08Z",
-   "ultima_actualizacion_exitosa_utc": "2026-11-09T02:59:08Z",
+   "ultimo_intento_utc": "2026-11-10T00:52:38Z",
+   "ultima_actualizacion_exitosa_utc": "2026-11-10T00:52:38Z",
    "fecha_boletin": "2026-10-29",
    "registros": 43,
    "rechazados": 0,
