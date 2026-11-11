@@ -3,25 +3,20 @@
  "fuente": "PIMA – SIMM",
  "datos_de_ejemplo": false,
  "estado": "ok",
- "mensaje": "Sin boletines nuevos; los datos están al día.",
- "ultimo_intento_utc": "2026-11-11T03:59:42Z",
- "ultima_actualizacion_exitosa_utc": "2026-11-11T03:59:42Z",
- "fecha_boletin": "2026-11-10",
- "registros": 49,
+ "mensaje": "Boletines nuevos: 2026-11-11",
+ "ultimo_intento_utc": "2026-11-11T23:43:25Z",
+ "ultima_actualizacion_exitosa_utc": "2026-11-11T23:43:25Z",
+ "fecha_boletin": "2026-11-11",
+ "registros": 60,
  "rechazados": 2,
- "sha256": "78a67b50470c1c031151b62d30f010fed89c608030d16504eba61c2c7b6f255b",
- "dias_con_datos": 42,
+ "sha256": "ab75097a34daaf41047bd3c4a069307e9fe3a0232503b6bcb97b29723aee8a35",
+ "dias_con_datos": 43,
  "meses_precios": [
   "2026-09",
   "2026-10",
   "2026-11"
  ],
  "historial": [
-  {
-   "utc": "2026-11-02T02:44:51Z",
-   "estado": "ok",
-   "mensaje": "Sin boletines nuevos; los datos están al día."
-  },
   {
    "utc": "2026-11-03T00:03:21Z",
    "estado": "ok",
@@ -166,27 +161,33 @@
    "utc": "2026-11-11T03:59:42Z",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día."
+  },
+  {
+   "utc": "2026-11-11T23:43:25Z",
+   "estado": "ok",
+   "mensaje": "Boletines nuevos: 2026-11-11"
   }
  ],
  "fuentes": {
   "fruta": {
    "nombre": "Fruta importada",
    "frecuencia": "semanal",
-   "estado": "atrasado",
-   "mensaje": "No hay boletín nuevo de fruta importada desde el 2026-10-28 (13 días): el PIMA no lo ha publicado.",
-   "ultimo_intento_utc": "2026-11-11T03:59:57Z",
-   "ultima_actualizacion_exitosa_utc": "2026-11-11T03:59:57Z",
-   "fecha_boletin": "2026-10-28",
-   "registros": 23,
-   "rechazados": 0,
-   "boletines_con_datos": 15,
+   "estado": "ok",
+   "mensaje": "Boletines nuevos: 2026-11-11",
+   "ultimo_intento_utc": "2026-11-11T23:43:36Z",
+   "ultima_actualizacion_exitosa_utc": "2026-11-11T23:43:36Z",
+   "fecha_boletin": "2026-11-11",
+   "registros": 22,
+   "rechazados": 2,
+   "boletines_con_datos": 16,
    "meses_precios": [
     "2026-07",
     "2026-08",
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
-   "atrasado_desde": "2026-10-28",
+   "atrasado_desde": null,
    "ultimo_aviso_atraso": null
   },
   "aromaticos": {
@@ -194,8 +195,8 @@
    "frecuencia": "quincenal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-11-11T04:00:08Z",
-   "ultima_actualizacion_exitosa_utc": "2026-11-11T04:00:08Z",
+   "ultimo_intento_utc": "2026-11-11T23:43:44Z",
+   "ultima_actualizacion_exitosa_utc": "2026-11-11T23:43:44Z",
    "fecha_boletin": "2026-10-29",
    "registros": 43,
    "rechazados": 0,

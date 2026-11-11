@@ -1,0 +1,37 @@
+{
+ "esquema": 1,
+ "fecha_boletin": "2026-11-11",
+ "sha256": "b0e1d0bd4f89c97966f3adbda650ffe453e52b311d622d4b48dbe848cc284991",
+ "generado_utc": "2026-11-11T23:43:36Z",
+ "total": 2,
+ "rechazados": [
+  {
+   "producto": "Pera de Chile",
+   "unidad": "Caja (80-100 und)",
+   "valores": {
+    "minimo": "26,000.00",
+    "maximo": "27,000.00",
+    "moda": "26,000.00",
+    "promedio": "26,250.00"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 1
+  },
+  {
+   "producto": "Pera de Estados Unidos",
+   "unidad": "Caja (80-100 und)",
+   "valores": {
+    "minimo": "28,000.00",
+    "maximo": "29,000.00",
+    "moda": "28,000.00",
+    "promedio": "28,250.00"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 1
+  }
+ ]
+}
