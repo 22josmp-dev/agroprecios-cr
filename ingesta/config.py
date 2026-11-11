@@ -48,6 +48,9 @@ MIN_DIAS_MES = 10
 
 HISTORIAL_META = 30  # entradas guardadas en meta.json -> historial
 
+# Boletín semanal/quincenal atrasado: correo el primer día y luego cada N días mientras siga igual.
+DIAS_ENTRE_AVISOS_ATRASO = int(os.environ.get("DIAS_ENTRE_AVISOS_ATRASO", "7"))
+
 
 @dataclass(frozen=True)
 class Fuente:

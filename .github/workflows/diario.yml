@@ -85,7 +85,12 @@ jobs:
         id: resumen
         if: always()
         run: |
-          mensaje=$(jq -r '"\(.estado): \(.mensaje)"' data/meta.json | cut -c1-200)
+          # Mensaje para el correo: lo que requiere atención, de cualquier boletín (antes solo el diario)
+          mensaje=$(jq -r '
+            ([if .estado != "ok" and .estado != "pendiente" then "Boletín diario: \(.mensaje)" else empty end]
+             + [(.fuentes // {}) | to_entries[] | select(.value.estado != "ok" and .value.estado != "pendiente")
+                | "\(.value.nombre): \(.value.mensaje)"])
+            | if length == 0 then "Todo al día" else join(" | ") end' data/meta.json | cut -c1-300)
           if [ "${{ steps.estacional.outcome }}" != "success" ]; then
             mensaje="$mensaje | Índices estacionales: $(jq -r '.avisos | join("; ")' data/seasonal.json 2>/dev/null | cut -c1-150)"
           fi
@@ -93,10 +98,11 @@ jobs:
           {
             echo "## Actualización de precios"
             echo
-            echo "- Estado: **$(jq -r .estado data/meta.json)**"
-            echo "- Boletín más reciente: $(jq -r .fecha_boletin data/meta.json) ($(jq -r .registros data/meta.json) registros, $(jq -r .rechazados data/meta.json) rechazados)"
-            echo "- Mensaje: $(jq -r .mensaje data/meta.json)"
-            echo "- Índices estacionales: ${{ steps.estacional.outcome }} — $(jq -r '"\(.productos | length) productos, estado \(.estado)"' data/seasonal.json 2>/dev/null)"
+            echo "- **Boletín diario:** $(jq -r '"\(.estado) — \(.mensaje) (boletín del \(.fecha_boletin))"' data/meta.json)"
+            jq -r '(.fuentes // {}) | to_entries[] | "- **\(.value.nombre):** \(.value.estado) — \(.value.mensaje) (boletín del \(.value.fecha_boletin))"' data/meta.json
+            echo "- **Índices estacionales:** ${{ steps.estacional.outcome }} — $(jq -r '"\(.productos | length) productos, estado \(.estado)"' data/seasonal.json 2>/dev/null)"
+            echo
+            echo "**Requiere atención:** $mensaje"
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Guardar datos en el repositorio
@@ -162,5 +168,5 @@ jobs:
         env:
           MENSAJE: ${{ needs.datos.outputs.mensaje }}
         run: |
-          echo "::error::La actualización falló: $MENSAJE"
+          echo "::error::Requiere atención: $MENSAJE"
           exit 1

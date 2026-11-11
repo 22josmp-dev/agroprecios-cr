@@ -110,20 +110,45 @@ def test_proceso_semanal_de_fruta(repo):
 
 
 def test_fruta_sin_boletin_nuevo(repo):
+    """Caso real (nov. 2026): el PIMA dejó de publicar fruta importada después del 28-10.
+    Estado "atrasado" (no es una falla de la app) y correo solo el primer día y luego cada 7 días."""
     fruta = {date(2026, 9, 30): (OTROS / "fruta_2026-09-30.pdf").read_bytes()}
     pima = PIMAFalso({79: fruta})
     alm = Almacen(repo, config.FRUTA)
     nada = lambda *a: None  # noqa: E731
-    assert ejecutar_fuente(alm, pima, datetime(2026, 9, 30, 20, tzinfo=timezone.utc), log=nada) == 0
+
+    def correr(dia, hora=23, ultimo=True):
+        return ejecutar_fuente(alm, pima, datetime(2026, 10, dia, hora, tzinfo=timezone.utc) if dia > 0
+                               else datetime(2026, 9, 30, 20, tzinfo=timezone.utc), ultimo_intento=ultimo, log=nada)
+
+    def fruta_meta():
+        return leer(repo, "data/meta.json")["fuentes"]["fruta"]
+
+    assert correr(0) == 0
     # 8 días después: todavía dentro del plazo semanal (9 días)
-    assert ejecutar_fuente(alm, pima, datetime(2026, 10, 8, 23, tzinfo=timezone.utc), ultimo_intento=True, log=nada) == 0
-    # 12 días después sin boletín nuevo: pendiente en el primer intento y error en el último
-    assert ejecutar_fuente(alm, pima, datetime(2026, 10, 12, 19, tzinfo=timezone.utc), log=nada) == 0
-    assert leer(repo, "data/meta.json")["fuentes"]["fruta"]["estado"] == "pendiente"
-    assert ejecutar_fuente(alm, pima, datetime(2026, 10, 12, 23, tzinfo=timezone.utc), ultimo_intento=True, log=nada) == 1
-    f = leer(repo, "data/meta.json")["fuentes"]["fruta"]
-    assert f["estado"] == "error" and "No hay boletín nuevo de fruta importada" in f["mensaje"]
+    assert correr(8) == 0 and fruta_meta()["estado"] == "ok" and fruta_meta()["atrasado_desde"] is None
+    # Día 10 (primer día fuera de plazo): primer intento -> atrasado sin correo; último -> correo
+    assert correr(10, hora=19, ultimo=False) == 0
+    assert fruta_meta()["estado"] == "atrasado"
+    assert correr(10) == 1
+    f = fruta_meta()
+    assert f["estado"] == "atrasado" and f["atrasado_desde"] == "2026-09-30" and f["ultimo_aviso_atraso"] == "2026-10-10"
+    assert "No hay boletín nuevo de fruta importada desde el 2026-09-30 (10 días)" in f["mensaje"]
     assert f["fecha_boletin"] == "2026-09-30"
+    # Días siguientes: sigue atrasado, sin repetir el correo
+    for dia in (11, 12, 13, 14, 15, 16):
+        assert correr(dia) == 0, dia
+        assert fruta_meta()["estado"] == "atrasado"
+    # 7 días después del primer aviso: se recuerda otra vez
+    assert correr(17) == 1 and fruta_meta()["ultimo_aviso_atraso"] == "2026-10-17"
+    assert correr(18) == 0
+    # El PIMA vuelve a publicar: todo en orden y se borra el atraso
+    pima.por_cm[79][date(2026, 10, 19)] = (OTROS / "fruta_2026-09-30.pdf").read_bytes()
+    fruta_ok = {date(2026, 10, 19): (OTROS / "fruta_2026-09-30.pdf").read_bytes()}
+    pima.por_cm[79] = {**fruta, **fruta_ok}
+    correr(19)  # el PDF de muestra trae otra fecha de plaza: se rechaza, pero la lista ya está al día
+    f = fruta_meta()
+    assert f["atrasado_desde"] is None and f["ultimo_aviso_atraso"] is None
 
 
 def test_falla_de_una_fuente_no_toca_las_otras(repo):

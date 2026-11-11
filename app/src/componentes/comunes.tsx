@@ -35,6 +35,7 @@ export function EstadoDatos({ f, fechaDiario, otras }: {
         ))}
       </dl>
       <p class="revision">{f.revisado}: {f.resultadoRevision}</p>
+      {f.atrasos.map((a) => <p key={a} class="atraso"><span aria-hidden="true">ⓘ </span>{a}</p>)}
       {f.desactualizado && <p class="aviso" role="alert"><span aria-hidden="true">⚠ </span>{f.desactualizado}</p>}
     </section>
   );

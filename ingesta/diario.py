@@ -106,7 +106,8 @@ def _actualizar_registro(registro: list[dict], entrada: dict) -> None:
     registro.append(entrada)
 
 
-def escribir_meta(alm: Almacen, momento: str, estado: str, mensaje: str, exito: bool, registro: list[dict]) -> dict:
+def escribir_meta(alm: Almacen, momento: str, estado: str, mensaje: str, exito: bool, registro: list[dict],
+                  atraso: dict | None = None) -> dict:
     meta = alm.meta()
     fechas = alm.fechas_con_datos()
     ultimo = fechas[-1].isoformat() if fechas else None
@@ -123,6 +124,9 @@ def escribir_meta(alm: Almacen, momento: str, estado: str, mensaje: str, exito: 
             "rechazados": entrada["rechazados"] if entrada else 0,
             "boletines_con_datos": len(fechas),
             "meses_precios": sorted({f"{d.year:04d}-{d.month:02d}" for d in fechas}),
+            # Atraso del PIMA: desde qué fecha no hay boletín nuevo y cuándo se avisó por última vez
+            "atrasado_desde": (atraso or {}).get("desde"),
+            "ultimo_aviso_atraso": (atraso or {}).get("ultimo_aviso", previo.get("ultimo_aviso_atraso") if atraso else None),
         }
         alm.guardar_meta(meta)
         return meta
@@ -230,28 +234,38 @@ def ejecutar_fuente(alm: Almacen, cliente: ClientePIMA, ahora: datetime | None =
                 problemas.append(f"El boletín de hoy ({hoy}) no está publicado en el sitio del PIMA")
             else:
                 estado = "pendiente"
-    elif (hoy - ultima_lista).days > fuente.max_dias_sin_boletin:
-        if ultimo_intento:
-            problemas.append(f"No hay boletín nuevo de {fuente.nombre.lower()} desde el {ultima_lista} "
-                             f"(más de {fuente.max_dias_sin_boletin} días)")
-        else:
-            estado = "pendiente"
+    atraso = None
+    avisar_atraso = False
+    if fuente.frecuencia != "diaria" and (hoy - ultima_lista).days > fuente.max_dias_sin_boletin:
+        # El PIMA no publica (pausa o atraso). No es una falla de la app: estado "atrasado".
+        # Correo solo el primer día y luego cada 7 días, en el último intento del día.
+        previo = (alm.meta().get("fuentes") or {}).get(fuente.id, {})
+        ultimo_aviso = previo.get("ultimo_aviso_atraso") if previo.get("atrasado_desde") == ultima_lista.isoformat() else None
+        if ultimo_intento and (not ultimo_aviso or (hoy - date.fromisoformat(ultimo_aviso)).days >= config.DIAS_ENTRE_AVISOS_ATRASO):
+            avisar_atraso = True
+            ultimo_aviso = hoy.isoformat()
+        atraso = {"desde": ultima_lista.isoformat(), "ultimo_aviso": ultimo_aviso}
+        estado = "atrasado"
 
     if problemas:
         mensaje = " | ".join(problemas)
         escribir_meta(alm, momento, "error", mensaje, False, registro)
         log("ERROR:", mensaje)
         return 1
-    if estado == "pendiente" and fuente.frecuencia == "diaria":
+    if estado == "pendiente":
         mensaje = f"El boletín de hoy ({hoy}) aún no está publicado; se reintentará más tarde."
-    elif estado == "pendiente":
-        mensaje = (f"Aún no hay boletín nuevo de {fuente.nombre.lower()} (el último es del {ultima_lista}); "
-                   "se reintentará más tarde.")
+    elif estado == "atrasado":
+        dias = (hoy - ultima_lista).days
+        mensaje = (f"No hay boletín nuevo de {fuente.nombre.lower()} desde el {ultima_lista} ({dias} días): "
+                   "el PIMA no lo ha publicado.")
     elif publicados:
         mensaje = f"Boletines nuevos: {', '.join(publicados)}"
     else:
         mensaje = "Sin boletines nuevos; los datos están al día."
-    escribir_meta(alm, momento, estado, mensaje, True, registro)
+    escribir_meta(alm, momento, estado, mensaje, True, registro, atraso)
+    if avisar_atraso:
+        log("AVISO:", mensaje)
+        return 1  # workflow en rojo -> correo al propietario (primer día y luego cada 7 días)
     log(mensaje)
     return 0
 

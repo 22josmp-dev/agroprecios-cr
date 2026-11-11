@@ -96,6 +96,14 @@ describe("frescura de los datos", () => {
     const g = frescura(meta({ fuentes: { fruta: { nombre: "Fruta importada", frecuencia: "semanal", estado: "error", mensaje: "",
       ultima_actualizacion_exitosa_utc: null, fecha_boletin: "2026-09-30", meses_precios: [] } } }), new Date("2026-09-28T22:00:00Z"));
     expect(g.resultadoRevision).toBe("la revisión no se completó para fruta importada; se muestran los últimos datos válidos.");
+    expect(g.atrasos).toEqual([]);
+  });
+  it("boletín atrasado por el PIMA: nota para el usuario y no se presenta como falla", () => {
+    const h = frescura(meta({ fuentes: { fruta: { nombre: "Fruta importada", frecuencia: "semanal", estado: "atrasado", mensaje: "",
+      ultima_actualizacion_exitosa_utc: "2026-11-10T19:00:00Z", fecha_boletin: "2026-10-28", meses_precios: [],
+      atrasado_desde: "2026-10-28" } } }), new Date("2026-09-28T22:00:00Z"));
+    expect(h.resultadoRevision).toBe("no hay boletines más nuevos en el PIMA.");
+    expect(h.atrasos).toEqual(["El PIMA no ha publicado un boletín de fruta importada desde el 28 de octubre."]);
   });
 });
 

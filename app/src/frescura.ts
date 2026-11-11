@@ -4,6 +4,8 @@ import type { Meta } from "./tipos";
 export const DIAS_AVISO_DESACTUALIZADO = 3;
 
 export interface Frescura {
+  /** "El PIMA no ha publicado un boletín de fruta importada desde el 28 de octubre." (uno por fuente atrasada) */
+  atrasos: string[];
   /** "Revisado hoy a las 8:16 p. m." (con el día si no fue hoy). */
   revisado: string;
   /** Resultado de esa revisión en palabras simples. */
@@ -40,7 +42,10 @@ export function frescura(meta: Meta, ahora: Date = new Date()): Frescura {
   const resultadoRevision = meta.estado === "error" || fuentesConError.length
     ? `la revisión no se completó${meta.estado !== "error" ? ` para ${fuentesConError.join(" y ")}` : ""}; se muestran los últimos datos válidos.`
     : "no hay boletines más nuevos en el PIMA.";
-  return { revisado, resultadoRevision, boletin, insigniaDato, desactualizado, ultimoIntentoFallo };
+  const atrasos = Object.values(meta.fuentes || {})
+    .filter((f) => f.estado === "atrasado" && f.atrasado_desde)
+    .map((f) => `El PIMA no ha publicado un boletín de ${f.nombre.toLowerCase()} desde el ${fechaLarga(f.atrasado_desde!)}.`);
+  return { atrasos, revisado, resultadoRevision, boletin, insigniaDato, desactualizado, ultimoIntentoFallo };
 }
 
 export function esDeHoy(fechaIso: string | null, ahora: Date = new Date()): boolean {

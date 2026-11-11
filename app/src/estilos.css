@@ -142,6 +142,7 @@ small { font-size: 0.85em; color: var(--texto-2); }
 .estado .boletines div { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; border-bottom: 1px dotted var(--borde); }
 .estado .boletines dt { margin: 0; }
 .estado .boletines dd { margin: 0; font-weight: 700; white-space: nowrap; }
+.estado .atraso { margin-top: 6px !important; font-size: 0.9rem; }
 .estado .revision { margin-top: 8px !important; font-size: 0.9rem; color: var(--texto-2); }
 .tarjeta .estrella { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); }
 .estrella {

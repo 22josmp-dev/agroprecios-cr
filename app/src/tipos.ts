@@ -19,11 +19,13 @@ export type IdFuente = "diario" | "fruta" | "aromaticos";
 export interface MetaFuente {
   nombre: string;
   frecuencia: "semanal" | "quincenal";
-  estado: "ok" | "pendiente" | "error";
+  /** "atrasado": el PIMA no ha publicado un boletín nuevo dentro del plazo (no es una falla de la app). */
+  estado: "ok" | "pendiente" | "error" | "atrasado";
   mensaje: string;
   ultima_actualizacion_exitosa_utc: string | null;
   fecha_boletin: string | null;
   meses_precios: string[];
+  atrasado_desde?: string | null;
 }
 
 export interface InfoFuente {
