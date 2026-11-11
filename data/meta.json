@@ -4,8 +4,8 @@
  "datos_de_ejemplo": false,
  "estado": "ok",
  "mensaje": "Sin boletines nuevos; los datos están al día.",
- "ultimo_intento_utc": "2026-11-11T03:02:18Z",
- "ultima_actualizacion_exitosa_utc": "2026-11-11T03:02:18Z",
+ "ultimo_intento_utc": "2026-11-11T03:14:52Z",
+ "ultima_actualizacion_exitosa_utc": "2026-11-11T03:14:52Z",
  "fecha_boletin": "2026-11-10",
  "registros": 49,
  "rechazados": 2,
@@ -17,11 +17,6 @@
   "2026-11"
  ],
  "historial": [
-  {
-   "utc": "2026-11-01T21:22:52Z",
-   "estado": "ok",
-   "mensaje": "Sin boletines nuevos; los datos están al día."
-  },
   {
    "utc": "2026-11-01T23:54:47Z",
    "estado": "ok",
@@ -166,16 +161,21 @@
    "utc": "2026-11-11T03:02:18Z",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día."
+  },
+  {
+   "utc": "2026-11-11T03:14:52Z",
+   "estado": "ok",
+   "mensaje": "Sin boletines nuevos; los datos están al día."
   }
  ],
  "fuentes": {
   "fruta": {
    "nombre": "Fruta importada",
    "frecuencia": "semanal",
-   "estado": "error",
-   "mensaje": "No hay boletín nuevo de fruta importada desde el 2026-10-28 (más de 9 días)",
-   "ultimo_intento_utc": "2026-11-11T03:02:31Z",
-   "ultima_actualizacion_exitosa_utc": "2026-11-11T00:54:47Z",
+   "estado": "atrasado",
+   "mensaje": "No hay boletín nuevo de fruta importada desde el 2026-10-28 (13 días): el PIMA no lo ha publicado.",
+   "ultimo_intento_utc": "2026-11-11T03:15:03Z",
+   "ultima_actualizacion_exitosa_utc": "2026-11-11T03:15:03Z",
    "fecha_boletin": "2026-10-28",
    "registros": 23,
    "rechazados": 0,
@@ -185,15 +185,17 @@
     "2026-08",
     "2026-09",
     "2026-10"
-   ]
+   ],
+   "atrasado_desde": "2026-10-28",
+   "ultimo_aviso_atraso": null
   },
   "aromaticos": {
    "nombre": "Aromáticos y gourmet",
    "frecuencia": "quincenal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-11-11T03:02:40Z",
-   "ultima_actualizacion_exitosa_utc": "2026-11-11T03:02:40Z",
+   "ultimo_intento_utc": "2026-11-11T03:15:11Z",
+   "ultima_actualizacion_exitosa_utc": "2026-11-11T03:15:11Z",
    "fecha_boletin": "2026-10-29",
    "registros": 43,
    "rechazados": 0,
@@ -205,7 +207,9 @@
     "2026-08",
     "2026-09",
     "2026-10"
-   ]
+   ],
+   "atrasado_desde": null,
+   "ultimo_aviso_atraso": null
   }
  }
 }
