@@ -1,7 +1,6 @@
 import { useEffect, useState } from "preact/hooks";
-import { AvisoEjemplo, EstadoDatos } from "./componentes/comunes";
+import { AvisoEjemplo } from "./componentes/comunes";
 import { cargarCatalogo, cargarLatest, cargarMeta } from "./datos";
-import { frescura } from "./frescura";
 import { Ayuda } from "./pantallas/Ayuda";
 import { Detalle } from "./pantallas/Detalle";
 import { Guia } from "./pantallas/Guia";
@@ -48,7 +47,7 @@ export function App() {
   }, []);
 
   const pantalla = ruta[0] || "inicio";
-  const titulo = { inicio: "Inicio", producto: "Detalle", guia: "Guía de siembra", ayuda: "Ayuda" }[pantalla] ?? "Inicio";
+  const titulo = { inicio: "Inicio", producto: "Detalle", guia: "Guía de siembra", ayuda: "Información" }[pantalla] ?? "Inicio";
   useEffect(() => { document.title = `${titulo} · AgroPrecios CR`; }, [titulo]);
 
   return (
@@ -64,14 +63,6 @@ export function App() {
         {datos && (
           <>
             {(datos.meta.datos_de_ejemplo || datos.latest.datos_de_ejemplo) && <AvisoEjemplo />}
-            {pantalla === "inicio" && (
-              <p class="origen-datos">
-                Precios mayoristas de referencia del <strong>CENADA</strong>, tomados de los boletines que publica el
-                <strong> PIMA – SIMM</strong>: diario (frutas y hortalizas), semanal (fruta importada) y quincenal
-                (aromáticos y gourmet). AgroPrecios CR es una app informativa independiente, no oficial del PIMA.
-              </p>
-            )}
-            {(pantalla === "inicio" || pantalla === "producto") && <EstadoDatos f={frescura(datos.meta)} fechaDiario={datos.meta.fecha_boletin} otras={datos.meta.fuentes} />}
             {pantalla === "inicio" && <Inicio datos={datos} />}
             {pantalla === "producto" && <Detalle datos={datos} id={ruta[1]} />}
             {pantalla === "guia" && <Guia inicial={ruta[1]} />}
@@ -82,7 +73,7 @@ export function App() {
       <nav class="navegacion" aria-label="Secciones">
         <a href="#/" aria-current={pantalla === "inicio" || pantalla === "producto" ? "page" : undefined}><span aria-hidden="true">🏠</span>Precios</a>
         <a href="#/guia" aria-current={pantalla === "guia" ? "page" : undefined}><span aria-hidden="true">📅</span>Guía de siembra</a>
-        <a href="#/ayuda" aria-current={pantalla === "ayuda" ? "page" : undefined}><span aria-hidden="true">❔</span>Ayuda</a>
+        <a href="#/ayuda" aria-current={pantalla === "ayuda" ? "page" : undefined}><span aria-hidden="true">ℹ️</span>Información</a>
       </nav>
     </>
   );

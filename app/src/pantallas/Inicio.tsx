@@ -1,6 +1,7 @@
 import { useMemo, useState } from "preact/hooks";
 import type { DatosBase } from "../app";
-import { Buscador, Fuente, TarjetaProducto } from "../componentes/comunes";
+import { Buscador, Fuente, LineaFuente, TarjetaProducto } from "../componentes/comunes";
+import { frescura } from "../frescura";
 import { useFavoritos } from "../favoritos";
 import { resumenDelDia } from "../resumen";
 import { FUENTES } from "../fuentes";
@@ -28,6 +29,7 @@ export function Inicio({ datos }: { datos: DatosBase }) {
       <div class="buscador-fijo">
         <Buscador entradas={entradas} alElegir={(e) => { location.hash = `#/producto/${e.id}`; }} />
       </div>
+      <LineaFuente f={frescura(datos.meta)} fechaDiario={datos.meta.fecha_boletin} />
 
       <section aria-labelledby="t-fav">
         <h2 id="t-fav"><span aria-hidden="true">★ </span>Mis cultivos</h2>

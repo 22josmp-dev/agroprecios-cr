@@ -1,11 +1,18 @@
-import { Fuente } from "../componentes/comunes";
+import { EstadoDatos, Fuente, OrigenDatos } from "../componentes/comunes";
+import { frescura } from "../frescura";
 import { momentoCR } from "../fechas";
 import type { Meta } from "../tipos";
 
 export function Ayuda({ meta }: { meta: Meta }) {
   return (
     <article class="ayuda">
-      <h1>Ayuda</h1>
+      <h1>Información</h1>
+
+      <section aria-labelledby="t-acerca">
+        <h2 id="t-acerca">Sobre los precios</h2>
+        <OrigenDatos />
+        <EstadoDatos f={frescura(meta)} fechaDiario={meta.fecha_boletin} otras={meta.fuentes} />
+      </section>
 
       <section aria-labelledby="t-glosario">
         <h2 id="t-glosario">Palabras que usamos</h2>

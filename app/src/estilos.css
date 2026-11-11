@@ -252,3 +252,8 @@ small { font-size: 0.85em; color: var(--texto-2); }
 
 .ayuda dt { font-weight: 700; margin-top: 12px; }
 .ayuda dd { margin: 2px 0 0; }
+
+/* Línea discreta bajo el buscador (Precios) */
+.linea-fuente { margin: 0 0 4px; font-size: 0.85rem; color: var(--texto-2); }
+.ayuda .estado { margin-top: 12px; }
+.ayuda .estado dt { font-weight: 400; margin-top: 0; }

@@ -11,6 +11,29 @@ export function Fuente() {
   return <p class="fuente">Fuente: PIMA – SIMM. Precios mayoristas de referencia en el CENADA, productos de primera calidad.</p>;
 }
 
+export function OrigenDatos() {
+  return (
+    <p class="origen-datos">
+      Precios mayoristas de referencia del <strong>CENADA</strong>, tomados de los boletines que publica el
+      <strong> PIMA – SIMM</strong>: diario (frutas y hortalizas), semanal (fruta importada) y quincenal
+      (aromáticos y gourmet). AgroPrecios CR es una app informativa independiente, no oficial del PIMA.
+    </p>
+  );
+}
+
+/** Una sola línea discreta en Precios; el detalle está en Información. Avisos solo si aplican. */
+export function LineaFuente({ f, fechaDiario }: { f: Frescura; fechaDiario: string | null }) {
+  return (
+    <>
+      <p class="linea-fuente">
+        {fechaDiario && <>Boletín diario del {fechaConAnio(fechaDiario)} · </>}Fuente: PIMA – SIMM ·{" "}
+        <a href="#/ayuda">Más información</a>
+      </p>
+      {f.desactualizado && <p class="aviso" role="alert"><span aria-hidden="true">⚠ </span>{f.desactualizado}</p>}
+    </>
+  );
+}
+
 export function AvisoEjemplo() {
   return <p class="aviso aviso-ejemplo" role="alert"><strong>DATOS DE EJEMPLO.</strong> Estos precios no son reales.</p>;
 }
