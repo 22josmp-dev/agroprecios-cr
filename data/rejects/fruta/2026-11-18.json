@@ -1,0 +1,37 @@
+{
+ "esquema": 1,
+ "fecha_boletin": "2026-11-18",
+ "sha256": "0a5fd30427d663c6d40ae5b70341643b8e526571a16a0d187c36dacd264f4355",
+ "generado_utc": "2026-11-18T23:36:53Z",
+ "total": 2,
+ "rechazados": [
+  {
+   "producto": "Aguacate Hass de Chile - Super Extra",
+   "unidad": "Caja (10 kg)",
+   "valores": {
+    "minimo": "21,000.00",
+    "maximo": "22,000.00",
+    "moda": "22,000.00",
+    "promedio": "21,666.67"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 1
+  },
+  {
+   "producto": "Aguacate Hass de Chile - Supremo",
+   "unidad": "Caja (10 kg)",
+   "valores": {
+    "minimo": "22,000.00",
+    "maximo": "23,000.00",
+    "moda": "23,000.00",
+    "promedio": "22,750.00"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 1
+  }
+ ]
+}

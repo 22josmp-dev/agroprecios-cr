@@ -1,0 +1,191 @@
+{
+ "esquema": 1,
+ "fecha_boletin": "2026-11-18",
+ "sha256": "727d146de6576e2377d32f871b7e76f2a3cd46f290b23a47df33c70e1beaacd9",
+ "generado_utc": "2026-11-18T23:36:40Z",
+ "total": 13,
+ "rechazados": [
+  {
+   "producto": "Ayote sazón mantequilla",
+   "unidad": "Kilo",
+   "valores": {
+    "minimo": "800.00",
+    "maximo": "1,000.00",
+    "moda": "800.00",
+    "promedio": "877.78"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 1
+  },
+  {
+   "producto": "Carambola",
+   "unidad": "Kilo",
+   "valores": {
+    "minimo": "700.00",
+    "maximo": "800.00",
+    "moda": "800.00",
+    "promedio": "776.92"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 1
+  },
+  {
+   "producto": "Cas",
+   "unidad": "Kilo",
+   "valores": {
+    "minimo": "1,000.00",
+    "maximo": "1,200.00",
+    "moda": "1,000.00",
+    "promedio": "1,037.50"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 1
+  },
+  {
+   "producto": "Coco",
+   "unidad": "Unidad",
+   "valores": {
+    "minimo": "500.00",
+    "maximo": "600.00",
+    "moda": "500.00",
+    "promedio": "514.29"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 1
+  },
+  {
+   "producto": "Guanábana injertada",
+   "unidad": "Kilo",
+   "valores": {
+    "minimo": "2,000.00",
+    "maximo": "2,300.00",
+    "moda": "2,200.00",
+    "promedio": "2,150.00"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 1
+  },
+  {
+   "producto": "Guayaba China/Taiwanesa",
+   "unidad": "Kilo",
+   "valores": {
+    "minimo": "1,000.00",
+    "maximo": "1,000.00",
+    "moda": "1,000.00",
+    "promedio": "1,000.00"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 1
+  },
+  {
+   "producto": "Maracuyá",
+   "unidad": "Kilo",
+   "valores": {
+    "minimo": "1,000.00",
+    "maximo": "1,200.00",
+    "moda": "1,000.00",
+    "promedio": "1,028.57"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 1
+  },
+  {
+   "producto": "Mora congelada",
+   "unidad": "Kilo",
+   "valores": {
+    "minimo": "1,600.00",
+    "maximo": "1,800.00",
+    "moda": "1,800.00",
+    "promedio": "1,733.33"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 2
+  },
+  {
+   "producto": "Mora fresca",
+   "unidad": "Kilo",
+   "valores": {
+    "minimo": "1,600.00",
+    "maximo": "2,000.00",
+    "moda": "1,800.00",
+    "promedio": "1,777.78"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 2
+  },
+  {
+   "producto": "Naranjilla",
+   "unidad": "Kilo",
+   "valores": {
+    "minimo": "1,400.00",
+    "maximo": "1,500.00",
+    "moda": "1,500.00",
+    "promedio": "1,466.67"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 2
+  },
+  {
+   "producto": "Papa polilla",
+   "unidad": "Malla (45 kg)",
+   "valores": {
+    "minimo": "3,000.00",
+    "maximo": "5,000.00",
+    "moda": "4,000.00",
+    "promedio": "3,833.33"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 2
+  },
+  {
+   "producto": "Pipa pelada",
+   "unidad": "Unidad",
+   "valores": {
+    "minimo": "300.00",
+    "maximo": "400.00",
+    "moda": "350.00",
+    "promedio": "344.44"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 2
+  },
+  {
+   "producto": "Tamarindo",
+   "unidad": "Kilo",
+   "valores": {
+    "minimo": "1,800.00",
+    "maximo": "2,000.00",
+    "moda": "1,800.00",
+    "promedio": "1,857.14"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 2
+  }
+ ]
+}
