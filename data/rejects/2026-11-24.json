@@ -1,0 +1,23 @@
+{
+ "esquema": 1,
+ "fecha_boletin": "2026-11-24",
+ "sha256": "69fabe3b894cc2cc865c0e7eae69a75ef2fbbc5cf6c937aecb7b76e3860f12f2",
+ "generado_utc": "2026-11-25T01:37:37Z",
+ "total": 1,
+ "rechazados": [
+  {
+   "producto": "Manga grande Tommy",
+   "unidad": "Caja plástica (17 kg)",
+   "valores": {
+    "minimo": "19,000.00",
+    "maximo": "20,000.00",
+    "moda": "20,000.00",
+    "promedio": "19,750.00"
+   },
+   "motivos": [
+    "producto no reconocido en el catálogo"
+   ],
+   "pagina": 1
+  }
+ ]
+}
