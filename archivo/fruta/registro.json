@@ -219,5 +219,18 @@
   "rechazados": 2,
   "formato_numerico": "1,000.00",
   "error": null
+ },
+ {
+  "fecha": "2026-11-25",
+  "sha256": "bc49d1ab569565717ebeffe87aef4adeadb44949db207c9f441e045be881b914",
+  "archivo": "archivo/fruta/boletines/2026/2026-11-25_bc49d1ab5695.pdf",
+  "nombre_original": "SIMM - Boletin Fruta Importada 2026-11-25.pdf",
+  "url_lista": "https://bpm.pima.go.cr/AccessDoc.aspx?Us9MxE9rVjtJrJefyGC6GjNJyB7y9tsCBZmu7MgCBVE7aiXurGVW7nNMco3qEzh4",
+  "descargado_utc": "2026-11-26T01:11:28Z",
+  "estado": "procesado",
+  "registros": 23,
+  "rechazados": 0,
+  "formato_numerico": "1,000.00",
+  "error": null
  }
 ]
