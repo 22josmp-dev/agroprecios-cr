@@ -180,5 +180,18 @@
   "rechazados": 0,
   "formato_numerico": "1,000.00",
   "error": null
+ },
+ {
+  "fecha": "2026-11-26",
+  "sha256": "20515d74a5a164816836be7e1466172c4c68639f1e8c3b864ac1b634a97af2e1",
+  "archivo": "archivo/aromaticos/boletines/2026/2026-11-26_20515d74a5a1.pdf",
+  "nombre_original": "SIMM - Boletin Quincenal de Productos Aromaticos y Gourmet 2026-11-26.pdf",
+  "url_lista": "https://bpm.pima.go.cr/AccessDoc.aspx?Us9MxE9rVjuLUkBO1k0SCheyu6xetloLGdI7f4DPxE5mJiIeIlMiF0ZlA+tZzbZn",
+  "descargado_utc": "2026-11-27T01:10:08Z",
+  "estado": "procesado",
+  "registros": 42,
+  "rechazados": 0,
+  "formato_numerico": "1,000.00",
+  "error": null
  }
 ]

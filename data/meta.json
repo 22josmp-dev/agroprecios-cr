@@ -3,25 +3,20 @@
  "fuente": "PIMA – SIMM",
  "datos_de_ejemplo": false,
  "estado": "ok",
- "mensaje": "Sin boletines nuevos; los datos están al día.",
- "ultimo_intento_utc": "2026-11-26T05:28:31Z",
- "ultima_actualizacion_exitosa_utc": "2026-11-26T05:28:31Z",
- "fecha_boletin": "2026-11-25",
- "registros": 61,
- "rechazados": 13,
- "sha256": "0415c41611f2447addae9c49e792f54366b8a024c1a1beb39b677349f6653b80",
- "dias_con_datos": 53,
+ "mensaje": "Boletines nuevos: 2026-11-26",
+ "ultimo_intento_utc": "2026-11-27T01:09:46Z",
+ "ultima_actualizacion_exitosa_utc": "2026-11-27T01:09:46Z",
+ "fecha_boletin": "2026-11-26",
+ "registros": 50,
+ "rechazados": 1,
+ "sha256": "25bc535bc5ba61841b26a8cbb04c55845e8676dd0acbeecdb1f137d89300bf40",
+ "dias_con_datos": 54,
  "meses_precios": [
   "2026-09",
   "2026-10",
   "2026-11"
  ],
  "historial": [
-  {
-   "utc": "2026-11-17T01:06:02Z",
-   "estado": "ok",
-   "mensaje": "Boletines nuevos: 2026-11-16"
-  },
   {
    "utc": "2026-11-17T03:11:48Z",
    "estado": "ok",
@@ -166,6 +161,11 @@
    "utc": "2026-11-26T05:28:31Z",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día."
+  },
+  {
+   "utc": "2026-11-27T01:09:46Z",
+   "estado": "ok",
+   "mensaje": "Boletines nuevos: 2026-11-26"
   }
  ],
  "fuentes": {
@@ -174,8 +174,8 @@
    "frecuencia": "semanal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-11-26T05:28:40Z",
-   "ultima_actualizacion_exitosa_utc": "2026-11-26T05:28:40Z",
+   "ultimo_intento_utc": "2026-11-27T01:09:59Z",
+   "ultima_actualizacion_exitosa_utc": "2026-11-27T01:09:59Z",
    "fecha_boletin": "2026-11-25",
    "registros": 23,
    "rechazados": 0,
@@ -194,13 +194,13 @@
    "nombre": "Aromáticos y gourmet",
    "frecuencia": "quincenal",
    "estado": "ok",
-   "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-11-26T05:28:51Z",
-   "ultima_actualizacion_exitosa_utc": "2026-11-26T05:28:51Z",
-   "fecha_boletin": "2026-11-12",
-   "registros": 44,
+   "mensaje": "Boletines nuevos: 2026-11-26",
+   "ultimo_intento_utc": "2026-11-27T01:10:08Z",
+   "ultima_actualizacion_exitosa_utc": "2026-11-27T01:10:08Z",
+   "fecha_boletin": "2026-11-26",
+   "registros": 42,
    "rechazados": 0,
-   "boletines_con_datos": 14,
+   "boletines_con_datos": 15,
    "meses_precios": [
     "2026-05",
     "2026-06",
