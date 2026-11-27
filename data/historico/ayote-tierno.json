@@ -5,7 +5,7 @@
  "id": "ayote-tierno",
  "nombre": "Ayote Tierno",
  "unidad_precio": "Unidad",
- "generado_utc": "2026-11-27T03:17:43Z",
+ "generado_utc": "2026-11-27T05:22:35Z",
  "nota": "Precio mensual: tabla del índice estacional del SIMM (promedio al por mayor). Meses recientes marcados en 'meses_boletin_diario': media de la moda diaria del boletín.",
  "precio": {
   "2018": [
