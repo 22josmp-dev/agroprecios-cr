@@ -3,25 +3,20 @@
  "fuente": "PIMA – SIMM",
  "datos_de_ejemplo": false,
  "estado": "ok",
- "mensaje": "Sin boletines nuevos; los datos están al día.",
- "ultimo_intento_utc": "2026-11-27T05:22:03Z",
- "ultima_actualizacion_exitosa_utc": "2026-11-27T05:22:03Z",
- "fecha_boletin": "2026-11-26",
- "registros": 50,
+ "mensaje": "Boletines nuevos: 2026-11-27",
+ "ultimo_intento_utc": "2026-11-28T00:42:18Z",
+ "ultima_actualizacion_exitosa_utc": "2026-11-28T00:42:18Z",
+ "fecha_boletin": "2026-11-27",
+ "registros": 55,
  "rechazados": 1,
- "sha256": "25bc535bc5ba61841b26a8cbb04c55845e8676dd0acbeecdb1f137d89300bf40",
- "dias_con_datos": 54,
+ "sha256": "6b74298ac6a14f4048312beb390e5b2a98670358aff2db0eb3a7f4c532c7c00c",
+ "dias_con_datos": 55,
  "meses_precios": [
   "2026-09",
   "2026-10",
   "2026-11"
  ],
  "historial": [
-  {
-   "utc": "2026-11-17T23:58:39Z",
-   "estado": "ok",
-   "mensaje": "Boletines nuevos: 2026-11-17"
-  },
   {
    "utc": "2026-11-18T02:36:51Z",
    "estado": "ok",
@@ -166,6 +161,11 @@
    "utc": "2026-11-27T05:22:03Z",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día."
+  },
+  {
+   "utc": "2026-11-28T00:42:18Z",
+   "estado": "ok",
+   "mensaje": "Boletines nuevos: 2026-11-27"
   }
  ],
  "fuentes": {
@@ -174,8 +174,8 @@
    "frecuencia": "semanal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-11-27T05:22:17Z",
-   "ultima_actualizacion_exitosa_utc": "2026-11-27T05:22:17Z",
+   "ultimo_intento_utc": "2026-11-28T00:42:31Z",
+   "ultima_actualizacion_exitosa_utc": "2026-11-28T00:42:31Z",
    "fecha_boletin": "2026-11-25",
    "registros": 23,
    "rechazados": 0,
@@ -195,8 +195,8 @@
    "frecuencia": "quincenal",
    "estado": "ok",
    "mensaje": "Sin boletines nuevos; los datos están al día.",
-   "ultimo_intento_utc": "2026-11-27T05:22:25Z",
-   "ultima_actualizacion_exitosa_utc": "2026-11-27T05:22:25Z",
+   "ultimo_intento_utc": "2026-11-28T00:42:40Z",
+   "ultima_actualizacion_exitosa_utc": "2026-11-28T00:42:40Z",
    "fecha_boletin": "2026-11-26",
    "registros": 42,
    "rechazados": 0,
